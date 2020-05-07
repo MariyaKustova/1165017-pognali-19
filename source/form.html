@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <title>HTML Academy: Погнали</title>
+  </head>
+  <body>
+    <header class="page-header">
+      <a class="page-header__logo-link" href="./index.html">
+        <img
+          class="page-header__logo-image"
+          src="#"
+          width="96"
+          height="15"
+          alt="Логотип Погнали?"
+        />
+      </a>
+      <button class="page-header__button" type="button"></button>
+      <nav class="page-header__nav">
+        <ul class="page-header__list main-menu">
+          <li class="main-menu__item">
+            <a class="main-menu__link" href="#">О сервисе</a>
+          </li>
+          <li class="main-menu__item">
+            <a class="main-menu__link" href="./form.html">Направления</a>
+          </li>
+          <li class="main-menu__item">
+            <a class="main-menu__link" href="./catalog.html">Попутчики</a>
+          </li>
+        </ul>
+        <ul class="page-header__list contacts">
+          <li class="contacts__item">
+            <a class="contacts__link" href="#">Aвторизация</a>
+          </li>
+          <li class="contacts__item">
+            <a class="contacts__tel-number" href="tel:88005558628">
+              <svg class="contacts__svg" width="18px" height="18px"></svg>
+              <span>8 800 555-86-28</span>
+            </a>
+          </li>
+          <li class="contacts__item">
+            <a class="contacts__e-mail" href="mail@htmlacademy.ru">
+              <svg class="contacts__svg" width="18px" height="14px"></svg>
+              <span>mail@htmlacademy.ru</span></a
+            >
+          </li>
+          <li class="contacts__item">
+            <ul class="contacts__social-contacts social-contacts">
+              <li class="social-contacts__item">
+                <a class="social-contacts__link" href="#" aria-label="Фейсбук">
+                  <svg
+                    class="social-contacts__svg social-contacts__svg--facebook"
+                    width="11px"
+                    height="21px"
+                  ></svg>
+                </a>
+              </li>
+              <li class="social-contacts__item">
+                <a
+                  class="social-contacts__link"
+                  href="#"
+                  aria-label="ВКонтакте"
+                >
+                  <svg
+                    class="social-contacts__svg social-contacts__svg--vk"
+                    width="23px"
+                    height="12px"
+                  ></svg>
+                </a>
+              </li>
+              <li class="social-contacts__item">
+                <a
+                  class="social-contacts__link"
+                  href="#"
+                  aria-label="Инстаграм"
+                >
+                  <svg
+                    class="social-contacts__svg social-contacts__svg--instagram"
+                    width="18px"
+                    height="18px"
+                  ></svg>
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <h1 class="page-header__title">Направления</h1>
+    </header>
+
+    <main class="page-main">
+      <section class="page-main__companions companions">
+        <ul class="companions__list">
+          <li class="companions__item">
+            <div class="companions__wrapper">
+              <img src="#" alt="Пети Демина" />
+              <div class="companions__level">
+                <h3 class="companions__heading">левел:</h3>
+                <div class="companions__wrapper-level">
+                  <p class="companions__number">80</p>
+                  <p class="companions__info">level</p>
+                </div>
+              </div>
+              <h2 class="visually-hidden companions__name">
+                Петя Демин
+              </h2>
+            </div>
+            <button class="companions__button-foto" type="button">
+              Сменить фото
+            </button>
+            <div class="companions__teg">
+              <label class="companions__label">
+              <span>Тэги</span>
+              <input type="text" name="tegs" value="#бургер #бар #футбол #концерт #крафт">
+              </label>
+            </div>
+
+             <fieldset class="companions__fieldset">
+                <legend class="companions__legend">транспорт:</legend>
+                <ul class="companions__list transport">
+                <li class="transport__item">
+                  <label class="transport__label">
+                    <span class="visually-hidden">Самолет</span>
+                    <input
+                      class="visually-hidden"
+                      type="checkbox"
+                      name="plane"
+                      checked
+                    />
+                    <span class="transport__icon">
+                      <svg
+                        class="transport__svg"
+                        width="19px"
+                        height="21px"
+                      ></svg>
+                    </span>
+                  </label>
+                </li>
+                <li class="transport__item">
+                  <label class="transport__label">
+                    <span class="visually-hidden">Автомобиль</span>
+                    <input
+                      class="visually-hidden"
+                      type="checkbox"
+                      name="car"
+                      checked
+                    />
+                    <span class="transport__icon">
+                      <svg
+                        class="transport__svg"
+                        width="17px"
+                        height="21px"
+                      ></svg>
+                    </span>
+                  </label>
+                </li>
+                <li class="transport__item">
+                  <label class="transport__label">
+                    <span class="visually-hidden">Велосипед</span>
+                    <input
+                      class="visually-hidden"
+                      type="checkbox"
+                      name="bike"
+                      checked
+                    />
+                    <span class="transport__icon">
+                      <svg
+                        class="transport__svg"
+                        width="24px"
+                        height="21px"
+                      ></svg>
+                    </span>
+                  </label>
+                </li>
+                <li class="transport__item">
+                  <label class="transport__label">
+                    <span class="visually-hidden">Поход</span>
+                    <input
+                      class="visually-hidden"
+                      type="checkbox"
+                      name="hike"
+                      checked
+                    />
+                    <span class="transport__icon">
+                      <svg
+                        class="transport__svg"
+                        width="20px"
+                        height="21px"
+                      ></svg>
+                    </span>
+                  </label>
+                </li>
+              </ul>
+            </fieldset>
+          </li>
+        </ul>
+      </section>
+      <section class="page-main__plans plans">
+        <h2 class="plans__title">Мои планы:</h2>
+        <ul class="plans__list">
+          <li class="plans__item">
+            <h4 class="plans__heading">
+              1. Франция, Италия
+            </h4>
+            <p class="plans__number">3 попутчика</p>
+            <p class="plans__data">26 мар — 29 мар</p>
+            <button class="plans__button">Изменить</button>
+          </li>
+          <li class="plans__item">
+            <h4 class="plans__heading">
+              2. Таиланд, Индонезия
+            </h4>
+            <p class="plans__number">1 попутчик</p>
+            <p class="plans__data">1 июл — 15 июл</p>
+            <button class="plans__button">Изменить</button>
+          </li>
+        </ul>
+
+        <form
+          class="plans__form-add form-add"
+          action="https://echo.htmlacademy.ru"
+          method="post"
+        >
+          <h2 class="plans__title">Добавить план:</h2>
+          <ul class="form-add__list">
+            <li class="form-add__item">
+              <h3 class="form-add__title"  id="first-step">
+                Шаг 1. <br />
+                Даты пребывания
+              </h3>
+              <p class="form-add__text">
+                Укажите предпочтительное количество попутчиков, которых вы
+                хотели бы позвать в поездку и ее предполагаемую длительность.
+              </p>
+              <label class="form-add__label">
+                <span class="form-add__subheading">ищу попутчиков:</span>
+                <span class="form-add__subheading--opacity">Чел.</span>
+                <input type="text" name="number-companions" pattern="[0-9]" value="2">
+              </label>
+              <label class="form-add__label">
+                <span class="form-add__subheading">Длительность:</span>
+                <span class="form-add__subheading--opacity">дн.</span>
+                <input type="text" name="duration" pattern="[0-9]" value="2">
+              </label>
+              <label class="form-add__label">
+                <span class="form-add__subheading--min">Можно с детьми</span>
+                <input type="checkbox" name="children" checked>
+              </label>
+              <div class="form-add__calendar">
+                <h3 class="form-add__title">Март 2019</h3>
+                <table class="form-add__table">
+                  <thead>
+                    <tr>
+                      <th>П</th>
+                      <th>В</th>
+                      <th>С</th>
+                      <th>Ч</th>
+                      <th>П</th>
+                      <th class="form-add__weekend">С</th>
+                      <th class="form-add__weekend">В</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>23</td>
+                      <td>24</td>
+                      <td>25</td>
+                      <td>26</td>
+                      <td>27</td>
+                      <td>28</td>
+                      <td>1</td>
+                    </tr>
+                    <tr>
+                      <td>2</td>
+                      <td>3</td>
+                      <td>4</td>
+                      <td>5</td>
+                      <td>6</td>
+                      <td>7</td>
+                      <td>8</td>
+                    </tr>
+                    <tr>
+                      <td>9</td>
+                      <td>10</td>
+                      <td>11</td>
+                      <td>12</td>
+                      <td>13</td>
+                      <td>14</td>
+                      <td>15</td>
+                    </tr>
+                    <tr>
+                      <td>16</td>
+                      <td>17</td>
+                      <td>18</td>
+                      <td>19</td>
+                      <td>20</td>
+                      <td>21</td>
+                      <td>22</td>
+                    </tr>
+                    <tr>
+                      <td>23</td>
+                      <td>24</td>
+                      <td>25</td>
+                      <td class="form-add__selected--active">26</td>
+                      <td class="form-add__selected">27</td>
+                      <td class="form-add__selected">28</td>
+                      <td>29</td>
+                    </tr>
+                  </tbody>
+                  <tfoot>
+                    <tr>
+                      <td>30</td>
+                      <td>31</td>
+                      <td>1</td>
+                      <td>2</td>
+                      <td>3</td>
+                      <td>4</td>
+                      <td>5</td>
+                    </tr>
+                  </tfoot>
+                </table>
+              </div>
+              <a class="form-add__button-next button" href="#second-step">Следующий шаг</a>
+            </li>
+            <li class="form-add__item">
+              <h3 class="form-add__title" id="second-step">
+                Шаг 2. <br />
+                Маршрут
+              </h3>
+              <p class="form-add__text">
+                Укажите страны, которые вы хотели посетить. Это может быть одна или сразу несколько.
+              </p>
+              <div class="form-add__wrapper-country">
+              <label class="form-add__label">
+                <span class="visually-hidden">Выберете страну</span>
+                <select name="name-country">
+                  <option value="Bosnia-and-Herzegovina" selected>Босния и герцеговина</option>
+                </select>
+              </label>
+              <button class="form-add__button-close" type="button">
+                <span
+                class="visually-hidden">Закрыть</span>
+              </button>
+              <span class="form-add__icon-flag form-add__icon-flag--Bosnia-and-Herzegovina"></span>
+            </div>
+            <div class="form-add__wrapper-country">
+              <label class="form-add__label">
+                <span class="visually-hidden">Выберете страну</span>
+                <select name="name-country">
+                  <option value="Czech-Republic" selected>Чехия</option>
+                </select>
+              </label>
+              <button class="form-add__button-close" type="button">
+                <span
+                class="visually-hidden">Закрыть</span>
+              </button>
+              <span class="form-add__icon-flag form-add__icon-flag--Czech-Republic"></span>
+            </div>
+            <div class="form-add__wrapper-country">
+              <label class="form-add__label">
+                <span class="visually-hidden">Выберете страну</span>
+                <select name="name-country">
+                  <option value="country-selection" selected>Выберете страну</option>
+                  <option value="Bosnia-and-Herzegovina">Босния и герцеговина</option>
+                  <option value="Czech-Republic">Чехия</option>
+                </select>
+              </label>
+              <button class="form-add__button-close" type="button">
+                <span
+                class="visually-hidden">Закрыть</span>
+              </button>
+              <span class="form-add__icon-flag form-add__icon-flag--open"></span>
+            </div>
+            <button class="form-add__button-add" type="button">Добавить страну</button>
+            <a class="form-add__button-next button" href="#third-step">Следующий шаг</a>
+            <a class="form-add__button-down button" href="#first-step">На шаг назад</a>
+            </li>
+            <li class="form-add__item">
+              <h3 class="form-add__title" id="third-step">
+                Шаг 3. <br />
+                Развлечения
+              </h3>
+              <p class="form-add__text">
+                Наконец, расскажите о своих планах времяпровождения.
+Можно писать в свободной форме и ставить тэги.
+              </p>
+              <label class="form-add__label">
+                <span class="form-add__name-contry">Босния и Герцеговина</span>
+                <textarea name="action-plan" cols="30" rows="10" placeholder="План действий"></textarea>
+              </label>
+              <label class="form-add__label">
+                <span class="form-add__name-contry">Чехия</span>
+                <textarea name="action-plan" cols="30" rows="10"></textarea>
+              </label>
+              <button class="form-add__button" type="submit">Отправить</button>
+              <a class="form-add__button-down button" href="#second-step">На шаг назад</a>
+              </li>
+          </ul>
+        </form>
+      </section>
+    </main>
+
+    <footer class="page-footer">
+      <div class="page-footer__wrapper">
+        <ul class="page-footer__list">
+          <li class="page-footer__item">
+            <svg class="page-footer__svg" width="96px" height="15px"></svg>
+          </li>
+          <li class="page-footer__item">
+            <ul class="page-footer__social-contacts social-contacts">
+              <li class="social-contacts__item">
+                <a class="social-contacts__link" href="#" aria-label="Фейсбук">
+                  <svg
+                    class="social-contacts__svg social-contacts__svg--facebook"
+                    width="11px"
+                    height="21px"
+                  ></svg>
+                </a>
+              </li>
+              <li class="social-contacts__item">
+                <a
+                  class="social-contacts__link"
+                  href="#"
+                  aria-label="ВКонтакте"
+                >
+                  <svg
+                    class="social-contacts__svg social-contacts__svg--vk"
+                    width="23px"
+                    height="12px"
+                  ></svg>
+                </a>
+              </li>
+              <li class="social-contacts__item">
+                <a
+                  class="social-contacts__link"
+                  href="#"
+                  aria-label="Инстаграм"
+                >
+                  <svg
+                    class="social-contacts__svg social-contacts__svg--instagram"
+                    width="18px"
+                    height="18px"
+                  ></svg>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="page-footer__item copyright">
+            <span class="copyright__text">Разработано</span>
+            <a
+              class="copyright__link"
+              href="https://htmlacademy.ru/intensive/adaptive"
+            >
+              <svg width="27" height="34"></svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+  </body>
+</html>
