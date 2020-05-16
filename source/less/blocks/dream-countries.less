@@ -1,0 +1,64 @@
+.dream-countries {
+  width: 100%;
+  position: absolute;
+  z-index: 1;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.dream-countries__list {
+  .list-reset ();
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.dream-countries__item:not(:last-child) {
+  margin-right: 16px;
+}
+
+.dream-countries__item--sri-lanka::before {
+  content: "";
+  display: block;
+  .size (36px; 24px);
+  background-image: url(../../img/flag-sri-lanka.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.dream-countries__item--thailand::before {
+  content: "";
+  display: block;
+  .size (36px; 24px);
+  background-image: url(../../img/flag-thailand.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.dream-countries__item--seychelles::before {
+  content: "";
+  display: block;
+  .size (36px; 24px);
+  background-image: url(../../img/flag-seychelles.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.dream-countries__item--belgium::before {
+  content: "";
+  display: block;
+  .size (36px; 24px);
+  background-image: url(../../img/flag-belgium.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.dream-countries__item--сzech::before {
+  content: "";
+  display: block;
+  .size (36px; 24px);
+  background-image: url(../../img/flag-czech.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
