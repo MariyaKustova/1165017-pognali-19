@@ -1,0 +1,119 @@
+.page-footer__wrapper {
+  width: 100%;
+  background-color: #ffffff;
+  margin-top: -162px;
+  position: relative;
+  z-index: 1;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+}
+
+.page-footer__wrapper-alignment {
+  box-sizing: border-box;
+  padding: 38px 25px 24px;
+}
+
+.page-footer__list {
+  .list-reset ();
+}
+
+.page-footer__logo {
+  display: block;
+  .size (100px; 17px);
+  position: relative;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.page-footer__social-contacts {
+  margin: 37px 0;
+}
+
+.page-footer .social-contacts__item {
+  margin-right: 0;
+}
+
+.page-footer .social-contacts__link {
+  .size (45px; 45px);
+  border-radius: 50%;
+  background-color: @light-gold;
+
+  &:hover {
+    background-color: @mango-two;
+  }
+}
+
+.page-footer .social-contacts__svg {
+  position: relative;
+  top: 14px;
+}
+
+.page-footer__item.copyright {
+  border-top: 1px solid @pale-grey-four;
+}
+
+@media (min-width: @tablet-width) {
+  .page-footer__wrapper {
+    margin-top: -54px;
+    border-top-left-radius: 60px;
+    border-top-right-radius: 60px;
+  }
+
+  .page-footer__wrapper-alignment {
+    padding: 48px 40px 43px;
+  }
+
+  .page-footer__list {
+    display: flex;
+  }
+
+  .page-footer__item {
+    flex-grow: 1;
+  }
+
+  .page-footer__logo {
+    .size (166px; 42px);
+    padding-top: 9px;
+    left: 0;
+    transform: translate(0);
+  }
+
+  .page-footer__social-contacts {
+    padding: 0 11px 0 0px;
+    margin: 0 0 0;
+    justify-content: center;
+
+    .social-contacts__link {
+      .size (60px; 60px);
+    }
+
+    .social-contacts__svg {
+      fill: @dark-slate-blue;
+      top: 17px;
+    }
+  }
+
+  .page-footer__item.copyright {
+    border-top: none;
+    text-align: right;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .page-footer__wrapper-alignment {
+    width: @desktop-width;
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 48px 59px 43px;
+  }
+
+  .page-footer__logo {
+    .size (200px; 52px);
+    padding-top: 4px;
+    padding-left: 2px;
+  }
+
+  .page-footer__social-contacts {
+    padding: 0 47px 0 0;
+  }
+}

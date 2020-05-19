@@ -1,0 +1,57 @@
+button {
+  cursor: pointer;
+}
+
+button:active,
+button:focus {
+  outline: 2px solid #81b3d2;
+}
+
+.button-link {
+  .font (18px; 18px);
+  .font-bold ();
+  .link-reset (@dark-slate-blue);
+  display: block;
+  padding: 22px 24px;
+  background-color: @light-gold;
+  border-radius: 10px;
+  position: relative;
+
+  &:hover {
+    background-color: @mango-two;
+  }
+
+  &:active {
+    color: @dark-slate-blue-30;
+  }
+
+  &:active::before {
+    opacity: 0.3;
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    .size (10px; 14px);
+    background-image: url(../../img/triangle-arrow-right.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    top: 24px;
+    right: 24px;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .button-link {
+    .font (24px; 24px);
+    padding: 28px 35px;
+    border-radius: 20px;
+
+    &::before {
+      content: "";
+      top: 34px;
+      right: 36px;
+    }
+  }
+}

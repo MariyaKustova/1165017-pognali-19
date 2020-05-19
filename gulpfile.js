@@ -34,7 +34,9 @@ gulp.task("css", function () {
 
 gulp.task("images", function () {
   return gulp
-    .src(["source/img/**/*.jpg", "source/img/**/*.svg", "!source/img/**/icon-*.svg" ])
+
+    .src(["source/img/**/*.jpg", "source/img/**/*.png", "source/img/**/*.svg", "!source/img/**/icon-*.svg" ])
+
     .pipe(
       imagemin([
         imagemin.optipng({ optimizationLevel: 3 }),
@@ -47,7 +49,10 @@ gulp.task("images", function () {
 
 gulp.task("webp", function () {
   return gulp
-    .src("source/img/**/*.jpg")
+
+
+    .src(["source/img/content/*.jpg", "source/img/content/*.png"])
+
     .pipe(webp({ quality: 90 }))
     .pipe(gulp.dest("build/img/webp"));
 });

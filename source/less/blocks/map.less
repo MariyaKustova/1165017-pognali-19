@@ -1,0 +1,167 @@
+.map {
+  background-color: @dark-blue-grey;
+}
+
+.map__wrapper {
+  background-color: @light-gold;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  padding-bottom: 35px;
+  position: relative;
+  z-index: 1;
+}
+
+.map__wrapper-content {
+  position: relative;
+}
+
+.map__address {
+  .font (16px; 22px);
+  .font-bold ();
+  text-transform: uppercase;
+  color: @dark-blue-grey;
+  padding: 32px 85px 0;
+  margin: 0 0 32px;
+}
+
+.map__location {
+  display: block;
+  .size (45px; 45px);
+  background-color: @dark-blue-grey-two;
+  border-radius: 50%;
+  position: absolute;
+  top: 30px;
+  left: 25px;
+}
+
+.map__location-svg {
+  fill: @light-gold;
+  position: relative;
+  top: 13px;
+  left: 16px;
+}
+
+.map__route {
+  padding: 19px 20px;
+  margin: 0 25px;
+  border: 3px solid @dark-blue-grey;
+
+  &:hover {
+    color: #ffffff;
+    background-color: @dark-blue-grey;
+  }
+
+  &:hover .map__svg {
+    fill: #ffffff;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+  }
+
+  &:active .map__svg {
+    fill: rgba(255, 255, 255, 0.3);
+  }
+}
+
+.map__svg {
+  fill: @dark-blue-grey;
+  position: absolute;
+  top: 21px;
+  right: 20px;
+}
+
+.map__route.button-link::before {
+  display: none;
+}
+
+iframe {
+  width: 100%;
+  margin-top: -20px;
+  position: relative;
+}
+
+@media (min-width: @tablet-width) {
+  .map__wrapper {
+    padding-bottom: 85px;
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
+  }
+
+  .map__address {
+    .font (28px; 28px);
+    padding: 67px 75px 0 168px;
+    margin: 0 0 64px;
+  }
+
+  .map__location {
+    .size (67px; 67px);
+    top: 47px;
+    left: 76px;
+  }
+
+  .map__location-svg {
+    .size (21px; 31px);
+    top: 20px;
+    left: 22px;
+  }
+
+  .map__route {
+    padding: 25px 33px;
+    margin: 0 75px;
+  }
+
+  .map__svg {
+    top: 31px;
+    right: 33px;
+  }
+
+  iframe {
+    margin-top: -50px;
+    height: 562px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .map__wrapper {
+    padding-bottom: 60px;
+  }
+
+  .map__wrapper-content {
+    width: @desktop-width;
+    box-sizing: border-box;
+    padding: 58px 133px 0px 405px;
+    margin: 0 auto;
+    display: flex;
+    align-items: flex-start;
+  }
+
+  .map__address {
+    padding: 25px 0 0 0;
+    margin: 0;
+  }
+
+  .map__location {
+    .size (90px; 90px);
+    top: 52px;
+    left: 284px;
+  }
+
+  .map__location-svg {
+    .size (28px; 43px);
+    top: 27px;
+    left: 31px;
+  }
+
+  .map__route {
+    margin: 0 0 0 auto;
+    padding-right: 64px;
+  }
+
+  iframe {
+    width: @desktop-width;
+    height: 497px;
+    left: 50%;
+    transform: translate(-50%);
+  }
+}

@@ -1,0 +1,243 @@
+.profile {
+  background-color: @dark-blue-grey;
+}
+
+.profile__wrapper-content {
+  background-color: #edeff6;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+
+.profile__wrapper-alignment {
+  padding: 49px 25px 17px 25px;
+  position: relative;
+}
+
+.profile__title {
+  .title-section ();
+  margin: 0 0 46px;
+  padding-left: 25px;
+  padding-right: 95px;
+}
+
+.profile__list {
+  .list-reset ();
+  padding-left: 25px;
+  padding-right: 62px;
+  margin-bottom: 8px;
+
+  &::before {
+    content: "";
+    display: block;
+    .size (99px; 99px);
+    background-image: url(../../img/rates@1x.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 39px;
+    right: 26px;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../../img/rates@2x.png");
+    }
+  }
+}
+
+.profile__item {
+  padding: 10px 0 11px;
+  border-top: 1px solid @pale-grey-four;
+  position: relative;
+}
+
+.profile__item:last-child {
+  border-bottom: 1px solid @pale-grey-four;
+}
+
+.profile__text {
+  .font (16px; 22px);
+  .font-light ();
+  color: @greyish-brown;
+  margin: 0;
+}
+
+.profile__number {
+  text-align: center;
+  padding-top: 9px;
+  box-sizing: border-box;
+  display: block;
+  .size (34px;34px);
+  border-radius: 50%;
+  position: absolute;
+  top: 3px;
+  right: -61px;
+}
+
+.profile__number--first {
+  background-color: @mango-three;
+}
+
+.profile__number--second {
+  background-color: @mango-two;
+}
+
+.profile__number--third {
+  background-color: @light-gold;
+}
+
+.profile__button {
+  .font (16px; 16px);
+  .font-bold ();
+  color: @dark-blue-grey;
+  width: 100%;
+  padding: 22px 25px;
+  background-color: transparent;
+  border: none;
+
+  &:hover {
+    color: @dark-blue-grey-70;
+  }
+
+  &:active {
+    color: @dark-blue-grey-30;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .profile__wrapper-content {
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
+  }
+
+  .profile__wrapper-alignment {
+    padding: 70px 75px 66px;
+
+    &::before {
+      content: "";
+      display: block;
+      .size (198px; 285px);
+      background-color: @pale-grey-four;
+      opacity: 0.5;
+      border-radius: 20px;
+      position: absolute;
+      top: 27%;
+      right: 5.5%;
+    }
+  }
+
+  .profile__title {
+    .title-section-tablet ();
+    text-align: center;
+    padding: 0;
+    margin-bottom: 77px;
+  }
+
+  .profile__text {
+    .font (28px; 33px);
+  }
+
+  .profile__list {
+    padding: 0 0 0 55px;
+    margin-bottom: 35px;
+
+    &::before {
+      content: "";
+      top: 73.5%;
+      right: 11.5%;
+    }
+  }
+
+  .profile__item {
+    display: flex;
+    padding: 14px 0 18px;
+  }
+
+  .profile__text--second {
+    margin-left: auto;
+  }
+
+  .profile__number {
+    .font (28px; 28px);
+    padding-top: 20px;
+    .size (67px;67px);
+    top: -2px;
+    right: 104%;
+  }
+
+  .profile__button {
+    .font (20px; 20px);
+    color: @light-navy;
+    text-align: left;
+    padding-left: 54px;
+    position: relative;
+
+    &::before {
+      content: "";
+      display: block;
+      .size (67px;67px);
+      background-color: @pale-grey-four;
+      border-radius: 50%;
+      position: absolute;
+      left: -35px;
+      top: 0;
+    }
+
+    &::after {
+      content: "";
+      display: block;
+      .size (17px;21px);
+      background-image: url(../../img/business.svg);
+      background-repeat: no-repeat;
+      background-size: 17px 21px;
+      position: absolute;
+      left: -10px;
+      top: 21px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    .profile__wrapper-content {
+      border-bottom-left-radius: 60px;
+      border-bottom-right-radius: 60px;
+    }
+
+    .profile__wrapper-alignment {
+      width: @desktop-width;
+      margin: 0 auto;
+      padding: 103px 167px 168px;
+      box-sizing: border-box;
+
+      &::before {
+        content: "";
+        display: block;
+        .size (444px; 300px);
+        top: 31%;
+        right: 17%;
+      }
+    }
+
+    .profile__title {
+      .title-section-tablet ();
+      text-align: center;
+      padding: 0;
+      margin-bottom: 136px;
+    }
+
+    .profile__list {
+      padding: 0 237px 0 55px;
+      margin-bottom: 35px;
+      position: relative;
+
+      &::before {
+        content: "";
+        display: block;
+        .size (198px; 198px);
+        top: 1.5%;
+        right: -3%;
+      }
+    }
+
+    .profile__number {
+      right: 103%;
+    }
+  }
+}

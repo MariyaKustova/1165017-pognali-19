@@ -1,0 +1,61 @@
+.font (@size; @line-height) {
+  font-size: @size;
+  line-height: @line-height;
+}
+
+.list-reset () {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.link-reset (@color) {
+  text-decoration: none;
+  color: @color;
+}
+
+.size (@widht; @height) {
+  width: @widht;
+  height: @height;
+}
+
+.font-bold () {
+  font-family: "BloggerSans-Bold", "Arial", sans-serif;
+}
+
+.font-medium () {
+  font-family: "BloggerSans-Medium", "Arial", sans-serif;
+}
+
+.font-light () {
+  font-family: "BloggerSans-Light", "Arial", sans-serif;
+}
+.font-lightitalic () {
+  font-family: "BloggerSans-Light-Italic", "Arial", sans-serif;
+}
+
+.font-italic () {
+  font-family: "BloggerSans-Italic", "Arial", sans-serif;
+}
+
+.font-mediumitalic () {
+  font-family: "BloggerSans-Medium-Italic", "Arial", sans-serif;
+}
+
+.font-bolditalic () {
+  font-family: "BloggerSans-Bold-Italic", "Arial", sans-serif;
+}
+
+.title-section () {
+  .font(24px, 24px);
+  .font-bold ();
+  color: @mango;
+  margin-top: 0;
+}
+
+.title-section-tablet () {
+  .font(45px, 45px);
+  .font-bold ();
+  color: @mango;
+  margin-top: 0;
+}
