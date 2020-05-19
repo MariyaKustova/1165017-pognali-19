@@ -1,0 +1,39 @@
+.music {
+  .list-reset ();
+  margin-bottom: 7px;
+}
+
+.music__checkbox {
+  display: inline-block;
+  vertical-align: top;
+  .size (18px; 18px);
+  border-radius: 5px;
+  background-color: #ffffff;
+  margin-right: 5px;
+}
+
+.music__type {
+  .font (15px; 15px);
+}
+
+.music__item {
+  padding-bottom: 12px;
+}
+
+.music__label input[type="checkbox"]:checked + span {
+  &::before {
+    content: "";
+    display: block;
+    .size (9px; 9px);
+    background-image: url("../../img/tick.svg");
+    background-repeat: no-repeat;
+    background-size: 9px 9px;
+    position: relative;
+    top: 4px;
+    left: 5px;
+  }
+}
+
+.music__label input[type="checkbox"]:focus + span {
+  outline: 2px solid #81b3d2;
+}

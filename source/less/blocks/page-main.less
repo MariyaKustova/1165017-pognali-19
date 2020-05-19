@@ -8,7 +8,7 @@
     background-image: url("../../img/globe-back-mobile@2x.jpg");
   }
 }
-  .page-main__wrapper-alignment {
+.page-main__wrapper-alignment {
   min-height: 405px;
   display: flex;
   flex-direction: column;
@@ -109,6 +109,304 @@
   }
 }
 
+// Внутренняя страница
+
+.page-main--inner-page {
+  background-color: @pale-grey;
+  padding-bottom: 88px;
+
+  .page-main__list.contacts {
+    display: none;
+  }
+
+  .companions__list {
+    .list-reset ();
+    padding: 0 25px;
+    margin-bottom: 13px;
+  }
+
+  .companions__item {
+    padding: 13px 0 22px;
+    background-color: #ffffff;
+    border-radius: 20px;
+    position: relative;
+
+    &::before {
+      content: "";
+      .size (6px; 6px);
+      border-radius: 50%;
+      background-color: @salmon;
+      position: absolute;
+      top: 23px;
+      right: 22px;
+    }
+  }
+
+  .companions__item:last-child {
+    &::before {
+      background-color: @green-apple;
+    }
+  }
+
+  .companions__link {
+    .link-reset (@dark-slate-blue);
+  }
+
+  .companions__wrapper-name {
+    display: inline-block;
+    vertical-align: top;
+  }
+
+  .companions__name {
+    .font (20px; 20px);
+    margin: 0 0 0;
+  }
+
+  .companions__img {
+    border-radius: 50%;
+  }
+
+  .companions__link-img {
+    .size (70px; 70px);
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+    margin: 2px 16px 0 19px;
+  }
+
+  .companions__like {
+    .size (31px; 31px);
+    border-radius: 50%;
+    background-color: @pale-grey;
+    position: absolute;
+    bottom: -1px;
+    right: -9px;
+  }
+
+  .companions__like--active {
+    background-color: @very-light-pink-two;
+  }
+
+  .companions__svg-heart {
+    fill: @dark-blue-grey-30;
+    position: relative;
+    top: 8px;
+    left: 9px;
+  }
+
+  .companions__svg-heart--active {
+    fill: @tomato;
+  }
+
+  .companions__experience {
+    .font (14px; 21px);
+    .font-bold ();
+    text-transform: uppercase;
+    color: @dark-two;
+    margin-top: 7px;
+  }
+
+  .companions__preferences {
+    .font (15px; 18px);
+    color: @greyish-brown;
+    padding-right: 30px;
+    margin: 3px 25px 25px;
+  }
+
+  .companions__dream-countries {
+    position: relative;
+    &::before {
+      content: "";
+      display: block;
+      .size (100%; 1px);
+      background-color: @pale-grey;
+      position: absolute;
+      top: 10px;
+    }
+  }
+
+  .companions__dream-countries--second {
+    margin-bottom: 6px;
+  }
+
+  .companions__dream-countries--third {
+    margin-bottom: 4px;
+  }
+
+  .companions__dream-countries--fourth {
+    margin-bottom: 5px;
+  }
+
+  .dream-countries__span {
+    .font (15px; 18px);
+    .font-bold ();
+    text-transform: uppercase;
+    color: @dark-slate-blue;
+  }
+
+  .dream-countries__list {
+    flex-direction: column;
+    padding: 0 25px;
+    margin-bottom: 0;
+  }
+
+  .dream-countries__item:not(:last-child) {
+    margin-bottom: 10px;
+  }
+
+  .dream-countries__item--sri-lanka::before,
+  .dream-countries__item--thailand::before,
+  .dream-countries__item--seychelles::before,
+  .dream-countries__item--belgium::before,
+  .dream-countries__item--сzech::before,
+  .dream-countries__item--usa::before,
+  .dream-countries__item--australia::before,
+  .dream-countries__item--dominica::before,
+  .dream-countries__item--germany::before,
+  .dream-countries__item--united-kingdom::before {
+    .size (26px; 18px);
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 13px;
+  }
+
+  .companions__heading {
+    .font (15px; 18px);
+    color: @greyish-brown;
+    background-color: #ffffff;
+    padding: 0 14px;
+    margin: 0 12px 16px 12px;
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+  }
+
+  .companions__wrapper-info {
+    display: flex;
+    position: relative;
+    margin-bottom: 19px;
+
+    &::before {
+      content: "";
+      display: block;
+      .size (100%; 1px);
+      background-color: @pale-grey;
+      position: absolute;
+      top: 10px;
+    }
+  }
+
+  .transport__list {
+    padding-left: 25px;
+  }
+
+  .transport__item {
+    .size (33px; 33px);
+    background-color: @pale-grey;
+    border-radius: 50%;
+    position: relative;
+  }
+
+  .transport__item:not(:last-child) {
+    margin-right: 0;
+  }
+
+  .transport__svg--plane {
+    .size (14px; 18px);
+    position: absolute;
+    top: 7px;
+    left: 8px;
+  }
+
+  .transport__svg--bus {
+    .size (13px; 16px);
+    position: absolute;
+    top: 8px;
+    left: 10px;
+  }
+
+  .transport__svg--bike {
+    .size (19px; 17px);
+    position: absolute;
+    top: 6px;
+    left: 6px;
+  }
+
+  .transport__svg--run {
+    .size (15px; 17px);
+    position: absolute;
+    top: 8px;
+    left: 8px;
+  }
+
+  .companions__level {
+    .size (40px; 40px);
+    background-color: #ffffff;
+    position: relative;
+    margin-left: auto;
+    top: 26px;
+    left: -20px;
+
+    &::before {
+      display: none;
+    }
+  }
+
+  .companions__heading--level {
+    top: -29px;
+    right: 25px;
+  }
+
+  .companions__number {
+    .font (24px; 18px);
+    color: @dark-slate-blue;
+    top: -12px;
+    left: 8px;
+  }
+
+  .companions__button {
+    .font (17px; 30px);
+    .font-bold ();
+    .link-reset (@dark-two);
+    text-align: center;
+    text-transform: uppercase;
+    box-sizing: border-box;
+    position: relative;
+  }
+
+  .companions__button--gold {
+    display: block;
+    background-color: @light-gold;
+    border-radius: 20px;
+    margin: 0 21px;
+    padding: 5px 10px;
+  }
+
+  .companions__button--more {
+    display: inline-block;
+    vertical-align: top;
+    padding: 5px 10px 5px 42px;
+    margin-bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .companions__button--more::before,
+  .companions__button--more::after {
+    content: "";
+    display: block;
+    .size (18px; 2px);
+    background-color: @dark-slate-blue;
+    position: absolute;
+    top: 19px;
+    left: 8px;
+  }
+
+  .companions__button--more::before {
+    transform: rotate(90deg);
+  }
+}
+
 @media (min-width: @tablet-width) {
   .page-main__user-nav {
     position: relative;
@@ -168,12 +466,22 @@
       right: 0;
     }
   }
+
+  // Внутренняя страница
+
+  .page-main--inner-page {
+    .page-main__list.contacts {
+      display: block;
+      top: 40px;
+    }
+  }
 }
 
 @media (min-width: @desktop-width) {
   .page-main__list.contacts {
-    padding-right: 59px;
-    top: -48px;
+    max-width: 500px;
+    padding-right: 60px;
+    top: -50px;
 
     .contacts__item:not(:last-child) {
       display: block;
@@ -196,7 +504,8 @@
 
   .page-main__user-nav {
     background-image: url(../../img/globe-back-desktop@1x.jpg);
-    background-position: center -105px;
+    background-position: center 0;
+    min-height: 650px;
 
     @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
       background-image: url(../../img/globe-back-desktop@2x.jpg);
@@ -207,7 +516,7 @@
     width: @desktop-width;
     box-sizing: border-box;
     margin: 0 auto;
-    min-height: 653px;
+    min-height: 650px;
     padding-bottom: 250px;
     position: relative;
 
