@@ -1,0 +1,31 @@
+.copyright__text {
+  .font (16px; 22px);
+  margin-right: auto;
+  margin-top: 4px;
+}
+
+.copyright__link {
+  .link-reset (@greyish-brown);
+  width: 100%;
+  padding-top: 13px;
+  display: flex;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .copyright__text {
+    .font (20px; 24px);
+    margin-right: 25px;
+  }
+
+  .copyright__link {
+    justify-content: flex-end;
+  }
+}

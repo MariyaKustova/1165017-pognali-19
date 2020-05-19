@@ -1,0 +1,43 @@
+.review {
+  .font (16px; 22px);
+  padding: 46px 115px 113px 50px;
+  background-color: @dark-two;
+}
+
+.review__text {
+  .font-light ();
+  margin: 0 0 18px 0;
+}
+
+.review__author-name {
+  font-style: normal;
+  .font-bold ();
+  margin: 0;
+}
+
+@media (min-width: @tablet-width) {
+  .review {
+    .font (28px; 33px);
+    width: 260px;
+    padding: 0;
+    background-color: transparent;
+    position: absolute;
+    top: 455px;
+    left: 74px;
+  }
+
+  .review__text {
+    margin: 0 0 44px 0;
+  }
+
+  .review__author-name {
+    .font (21px; 25px);
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .review {
+    top: 218px;
+    left: 70%;
+  }
+}

@@ -1,0 +1,167 @@
+.service {
+  background-color: @dark-blue-grey;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  position: relative;
+  z-index: 1;
+}
+
+.service__wrapper-alignment {
+  .font (16px; 22px);
+  min-height: 260px;
+  padding: 33px 61px 61px 49px;
+  position: relative;
+  z-index: 1;
+
+  &::after {
+    content: "";
+    display: block;
+    .size (292px; 352px);
+    background-image: url(../../img/about-mobile@1x.png);
+    background-size: 292px 352px;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    right: 50%;
+    transform: translateX(50%);
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../../img/about-mobile@2x.png");
+    }
+  }
+}
+
+.service__title {
+  .title-section ();
+  margin-top: 0;
+  margin-bottom: 19px;
+}
+
+.service__text {
+  .font-light ();
+  margin-bottom: 20px;
+}
+
+.service__text--second {
+  .font-bold ();
+}
+
+.service__button {
+  display: none;
+}
+
+@media (min-width: @tablet-width) {
+  .service {
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
+  }
+
+  .service__wrapper-alignment {
+    .font (28px; 33px);
+    padding: 40px 51% 89px 74px;
+    min-height: 558px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    &::after {
+      content: "";
+      display: block;
+      .size (376px; 548px);
+      background-image: url(../../img/about-tablet@1x.png);
+      background-size: 376px 548px;
+      position: absolute;
+      top: 50px;
+      right: 25.5%;
+
+      @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+        background-image: url("../../img/about-tablet@2x.png");
+      }
+    }
+
+    &::before {
+      content: "";
+      display: block;
+      .size (688px; 213px);
+      background-color: @dark-blue-grey-four;
+      border-radius: 20px;
+      position: absolute;
+      z-index: -1;
+      top: 0;
+      left: 40px;
+    }
+  }
+
+  .service__title {
+    .title-section-tablet ();
+    margin-bottom: 14px;
+  }
+
+  .service__text {
+    margin-bottom: 11px;
+  }
+
+  .service__text--second {
+    .font (21px; 25px);
+    .font-bold ();
+  }
+
+  .service__button {
+    display: inline-block;
+    padding: 28px 124px 28px 35px;
+    margin-top: auto;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .service {
+    min-height: 751px;
+  }
+
+  .service__wrapper-alignment {
+    width: @desktop-width;
+    box-sizing: border-box;
+    padding: 128px 680px 65px 130px;
+    margin: 0 auto;
+
+    &::after {
+      content: "";
+      .size (630px; 665px);
+      background-image: url(../../img/about-desktop@1x.png);
+      background-size: 630px 665px;
+      top: 86px;
+      right: 375px;
+
+      @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+        background-image: url("../../img/about-desktop@2x.png");
+      }
+    }
+
+    &::before {
+      content: "";
+      display: block;
+      .size (213px; 213px);
+      top: 70px;
+      left: 60px;
+    }
+  }
+
+  .service__title {
+    margin-bottom: 31px;
+  }
+
+  .service__text {
+    margin-bottom: 18px;
+  }
+
+  .service__text--second {
+    margin-bottom: 86px;
+    padding-right: 160px;
+  }
+
+  .service__button {
+    margin-right: 0;
+    width: max-content;
+    padding-right: 125px;
+  }
+}
