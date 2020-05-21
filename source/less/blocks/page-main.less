@@ -126,26 +126,15 @@
   }
 
   .companions__item {
-    padding: 13px 0 22px;
+    padding: 13px 0 62px;
     background-color: #ffffff;
     border-radius: 20px;
     position: relative;
-
-    &::before {
-      content: "";
-      .size (6px; 6px);
-      border-radius: 50%;
-      background-color: @salmon;
-      position: absolute;
-      top: 23px;
-      right: 22px;
-    }
   }
 
-  .companions__item:last-child {
-    &::before {
-      background-color: @green-apple;
-    }
+  .companions__wrapper-link {
+    display: flex;
+    flex-grow: 1;
   }
 
   .companions__link {
@@ -153,13 +142,40 @@
   }
 
   .companions__wrapper-name {
-    display: inline-block;
-    vertical-align: top;
+    width: calc(74% - 41px);
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    min-height: 146px;
   }
 
   .companions__name {
     .font (20px; 20px);
     margin: 0 0 0;
+    padding-right: 60px;
+    position: relative;
+  }
+
+  .companions__name--red,
+  .companions__name--green {
+    &::before {
+      content: "";
+      display: block;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      position: absolute;
+      top: 10px;
+      right: 17px;
+    }
+  }
+
+  .companions__name--red::before {
+    background-color: @salmon;
+  }
+
+  .companions__name--green::before {
+    background-color: @green-apple;
   }
 
   .companions__img {
@@ -167,50 +183,82 @@
   }
 
   .companions__link-img {
-    .size (70px; 70px);
-    display: inline-block;
-    vertical-align: top;
-    position: relative;
+    width: 70px;
     margin: 2px 16px 0 19px;
   }
 
   .companions__like {
+    display: flex;
+    position: relative;
+    left: -38px;
+  }
+
+  .companions__heart {
     .size (31px; 31px);
     border-radius: 50%;
     background-color: @pale-grey;
-    position: absolute;
-    bottom: -1px;
-    right: -9px;
+    margin-right: 6px;
+    order: 1;
+    border: none;
+
+    &:hover .companions__svg-heart {
+      opacity: 0.5;
+    }
+
+    &:active .companions__svg-heart {
+      opacity: 0.1;
+    }
   }
 
-  .companions__like--active {
+  .companions__heart--active {
     background-color: @very-light-pink-two;
+
+    &:hover {
+      background-color: @light-tan;
+    }
+
+    &:hover .companions__svg-heart--active {
+      opacity: 1;
+    }
+
+    &:active .companions__svg-heart--active {
+      opacity: 0.3;
+    }
   }
 
   .companions__svg-heart {
     fill: @dark-blue-grey-30;
     position: relative;
-    top: 8px;
-    left: 9px;
+    top: 2px;
+    left: 1px;
   }
 
   .companions__svg-heart--active {
     fill: @tomato;
   }
 
-  .companions__experience {
+  .companions__number-like {
     .font (14px; 21px);
     .font-bold ();
     text-transform: uppercase;
     color: @dark-two;
     margin-top: 7px;
+    order: 2;
   }
 
   .companions__preferences {
     .font (15px; 18px);
     color: @greyish-brown;
-    padding-right: 30px;
-    margin: 3px 25px 25px;
+    margin: 12px 0 16px;
+    order: 3;
+    width: 180px;
+    position: relative;
+    left: -79px;
+    bottom: 9px;
+  }
+
+  .companions__control {
+    margin-top: auto;
   }
 
   .companions__dream-countries {
@@ -245,9 +293,10 @@
   }
 
   .dream-countries__list {
-    flex-direction: column;
     padding: 0 25px;
     margin-bottom: 0;
+    display: flex;
+    flex-direction: column;
   }
 
   .dream-countries__item:not(:last-child) {
@@ -268,6 +317,7 @@
     display: inline-block;
     vertical-align: top;
     margin-right: 13px;
+    background-size: 26px 18px;
   }
 
   .companions__heading {
@@ -352,9 +402,13 @@
     }
   }
 
-  .companions__heading--level {
+  .companions__heading--level-cir {
     top: -29px;
     right: 25px;
+  }
+
+  .companions__heading--level {
+    display: none;
   }
 
   .companions__number {
@@ -378,8 +432,19 @@
     display: block;
     background-color: @light-gold;
     border-radius: 20px;
-    margin: 0 21px;
     padding: 5px 10px;
+    position: absolute;
+    bottom: 21px;
+    left: 20px;
+    width: calc(100% - 40px);
+
+    &:hover {
+      background-color: @mango-two;
+    }
+
+    &:active {
+      color: @dark-two-30;
+    }
   }
 
   .companions__button--more {
@@ -404,6 +469,20 @@
 
   .companions__button--more::before {
     transform: rotate(90deg);
+  }
+
+  .companions__button--more {
+    &:hover,
+    &:hover::before,
+    &:hover::after {
+      opacity: 0.6;
+    }
+
+    &:active,
+    &:active::before,
+    &:active::after {
+      opacity: 0.3;
+    }
   }
 }
 
@@ -470,9 +549,251 @@
   // Внутренняя страница
 
   .page-main--inner-page {
+    padding-bottom: 102px;
+
     .page-main__list.contacts {
       display: block;
       top: 40px;
+    }
+
+    .companions__list {
+      padding: 0 40px;
+      margin-bottom: 39px;
+      flex-direction: column;
+    }
+
+    .companions__item {
+      width: 100%;
+      padding: 31px 25px 107px 35px;
+      box-sizing: border-box;
+      display: flex;
+
+      &::before {
+        display: none;
+      }
+    }
+
+    .companions__item:not(:last-child) {
+      margin-bottom: 41px;
+    }
+
+    .companions__item:not(:nth-child(2n)) {
+      margin-right: 0;
+    }
+
+    .companions__link-img {
+      width: 36.5%;
+      margin: 2px 29px 0 0;
+      align-self: flex-start;
+    }
+
+    .companions__img {
+      border-radius: 20px;
+    }
+
+    .companions__like {
+      align-items: center;
+    }
+
+    .companions__number-like {
+      .font (20px; 30px);
+      margin: 0;
+    }
+
+    .companions__heart {
+      .size (50px; 50px);
+      margin-right: 10px;
+    }
+
+    .companions__svg-heart {
+      .size (20px; 17px);
+      top: 4px;
+      left: 1px;
+    }
+
+    .companions__name {
+      .font (30px; 30px);
+      display: inline-block;
+      vertical-align: top;
+      padding-left: 4px;
+      padding-right: 29px;
+
+      &::before {
+        .size(7px; 7px);
+        top: 13px;
+        right: 0;
+      }
+    }
+
+    .companions__preferences {
+      .font (20px; 24px);
+      width: auto;
+      margin: 17px 0 0 8px;
+      padding-right: 90px;
+      left: 0;
+      bottom: 0;
+    }
+
+    .companions__control {
+      order: 3;
+      display: flex;
+    }
+
+    .companions__wrapper-info {
+      margin-bottom: 0;
+      position: relative;
+      flex-direction: column;
+
+      &::before {
+        display: none;
+      }
+
+      .companions__heading {
+        display: none;
+      }
+    }
+
+    .transport__list {
+      padding-left: 20px;
+      flex-direction: column;
+    }
+
+    .transport__item {
+      background-color: transparent;
+    }
+
+    .transport__svg--plane {
+      .size (19px; 21px);
+      top: 7px;
+      left: -2px;
+    }
+
+    .transport__svg--bus {
+      .size (17px; 21px);
+      top: 6px;
+      left: 1px;
+    }
+
+    .transport__svg--bike {
+      .size (24px; 21px);
+      top: 3px;
+      left: -3px;
+    }
+
+    .transport__svg--run {
+      .size (20px; 21px);
+      top: 5px;
+      left: 0px;
+    }
+
+    .companions__level {
+      .size (55px; 55px);
+      top: 4px;
+      left: 0;
+      margin-top: auto;
+
+      &::before {
+        content: "";
+        display: block;
+        width: 31px;
+        height: 1px;
+        background-color: @greyish-brown-40;
+        opacity: 0.3;
+        position: absolute;
+        top: 33px;
+        left: 12px;
+      }
+
+      .companions__heading--level {
+        display: block;
+        color: @greyish-brown-40;
+        background-color: transparent;
+        margin: 0;
+        top: 34px;
+        left: -1px;
+      }
+    }
+
+    .companions__number {
+      .font (24px; 24px);
+      top: -14px;
+      left: 15px;
+    }
+
+    .companions__wrapper-name {
+      width: calc(74% - 41px);
+      min-height: 146px;
+      flex-direction: column;
+    }
+
+    .companions__dream-countries {
+      width: 100%;
+      position: absolute;
+      top: auto;
+      bottom: 21px;
+    }
+
+    .companions__dream-countries--second,
+    .companions__dream-countries--third,
+    .companions__dream-countries--fourth {
+      margin-bottom: 0;
+    }
+
+    .dream-countries__list {
+      padding: 0 35px;
+      flex-direction: row;
+      justify-content: start;
+    }
+
+    .dream-countries__item:not(:last-child) {
+      margin-right: 24px;
+      margin-bottom: 0;
+    }
+
+    .dream-countries__span {
+      .font (20px; 30px);
+    }
+
+    .dream-countries__item--sri-lanka::before,
+    .dream-countries__item--thailand::before,
+    .dream-countries__item--seychelles::before,
+    .dream-countries__item--belgium::before,
+    .dream-countries__item--сzech::before,
+    .dream-countries__item--usa::before,
+    .dream-countries__item--australia::before,
+    .dream-countries__item--dominica::before,
+    .dream-countries__item--germany::before,
+    .dream-countries__item--united-kingdom::before {
+      .size (36px; 24px);
+      margin-right: 10px;
+      background-size: 36px 24px;
+    }
+
+    .companions__heading {
+      margin: 0 69px 18px;
+    }
+
+    .companions__button.companions__button--gold {
+      .font (20px; 30px);
+      padding: 10px 31px;
+      border-radius: 30px;
+      width: auto;
+      margin-right: 38px;
+      position: relative;
+      bottom: 0;
+      left: 0;
+    }
+
+    .companions__button--more {
+      .font (20px; 30px);
+      padding-left: 50px;
+      margin-bottom: 44px;
+
+      &::before,
+      &::after {
+        .size (27px; 3px);
+        left: -1px;
+      }
     }
   }
 }
@@ -540,5 +861,184 @@
     text-align: left;
     padding: 108px 0 0 127px;
     max-width: 400px;
+  }
+
+  // Внутренняя страница
+
+  .page-main--inner-page {
+    padding-bottom: 116px;
+
+    .page-main__list.contacts {
+      display: flex;
+      top: 49px;
+      right: 83px;
+    }
+
+    .page-main__wrapper-section {
+      width: @desktop-width;
+      box-sizing: border-box;
+      margin: 0 auto;
+      padding: 0 60px;
+      display: flex;
+    }
+
+    .page-main__choice {
+      order: 2;
+    }
+
+    .companions {
+      flex-grow: 1;
+    }
+
+    .companions__list {
+      padding: 0;
+      margin-bottom: 59px;
+    }
+
+    .companions__item {
+      padding: 0;
+      display: flex;
+      min-height: 285px;
+    }
+
+    .companions__item:not(:last-child) {
+      margin-bottom: 30px;
+    }
+
+    .companions__wrapper-link {
+      width: 76%;
+    }
+
+    .companions__wrapper-name {
+      width: 55%;
+      box-sizing: border-box;
+      padding: 46px 0 47px 60px;
+    }
+
+    .companions__name {
+      padding: 0;
+
+      &::before {
+        right: auto;
+        left: -25px;
+        top: 12px;
+      }
+    }
+
+    .companions__link-img {
+      width: 285px;
+      margin: 0;
+    }
+
+    .companions__img {
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+
+    .companions__preferences {
+      padding-right: 0;
+      width: auto;
+      margin: 17px 0 0 4px;
+      padding-right: 30px;
+    }
+
+    .companions__control {
+      position: relative;
+      left: -2px;
+    }
+
+    .companions__button.companions__button--gold {
+      padding: 10px 30px;
+      margin-right: 0;
+    }
+
+    .companions__wrapper-info {
+      margin-top: auto;
+      width: auto;
+      flex-direction: row;
+      align-items: flex-end;
+      padding: 0;
+    }
+
+    .transport__list {
+      flex-direction: row;
+      padding-left: 20px;
+    }
+
+    .companions__like {
+      left: 0;
+    }
+
+    .companions__container {
+      width: 37%;
+      box-sizing: border-box;
+      padding: 49px 30px 39px 42px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .companions__dream-countries {
+      position: relative;
+      width: auto;
+      top: 0;
+      left: 0;
+      transform: translateX(0);
+
+      &::before {
+        display: none;
+      }
+    }
+
+    .dream-countries__list {
+      padding: 0;
+      flex-direction: column;
+    }
+
+    .dream-countries__item--australia::before,
+    .dream-countries__item--belgium::before,
+    .dream-countries__item--dominica::before,
+    .dream-countries__item--germany::before,
+    .dream-countries__item--seychelles::before,
+    .dream-countries__item--sri-lanka::before,
+    .dream-countries__item--thailand::before,
+    .dream-countries__item--united-kingdom::before,
+    .dream-countries__item--usa::before,
+    .dream-countries__item--сzech::before {
+      margin-right: 18px;
+    }
+
+    .dream-countries__item:not(:last-child) {
+      margin-bottom: 6px;
+    }
+
+    .companions__heading {
+      display: none;
+    }
+
+    .companions__transport {
+      margin-bottom: 17px;
+      margin-left: 2px;
+    }
+
+    .transport__list {
+      padding-left: 0;
+    }
+
+    .companions__level {
+      top: -3px;
+      margin-right: 14px;
+    }
+
+    .page-main__alignment {
+      width: @desktop-width;
+      box-sizing: border-box;
+      margin: 0 auto;
+    }
+
+    .companions__button--more {
+      bottom: 0;
+      transform: translateX(-66%);
+      margin-bottom: 63px;
+    }
   }
 }

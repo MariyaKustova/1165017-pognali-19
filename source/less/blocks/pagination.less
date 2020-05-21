@@ -1,7 +1,19 @@
 .pagination {
+  width: 100%;
+  display: flex;
+  box-sizing: border-box;
+  padding: 0 25px;
+}
+
+.pagination__list--arrow {
+  width: 100%;
   .list-reset ();
   display: flex;
-  margin: 0 25px
+}
+
+.pagination__list--number-page {
+  .list-reset ();
+  display: none;
 }
 
 .pagination__item {
@@ -37,9 +49,9 @@
   background-repeat: no-repeat;
   background-size: 10px 20px;
   position: relative;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%; 50%);
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%; 50%);
 }
 
 .pagination__link--next::before {
@@ -50,7 +62,85 @@
   background-repeat: no-repeat;
   background-size: 10px 20px;
   position: relative;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%; 50%);
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%; 50%);
+}
+
+.pagination__link {
+  &:hover::before {
+    opacity: 0.6;
+  }
+
+  &:active::before {
+    opacity: 0.3;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .pagination {
+    padding: 25px 28px;
+    margin: 0 40px;
+    width: calc(100% - 80px);
+    background-color: #fff;
+    border-radius: 20px;
+  }
+
+  .pagination__list--number-page {
+    display: flex;
+
+    .pagination__link {
+      .link-reset (@dark-two);
+      display: block;
+      .size (50px; 50px);
+      border-radius: 50%;
+      background-color: #ffffff;
+
+      &:hover {
+        color: @dark-two-60;
+      }
+
+      &:active {
+        background-color: @light-gold;
+      }
+    }
+
+    .pagination__link--active {
+      color: @dark-two;
+      background-color: @light-gold;
+    }
+  }
+
+  .pagination__number {
+    .font (20px; 30px);
+    .font-bold ();
+    position: relative;
+    top: 10px;
+    left: 19px;
+  }
+
+  .pagination__list--arrow {
+    width: auto;
+    margin-left: auto;
+
+    .pagination__item {
+      .size (25px; 50px);
+      margin-left: 18px;
+    }
+  }
+
+  .pagination__item:last-child {
+    border-left: none;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .pagination {
+  width: 950px;
+  margin: 0 60px;
+}
+
+.pagination__list {
+  margin-right: 8px;
+}
 }
