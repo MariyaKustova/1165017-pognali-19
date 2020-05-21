@@ -1,0 +1,28 @@
+.level-icon {
+  text-align: center;
+  .size (95px; 95px);
+  border-radius: 50%;
+  border: 3px solid @mango;
+}
+
+.level-icon__number {
+  .font (38px; 38px);
+  .font-bold ();
+  color: @dark-two;
+  margin: 20px 0 0;
+
+  &::after {
+    content: "";
+    display: block;
+    .size (49px; 2px);
+    background-color: @cloudy-blue;
+    position: relative;
+    left: 22px;
+  }
+}
+
+.level-icon__info {
+  .font (18px; 22px);
+  color: @greyish-brown;
+  margin: 0;
+}
