@@ -9,6 +9,10 @@
   }
 }
 .page-main__wrapper-alignment {
+  position: relative;
+}
+
+.page-main__container {
   min-height: 405px;
   display: flex;
   flex-direction: column;
@@ -93,6 +97,7 @@
   .contacts__wrapper-svg--mail {
     background-color: @mango-two;
   }
+
   .contacts__svg {
     fill: @dark-two;
     position: relative;
@@ -114,10 +119,6 @@
 .page-main--inner-page {
   background-color: @pale-grey;
   padding-bottom: 88px;
-
-  .page-main__list.contacts {
-    display: none;
-  }
 
   .companions__list {
     .list-reset ();
@@ -350,45 +351,6 @@
     padding-left: 25px;
   }
 
-  .transport__item {
-    .size (33px; 33px);
-    background-color: @pale-grey;
-    border-radius: 50%;
-    position: relative;
-  }
-
-  .transport__item:not(:last-child) {
-    margin-right: 0;
-  }
-
-  .transport__svg--plane {
-    .size (14px; 18px);
-    position: absolute;
-    top: 7px;
-    left: 8px;
-  }
-
-  .transport__svg--bus {
-    .size (13px; 16px);
-    position: absolute;
-    top: 8px;
-    left: 10px;
-  }
-
-  .transport__svg--bike {
-    .size (19px; 17px);
-    position: absolute;
-    top: 6px;
-    left: 6px;
-  }
-
-  .transport__svg--run {
-    .size (15px; 17px);
-    position: absolute;
-    top: 8px;
-    left: 8px;
-  }
-
   .companions__level {
     .size (40px; 40px);
     background-color: #ffffff;
@@ -498,7 +460,7 @@
     }
   }
 
-  .page-main__wrapper-alignment {
+  .page-main__container {
     min-height: 862px;
     box-sizing: border-box;
     padding-bottom: 540px;
@@ -526,35 +488,13 @@
   }
 
   .page-main__list.contacts {
-    width: auto;
-    justify-content: flex-end;
-    padding-right: 39px;
-    position: absolute;
-    top: -91px;
-    right: 0;
-
-    .contacts__item:not(:last-child) {
-      display: none;
-    }
-
-    .contacts__link {
-      .font (20px; 30px);
-      padding: 10px 30px;
-      position: relative;
-      top: 0px;
-      right: 0;
-    }
+    display: none;
   }
 
   // Внутренняя страница
 
   .page-main--inner-page {
     padding-bottom: 102px;
-
-    .page-main__list.contacts {
-      display: block;
-      top: 40px;
-    }
 
     .companions__list {
       padding: 0 40px;
@@ -654,36 +594,10 @@
     }
 
     .transport__list {
-      padding-left: 20px;
+      padding-left: 7px;
       flex-direction: column;
-    }
-
-    .transport__item {
-      background-color: transparent;
-    }
-
-    .transport__svg--plane {
-      .size (19px; 21px);
-      top: 7px;
-      left: -2px;
-    }
-
-    .transport__svg--bus {
-      .size (17px; 21px);
-      top: 6px;
-      left: 1px;
-    }
-
-    .transport__svg--bike {
-      .size (24px; 21px);
-      top: 3px;
-      left: -3px;
-    }
-
-    .transport__svg--run {
-      .size (20px; 21px);
-      top: 5px;
-      left: 0px;
+      position: relative;
+      top: -5px;
     }
 
     .companions__level {
@@ -799,30 +713,6 @@
 }
 
 @media (min-width: @desktop-width) {
-  .page-main__list.contacts {
-    max-width: 500px;
-    padding-right: 60px;
-    top: -50px;
-
-    .contacts__item:not(:last-child) {
-      display: block;
-    }
-
-    .contacts__link {
-      margin: 0;
-    }
-
-    .contacts__wrapper-svg {
-      .size (50px; 50px);
-    }
-
-    .contacts__svg {
-      .size (18px; 18px);
-      top: 15px;
-      left: 17px;
-    }
-  }
-
   .page-main__user-nav {
     background-image: url(../../img/globe-back-desktop@1x.jpg);
     background-position: center 0;
@@ -837,9 +727,11 @@
     width: @desktop-width;
     box-sizing: border-box;
     margin: 0 auto;
+  }
+
+  .page-main__container {
     min-height: 650px;
     padding-bottom: 250px;
-    position: relative;
 
     &::before {
       content: "";
@@ -867,12 +759,6 @@
 
   .page-main--inner-page {
     padding-bottom: 116px;
-
-    .page-main__list.contacts {
-      display: flex;
-      top: 49px;
-      right: 83px;
-    }
 
     .page-main__wrapper-section {
       width: @desktop-width;

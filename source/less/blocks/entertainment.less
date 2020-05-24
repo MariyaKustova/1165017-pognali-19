@@ -1,0 +1,255 @@
+.entertainment__wrapper-content {
+  position: relative;
+}
+
+.entertainment__wrapper-content:first-child {
+  &::before {
+    content: "";
+    display: block;
+    .size (2px; 284px);
+    background-color: @dark-slate-blue;
+    position: absolute;
+    top: 9px;
+    left: -14px;
+  }
+}
+
+.entertainment__wrapper {
+  margin-bottom: 22px;
+}
+
+.entertainment__wrapper-title {
+  display: flex;
+  position: relative;
+
+  &::before {
+    content: "";
+    display: block;
+    .size (6px; 6px);
+    border-radius: 50%;
+    background-color: @dark-slate-blue;
+    position: absolute;
+    left: -3px;
+    top: 7px;
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    .size (11px; 2px);
+    background-color: @dark-slate-blue;
+    position: absolute;
+    left: -13px;
+    top: 9px;
+  }
+}
+
+.entertainment__name-country {
+  .font (18px; 18px);
+  .font-medium ();
+  color: @dark-slate-blue;
+  white-space: nowrap;
+  margin-top: 0;
+  margin-bottom: 18px;
+  padding-left: 11px;
+  position: relative;
+}
+
+.entertainment__wrapper-bosnia {
+  display: block;
+  width: 65px;
+  height: 24px;
+  margin-left: auto;
+  background-color: #ffffff;
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  &::after {
+    content: "";
+    display: block;
+    .size (36px; 24px);
+    background-image: url(../../img/flag-bosnia.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: -3px;
+    right: 0;
+  }
+}
+
+.entertainment__wrapper-czech {
+  margin-left: auto;
+  position: relative;
+
+  &::after {
+    content: "";
+    display: block;
+    .size (36px; 24px);
+    background-image: url(../../img/flag-czech.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: -3px;
+    right: 0;
+  }
+}
+
+.entertainment__textarea {
+  .font (16px; 22px);
+  color: @greyish-brown;
+  width: 100%;
+  height: 220px;
+  box-sizing: border-box;
+  padding: 8px 12px;
+  border: 1px solid @cloudy-blue;
+  border-radius: 5px;
+
+  &:hover {
+    border-color: @bluey-grey;
+  }
+
+  &:active {
+    border-color: @dark-two;
+  }
+}
+
+.entertainment__error {
+  .font (20px; 24px);
+  color: #ff0000;
+  width: 100%;
+  padding: 8px 12px;
+  margin: 0;
+  box-sizing: border-box;
+  border: 1px solid #f47e7e;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  background-color: #ffefef;
+  position: absolute;
+  bottom: 0;
+  display: none;
+}
+
+.entertainment__textarea--error {
+  border-color: #ff0000;
+
+  & + .entertainment__error {
+    display: block;
+  }
+}
+
+.entertainment__textarea--czech {
+  margin-bottom: 19px;
+}
+
+@media (min-width: @tablet-width) {
+  .entertainment {
+    margin-bottom: 26px;
+  }
+
+  .entertainment__wrapper {
+    margin-bottom: 16px;
+  }
+
+  .entertainment__wrapper-content {
+    padding-right: 30px;
+  }
+
+  .entertainment__wrapper-content:first-child {
+    &::before {
+      .size (3px; 260px);
+      top: 53px;
+      left: auto;
+      right: 2px;
+    }
+  }
+
+  .entertainment__wrapper-bosnia {
+    &::before {
+      .size (90px; 47px);
+    }
+
+    &::after {
+      .size (70px; 47px);
+      top: 22px;
+      right: 1px;
+    }
+  }
+
+  .entertainment__wrapper-czech {
+    &::before {
+      .size (90px; 47px);
+    }
+
+    &::after {
+      .size (70px; 47px);
+      top: 22px;
+      right: 1px;
+    }
+  }
+
+  .entertainment__wrapper-title {
+    &::before {
+      .size (15px; 15px);
+      top: 39px;
+      left: auto;
+      right: -34px;
+    }
+
+    &::after {
+      display: none;
+    }
+  }
+
+  .entertainment__name-country {
+    .font (30px; 18px);
+    padding-top: 35px;
+    padding-left: 0;
+    margin-bottom: 45px;
+  }
+
+  .entertainment__textarea {
+    .font (20px; 24px);
+    padding: 15px 18px;
+    height: 142px;
+  }
+
+  .entertainment__textarea--czech {
+    margin-bottom: 17px;
+  }
+
+  .entertainment__error {
+    width: calc(100% - 30px);
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .entertainment {
+    margin-bottom: 36px;
+  }
+
+  .entertainment__wrapper-content {
+    padding-right: 115px;
+  }
+
+  .entertainment__textarea {
+    width: 82.5%;
+    padding: 22px 24px;
+  }
+
+  .entertainment__error {
+    width: 73%;
+  }
+
+  .entertainment__wrapper-bosnia {
+    top: 4px;
+  }
+
+  .entertainment__wrapper-content:first-child::before {
+    right: 225px;
+  }
+
+  .entertainment__wrapper-title::before {
+    right: 104px;
+  }
+}

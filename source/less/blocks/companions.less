@@ -224,7 +224,7 @@
   .companions__text {
     .font (28px; 33px);
     padding-left: 0;
-    padding-right: 190px;
+    padding-right: 30%;
     margin-bottom: 39px;
   }
 
@@ -257,7 +257,7 @@
     border-top-right-radius: 20px;
   }
   .companions__info {
-    padding: 29px 30px 25px;
+    padding: 29px 30px 36px;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
   }
@@ -266,10 +266,23 @@
     .font (24px; 24px);
   }
 
+  .companions__link--red::before,
+  .companions__link--green::before {
+    .size (7px; 7px);
+    top: 12px;
+    left: -23px;
+  }
+
   .companions__preferences {
     .font (20px; 24px);
     margin-top: 21px;
-    margin-bottom: 26px;
+    margin-bottom: 7px;
+  }
+
+  .companions__transport.transport {
+    .transport__item:not(:last-child) {
+      margin-right: 0px;
+    }
   }
 }
 
@@ -314,5 +327,5 @@
 
   .companions__item:not(:nth-child(2n)) {
     margin-right: 60px;
-}
+  }
 }

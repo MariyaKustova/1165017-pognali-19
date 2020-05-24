@@ -1,0 +1,748 @@
+.country-selection {
+  margin-bottom: 25px;
+}
+
+.country-selection__wrapper {
+  position: relative;
+  display: flex;
+  margin-bottom: 21px;
+}
+
+.country-selection__wrapper {
+  &::after {
+    content: "";
+    display: block;
+    .size (5px; 10px);
+    background-image: url(../../img/small-arrow.svg);
+    background-repeat: no-repeat;
+    background-size: 5px 10px;
+    opacity: 0.3;
+    position: absolute;
+    bottom: -16px;
+    right: 23%;
+  }
+}
+
+.country-selection__country-selected {
+  .font (14px; 18px);
+  .font-medium ();
+  text-transform: uppercase;
+  color: @dark-slate-blue;
+  letter-spacing: 1.4px;
+  width: 80%;
+  white-space: nowrap;
+  overflow: hidden;
+  box-sizing: border-box;
+  padding: 12px 32px 11px 10px;
+  margin: 0;
+  border: 1px solid @cloudy-blue;
+  border-radius: 5px;
+  position: relative;
+}
+
+.country-selection__icon-flag {
+  display: block;
+  width: 25%;
+  height: 43px;
+  box-sizing: border-box;
+  border: 1px solid @cloudy-blue;
+  border-radius: 5px;
+  position: relative;
+
+  &::before {
+    content: "";
+    display: block;
+    .size (7px; 7px);
+    border-radius: 50%;
+    border: 1px solid @cloudy-blue;
+    background-color: #ffffff;
+    position: absolute;
+    top: 17px;
+    left: -6px;
+  }
+}
+
+.country-selection__country-selected--arrow {
+  &::before {
+    content: "";
+    display: block;
+    .size (40px; 40px);
+    background-color: #ffffff;
+    position: absolute;
+    top: 2px;
+    right: 2px;
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    .size (27px; 13px);
+    background-image: url(../../img/month-arrow-right.svg);
+    background-repeat: no-repeat;
+    background-size: 27px 13px;
+    transform: rotate(90deg);
+    opacity: 0.3;
+    position: absolute;
+    top: 15px;
+    right: 6px;
+  }
+}
+
+.country-selection__icon-flag--Bosnia-and-Herzegovina {
+  background-image: url(../../img/flag-bosnia.svg);
+  background-repeat: no-repeat;
+  background-size: 35px 24px;
+  background-position: center;
+}
+
+.country-selection__icon-flag--Czech-Republic {
+  background-image: url(../../img/flag-czech.svg);
+  background-repeat: no-repeat;
+  background-size: 35px 24px;
+  background-position: center;
+}
+
+.country-selection__icon-flag--Bosnia-and-Herzegovina::before,
+.country-selection__icon-flag--Czech-Republic::before {
+  background-color: @dark-slate-blue;
+  border-color: @dark-slate-blue;
+}
+
+.country-selection__icon-flag-add {
+  background-color: @pale-grey;
+}
+
+.country-selection__button-close {
+  border: none;
+  background-color: @pale-grey;
+  .size (21px; 21px);
+  border-radius: 50%;
+  position: absolute;
+  top: -10px;
+  right: -10px;
+
+  .country-selection__svg {
+    fill: @cloudy-blue;
+  }
+
+  &:hover .country-selection__svg {
+    opacity: 0.3;
+  }
+
+  &:active .country-selection__svg {
+    opacity: 0.05;
+  }
+}
+
+.country-selection__button-choice {
+  .font (14px; 18px);
+  .font-medium ();
+  text-transform: uppercase;
+  color: @dark-slate-blue;
+  letter-spacing: 1.4px;
+  text-align: left;
+  width: 100%;
+  min-height: 43px;
+  padding: 9px 53px 5px 0;
+  background-color: transparent;
+  border: 1px solid @cloudy-blue;
+  border-radius: 5px;
+  position: relative;
+
+  &:hover {
+    border-color: @bluey-grey;
+  }
+
+  &:hover::after {
+    opacity: 0.5;
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    .size (27px; 13px);
+    background-image: url(../../img/month-arrow-right.svg);
+    background-repeat: no-repeat;
+    background-size: 27px 13px;
+    transform: rotate(90deg);
+    opacity: 0.3;
+    position: absolute;
+    top: 15px;
+    right: 6px;
+  }
+
+  .country-selection__country-selected--arrow {
+    border-color: transparent;
+
+    &::before {
+      display: none;
+    }
+
+    &::after {
+      display: none;
+    }
+  }
+
+  .country-selection__icon-flag {
+    width: 23.5%;
+    border-color: transparent;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+}
+
+.country-selection__button-choice--close {
+  background-color: @dark-slate-blue;
+  color: #ffffff;
+  padding-left: 11px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+
+  &::after {
+    display: none;
+  }
+
+  .country-selection__svg {
+    fill: #ffffff;
+    opacity: 0.3;
+    position: absolute;
+    top: 17px;
+    right: 16px;
+  }
+
+  &:hover .country-selection__svg {
+    opacity: 1;
+  }
+
+  &:active .country-selection__svg {
+    opacity: 0.1;
+  }
+}
+
+.country-selection__popup {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0px 20px 50px 0 rgba(29, 46, 91, 0.1);
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  display: none;
+
+  .country__table {
+    margin-bottom: 0;
+  }
+
+  .country__container {
+    padding: 12px 18px;
+    background-color: #ffffff;
+    border-left: 1px solid @cloudy-blue;
+    border-bottom: 1px solid @cloudy-blue;
+    border-right: 1px solid @cloudy-blue;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+
+  .country__selected {
+    color: @dark-slate-blue;
+    background-color: @pale-grey;
+  }
+}
+
+.country-selection__wrapper-popup {
+  position: relative;
+}
+
+.country-selection__wrapper-popup--opend {
+  .country-selection__popup {
+    display: block;
+  }
+
+  .country-selection__button-close {
+    display: none;
+  }
+}
+
+.nojs {
+  .country-selection__popup {
+    position: relative;
+    display: block;
+    margin-top: 64px;
+
+    .country-selection__svg {
+      display: none;
+    }
+  }
+
+  .country-selection__button-close {
+    display: none;
+  }
+}
+
+.country-selection__button-add {
+  .font (14px; 18px);
+  .font-medium ();
+  text-transform: uppercase;
+  letter-spacing: 1.4px;
+  text-align: left;
+  color: @dark-slate-blue;
+  width: 100%;
+  min-height: 43px;
+  padding: 12px 52px 11px 0;
+  background-color: @pale-grey;
+  border: none;
+  border-radius: 5px;
+  position: relative;
+
+  &::after {
+    content: "";
+    display: block;
+    .size (14px; 14px);
+    background-image: url(../../img/qty-plus.svg);
+    background-repeat: no-repeat;
+    background-size: 14px 14px;
+    opacity: 0.2;
+    position: absolute;
+    top: 15px;
+    right: 14px;
+  }
+
+  &:hover {
+    background-color: @pale-grey-two;
+  }
+
+  &:hover .country-selection__icon-flag {
+    background-color: @pale-grey-two;
+  }
+
+  &:hover::after {
+    opacity: 0.3;
+  }
+
+  &:active {
+    color: @dark-slate-blue-30;
+  }
+
+  &:active .country-selection__icon-flag {
+    color: @dark-slate-blue-30;
+  }
+
+  &:active::after {
+    opacity: 0.1;
+  }
+}
+
+.country-selection__button-add .country-selection__country-selected {
+  border-color: transparent;
+}
+
+.country-selection__button-add .country-selection__icon-flag {
+  width: 23.5%;
+  border-color: transparent;
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  &::before {
+    background-color: @pale-grey;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .country-selection {
+    border-top: 1px solid #d4d9eb;
+    margin-top: -6px;
+    padding-top: 41px;
+    margin-bottom: 50px;
+    position: relative;
+
+    &::before {
+      content: "";
+      display: block;
+      .size (1px; 391px);
+      background-color: #d4d9eb;
+      position: absolute;
+      top: 0;
+      right: 31.5%;
+    }
+  }
+
+  .country-selection__country-selected {
+    .font (20px; 18px);
+    letter-spacing: 2px;
+    padding: 25px 70px 25px 23px;
+    width: 64%;
+  }
+
+  .country-selection__country-selected--arrow::after {
+    .size (10px; 16px);
+    background-size: 10px 16px;
+    top: 27px;
+    right: 30px;
+  }
+
+  .country-selection__icon-flag {
+    display: block;
+    height: 68px;
+    margin-left: auto;
+    border: none;
+
+    &::before {
+      .size (14px; 14px);
+      top: 26px;
+      left: -12px;
+    }
+  }
+
+  .country-selection__icon-flag--Bosnia-and-Herzegovina,
+  .country-selection__icon-flag--Czech-Republic {
+    background-size: 70px 47px;
+    background-position: 22% center;
+    width: 31%;
+  }
+
+  .country-selection__button-close {
+    .size (50px; 50px);
+    background-color: #ffffff;
+    top: 11px;
+    right: 28px;
+  }
+
+  .country-selection__svg {
+    .size (17px; 17px);
+  }
+
+  .country-selection__wrapper {
+    margin-bottom: 14px;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  .country-selection__wrapper-popup--opend {
+    .country-selection__button-close {
+      display: block;
+    }
+  }
+
+  .country-selection__button-choice {
+    .font (20px; 18px);
+    letter-spacing: 2px;
+    padding: 0;
+    width: 100%;
+    border-color: transparent;
+
+    &::before {
+      .size (15px; 15px);
+      top: 24px;
+      right: -36px;
+    }
+
+    &::after {
+      display: none;
+    }
+
+    &:hover {
+      border-color: transparent;
+    }
+
+    &:hover .country-selection__country-selected {
+      border-color: @bluey-grey;
+    }
+
+    &:hover .country-selection__country-selected::after {
+      opacity: 0.5;
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    &:focus .country-selection__country-selected {
+      outline: 2px solid #81b3d2;
+    }
+
+    .country-selection__country-selected {
+      display: block;
+      border-color: @cloudy-blue;
+      width: 64%;
+
+      &::after {
+        display: block;
+      }
+    }
+
+    .country-selection__icon-flag {
+      width: 24.5%;
+
+      &::before {
+        left: -48px;
+      }
+    }
+  }
+
+  .country-selection__button-choice--close {
+    width: 64%;
+    padding: 25px 70px 25px 23px;
+
+    .country-selection__svg {
+      top: 28px;
+      right: 26px;
+    }
+  }
+
+  .country-selection__popup {
+    width: 100%;
+
+    .country__wrapper-content {
+      background-color: #ffffff;
+      display: flex;
+      width: 100%;
+      box-shadow: 0px 20px 50px 0 rgba(29, 46, 91, 0.1);
+      border-radius: 10px;
+    }
+
+    .country__table {
+      width: 64%;
+      box-sizing: border-box;
+      border: 1px solid #cbced9;
+      margin: 36px 79px 42px 26px;
+
+      td:not(:last-child) {
+        border-right: 1px solid @cloudy-blue;
+      }
+
+      tr:not(:last-child) {
+        border-bottom: 1px solid @cloudy-blue;
+      }
+    }
+
+    .country__container {
+      box-sizing: border-box;
+      width: 48%;
+      padding: 28px 15px 31px 23px;
+      border-radius: 0;
+      border-bottom-right-radius: 10px;
+      border-color: transparent;
+      border-left: 1px solid @pale-grey-two;
+    }
+
+    .country__label {
+      .font (20px; 18px);
+      .font-medium ();
+      letter-spacing: 2px;
+      padding: 45% 0;
+    }
+
+    .country__list a {
+      .font (20px; 30px);
+    }
+  }
+
+  .country-selection__button-add {
+    .font (20px; 18px);
+    letter-spacing: 2px;
+    padding: 0;
+    width: 100%;
+    background-color: transparent;
+
+    &::after {
+      display: none;
+    }
+
+    .country-selection__country-selected--plus {
+      display: block;
+      border-color: @cloudy-blue;
+      width: 64%;
+      background-color: @pale-grey;
+
+      &::before {
+        content: "";
+        display: block;
+        .size (20px; 20px);
+        background-image: url(../../img/qty-plus.svg);
+        background-repeat: no-repeat;
+        background-size: 20px 20px;
+        opacity: 0.2;
+        position: absolute;
+        top: 24px;
+        right: 25px;
+      }
+    }
+
+    &:hover {
+      background-color: transparent;
+    }
+
+    &:hover .country-selection__icon-flag {
+      background-color: transparent;
+    }
+
+    &:hover .country-selection__country-selected--plus {
+      background-color: @cloudy-blue;
+    }
+
+    &:hover .country-selection__country-selected--plus::before {
+      opacity: 0.3;
+    }
+
+    &:active {
+      color: transparent;
+    }
+
+    &:active .country-selection__icon-flag {
+      color: transparent;
+    }
+
+    &:active .country-selection__country-selected--plus {
+      color: @dark-slate-blue-30;
+    }
+
+    &:active .country-selection__country-selected--plus::before {
+      opacity: 0.1;
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    &:focus .country-selection__country-selected--plus {
+      outline: 2px solid #81b3d2;
+    }
+
+    .country-selection__icon-flag {
+      width: 24.5%;
+      background-color: transparent;
+
+      &::before {
+        left: -48px;
+      }
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .country-selection {
+    margin-top: 0;
+    margin-bottom: 58px;
+    padding-top: 63px;
+    padding-right: 9px;
+
+    &::before {
+      right: 22.5%;
+      height: 510px;
+    }
+  }
+
+  .country-selection__icon-flag--Bosnia-and-Herzegovina::before,
+  .country-selection__icon-flag--Czech-Republic::before {
+    left: 33px;
+  }
+
+  .country-selection__icon-flag--Bosnia-and-Herzegovina,
+  .country-selection__icon-flag--Czech-Republic {
+    width: 26%;
+    background-position: 43% center;
+  }
+
+  .country-selection__button-close {
+    right: -18px;
+  }
+
+  .country-selection__country-selected,
+  .country-selection__button-choice,
+  .country-selection__button-add {
+    width: 73.5%;
+  }
+
+  .country-selection__button-choice::before {
+    right: -55px;
+  }
+
+  .country-selection__button-add::before {
+    right: -54px;
+  }
+
+  .country-selection__button-choice {
+    .country-selection__country-selected {
+      width: 100%;
+    }
+
+    .country-selection__icon-flag::before {
+      left: auto;
+      right: -54px;
+    }
+  }
+
+  .country-selection__button-add {
+    .country-selection__country-selected--plus {
+      width: 100%;
+    }
+
+    .country-selection__icon-flag::before {
+      left: auto;
+      right: -54px;
+    }
+  }
+
+  .country-selection__button-choice--close,
+  .country-selection__popup {
+    width: 730px;
+  }
+
+  .country-selection__popup {
+    display: block;
+    height: auto;
+
+    .country__table {
+      display: block;
+      margin: 23px 92px 26px 16px;
+      border-collapse: separate;
+      border-spacing: 12px;
+      border: none;
+
+      td {
+        .size (60px; 70px);
+        border-radius: 5px;
+        border: 1px solid @cloudy-blue;
+      }
+    }
+
+    .country__title {
+      display: none;
+    }
+
+    .country__container {
+      width: 240px;
+      position: relative;
+    }
+
+    .country__label {
+      .font (20px; 18px);
+      .font-medium ();
+      letter-spacing: 2px;
+    }
+
+    .country__list {
+      display: none;
+      margin: 0;
+    }
+
+    .country__input:checked ~ .country__list {
+      display: block;
+      position: absolute;
+      top: 28px;
+      left: 23px;
+    }
+
+    .country__list a {
+      .font (20px; 30px);
+    }
+
+    .country__selected {
+      color: #ffffff;
+      background-color: @dark-slate-blue;
+    }
+  }
+}
