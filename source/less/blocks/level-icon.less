@@ -26,3 +26,24 @@
   color: @greyish-brown;
   margin: 0;
 }
+
+@media (min-width: @tablet-width) {
+  .level-icon {
+    .size (88px; 88px);
+  }
+
+  .level-icon__number {
+    margin: 15px 0 0;
+
+    &::after {
+      left: 19px;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .level-icon__number,
+  .level-icon__info {
+    color: #ffffff;
+  }
+}

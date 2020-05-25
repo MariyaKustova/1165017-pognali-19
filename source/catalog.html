@@ -26,56 +26,58 @@
     <div class="page-header__wrapper-content">
       <div class="page-header__wrapper-alignment">
         <div class="page-header__wrapper-nav">
-          <a class="page-header__wrapper-logo" href="index.html">
-            <picture class="page-header__dark-theme">
-              <source type="image/webp" media="(min-width: 1440px)" srcset="
+          <div class="page-header__wrapper-logo">
+            <a href="index.html">
+              <picture class="page-header__dark-theme">
+                <source type="image/webp" media="(min-width: 1440px)" srcset="
               ./img/webp/logo-desktop-white@1x.webp 1x,
               ./img/webp/logo-desktop-white@2x.webp 2x
             " />
-              <source type="image/webp" media="(min-width: 768px)" srcset="
+                <source type="image/webp" media="(min-width: 768px)" srcset="
               ./img/webp/logo-tablet-white@1x.webp 1x,
               ./img/webp/logo-tablet-white@2x.webp 2x
             " />
-              <source type="image/webp" media="(min-width: 320px)" srcset="
+                <source type="image/webp" media="(min-width: 320px)" srcset="
               ./img/webp/logo-mobile-white@1x.webp 1x,
               ./img/webp/logo-mobile-white@2x.webp 2x
             " />
-              <source media="(min-width: 1440px)" srcset="
+                <source media="(min-width: 1440px)" srcset="
               ./img/content/logo-desktop-white@1x.png 1x,
               ./img/content/logo-desktop-white@2x.png 2x
             " />
-              <source media="(min-width: 768px)" srcset="
+                <source media="(min-width: 768px)" srcset="
               ./img/content/logo-tablet-white@1x.png 1x,
               ./img/content/logo-tablet-white@2x.png 2x
             " />
-              <img class="page-header__logo" src="./img/content/logo-mobile-white@1x.png"
-                srcset="./img/content/logo-mobile-white@2x.png 2x" loading="lazy" alt="Фотография корзин" />
-            </picture>
-            <picture class="page-header__light-theme">
-              <source type="image/webp" media="(min-width: 1440px)" srcset="
+                <img class="page-header__logo" src="./img/content/logo-mobile-white@1x.png"
+                  srcset="./img/content/logo-mobile-white@2x.png 2x" loading="lazy" alt="Фотография корзин" />
+              </picture>
+              <picture class="page-header__light-theme">
+                <source type="image/webp" media="(min-width: 1440px)" srcset="
               ./img/webp/logo-desktop-blue@1x.webp 1x,
               ./img/webp/logo-desktop-blue@2x.webp 2x
             " />
-              <source type="image/webp" media="(min-width: 768px)" srcset="
+                <source type="image/webp" media="(min-width: 768px)" srcset="
               ./img/webp/logo-tablet-blue@1x.webp 1x,
               ./img/webp/logo-tablet-blue@2x.webp 2x
             " />
-              <source type="image/webp" media="(min-width: 320px)" srcset="
+                <source type="image/webp" media="(min-width: 320px)" srcset="
               ./img/webp/logo-mobile-blue@1x.webp 1x,
               ./img/webp/logo-mobile-blue@2x.webp 2x
             " />
-              <source media="(min-width: 1440px)" srcset="
+                <source media="(min-width: 1440px)" srcset="
               ./img/content/logo-desktop-blue@1x.png 1x,
               ./img/content/logo-desktop-blue@2x.png 2x
             " />
-              <source media="(min-width: 768px)" srcset="
+                <source media="(min-width: 768px)" srcset="
               ./img/content/logo-tablet-blue@1x.png 1x,
               ./img/content/logo-tablet-blue@2x.png 2x
             " />
-              <img class="page-header__logo" src="./img/content/logo-mobile-blue@1x.png"
-                srcset="./img/content/logo-mobile-blue@2x.png 2x" loading="lazy" alt="Фотография корзин" />
-            </picture>
-          </a>
+                <img class="page-header__logo" src="./img/content/logo-mobile-blue@1x.png"
+                  srcset="./img/content/logo-mobile-blue@2x.png 2x" loading="lazy" alt="Фотография корзин" />
+              </picture>
+            </a>
+          </div>
           <nav class="page-header__nav">
             <button class="page-header__button" type="button"></button>
             <ul class="page-header__list main-menu">
@@ -95,15 +97,21 @@
               </li>
               <li class="contacts__item">
                 <a class="contacts__tel-number" href="tel:88005558628">
-                  <span class="contacts__wrapper-svg"><svg class="contacts__svg" width="18px" height="18px">
+                  <span class="contacts__wrapper-svg contacts__wrapper-svg--home-phone"><svg class="contacts__svg"
+                      width="18px" height="18px">
                       <use xlink:href="./img/sprite.svg#icon-phone"></use>
+                    </svg></span>
+                  <span class="contacts__wrapper-svg contacts__wrapper-svg--phone">
+                    <svg class="contacts__svg contacts__svg--phone" width="18px" height="18px">
+                      <use xlink:href="./img/sprite.svg#icon-topmenu-phone"></use>
                     </svg></span>
                   <span class="contacts__info">8 800 555-86-28</span>
                 </a>
               </li>
               <li class="contacts__item">
                 <a class="contacts__e-mail" href="mail@htmlacademy.ru">
-                  <span class="contacts__wrapper-svg"><svg class="contacts__svg" width="18px" height="14px">
+                  <span class="contacts__wrapper-svg">
+                    <svg class="contacts__svg" width="18px" height="14px">
                       <use xlink:href="./img/sprite.svg#icon-mail"></use>
                     </svg></span>
                   <span class="contacts__info">mail@htmlacademy.ru</span></a>
@@ -145,32 +153,6 @@
   </header>
 
   <main class="page-main page-main--inner-page">
-
-    <div class="wrapper">
-    <ul class="page-main__list contacts">
-      <li class="contacts__item">
-        <a class="contacts__tel-number" href="tel:88005558628">
-          <span class="contacts__wrapper-svg contacts__wrapper-svg--phone"><svg
-              class="contacts__svg contacts__svg--phone" width="18px" height="18px">
-              <use xlink:href="./img/sprite.svg#icon-topmenu-phone"></use>
-            </svg></span>
-          <span class="contacts__info">8 800 555-86-28</span>
-        </a>
-      </li>
-      <li class="contacts__item">
-        <a class="contacts__e-mail" href="mail@htmlacademy.ru">
-          <span class="contacts__wrapper-svg contacts__wrapper-svg--mail"><svg class="contacts__svg contacts__svg--mail"
-              width="18px" height="14px">
-              <use xlink:href="./img/sprite.svg#icon-topmenu-mail"></use>
-            </svg></span>
-          <span class="contacts__info">mail@htmlacademy.ru</span></a>
-      </li>
-      <li class="contacts__item">
-        <a class="contacts__link" href="#">Aвторизация</a>
-      </li>
-    </ul>
-  </div>
-
     <section class="page-main__filter filter filter--opened">
       <div class="filter__wrapper">
         <div class="filter__wrapper-alignment">
@@ -204,7 +186,7 @@
               <tbody>
                 <tr>
                   <td>
-                    <label class="country__label" for="a">
+                    <label class="country__label country__selected" for="a">
                       А
                     </label>
                   </td>
@@ -1086,44 +1068,50 @@
               <button class="choice__button" type="button"></button>
               <h3 class="choice__heading">Транспорт</h3>
             </div>
-            <ul class="choice__list transport">
-              <li class="transport__item">
-                <label class="transport__label">
-                  <input class="visually-hidden" type="checkbox" name="plane">
-                  <span class="transport__checkbox"></span>
-                  <svg class="transport__svg transport__svg--plane" width="19px" height="21px">
-                    <use xlink:href="./img/sprite.svg#icon-plane"></use>
-                  </svg>
-                </label>
-              </li>
-              <li class="transport__item">
-                <label class="transport__label">
-                  <input class="visually-hidden" type="checkbox" name="bus" checked>
-                  <span class="transport__checkbox"></span>
-                  <svg class="transport__svg transport__svg--bus" width="17px" height="21px">
-                    <use xlink:href="./img/sprite.svg#icon-bus"></use>
-                  </svg>
-                </label>
-              </li>
-              <li class="transport__item">
-                <label class="transport__label">
-                  <input class="visually-hidden" type="checkbox" name="bike">
-                  <span class="transport__checkbox"></span>
-                  <svg class="transport__svg transport__svg--bike" width="24px" height="21px">
-                    <use xlink:href="./img/sprite.svg#icon-bike"></use>
-                  </svg>
-                </label>
-              </li>
-              <li class="transport__item">
-                <label class="transport__label">
-                  <input class="visually-hidden" type="checkbox" name="run" checked>
-                  <span class="transport__checkbox"></span>
-                  <svg class="transport__svg transport__svg--run" width="20px" height="21px">
-                    <use xlink:href="./img/sprite.svg#icon-run"></use>
-                  </svg>
-                </label>
-              </li>
-            </ul>
+            <div class="choice__list transport">
+              <ul class="transport__list">
+                <li class="transport__item">
+                  <label class="transport__label">
+                    <input class="visually-hidden" type="checkbox" name="plane">
+                    <span class="transport__checkbox"></span>
+                    <svg class="transport__svg transport__svg--plane" width="19px" height="21px">
+                      <use xlink:href="./img/sprite.svg#icon-plane"></use>
+                    </svg>
+                  </label>
+                  <p class="transport__prompt">Авиаперелет</p>
+                </li>
+                <li class="transport__item">
+                  <label class="transport__label">
+                    <input class="visually-hidden" type="checkbox" name="bus" checked>
+                    <span class="transport__checkbox"></span>
+                    <svg class="transport__svg transport__svg--bus" width="17px" height="21px">
+                      <use xlink:href="./img/sprite.svg#icon-bus"></use>
+                    </svg>
+                  </label>
+                  <p class="transport__prompt">Автотранспорт</p>
+                </li>
+                <li class="transport__item">
+                  <label class="transport__label">
+                    <input class="visually-hidden" type="checkbox" name="bike">
+                    <span class="transport__checkbox"></span>
+                    <svg class="transport__svg transport__svg--bike" width="24px" height="21px">
+                      <use xlink:href="./img/sprite.svg#icon-bike"></use>
+                    </svg>
+                  </label>
+                  <p class="transport__prompt">Велосипед</p>
+                </li>
+                <li class="transport__item">
+                  <label class="transport__label">
+                    <input class="visually-hidden" type="checkbox" name="run" checked>
+                    <span class="transport__checkbox"></span>
+                    <svg class="transport__svg transport__svg--run" width="20px" height="21px">
+                      <use xlink:href="./img/sprite.svg#icon-run"></use>
+                    </svg>
+                  </label>
+                  <p class="transport__prompt">Пешком</p>
+                </li>
+              </ul>
+            </div>
           </div>
           <div class="choice__container choice__container--level">
             <div class="choice__wrapper-container">
@@ -1224,21 +1212,25 @@
                         height="21px">
                         <use xlink:href="./img/sprite.svg#icon-plane"></use>
                       </svg>
+                      <p class="transport__prompt">Авиаперелет</p>
                     </li>
                     <li class="transport__item">
                       <svg class="transport__svg transport__svg--bus" width="17px" height="21px">
                         <use xlink:href="./img/sprite.svg#icon-bus"></use>
                       </svg>
+                      <p class="transport__prompt">Автотранспорт</p>
                     </li>
                     <li class="transport__item">
                       <svg class="transport__svg transport__svg--bike" width="24px" height="21px">
                         <use xlink:href="./img/sprite.svg#icon-bike"></use>
                       </svg>
+                      <p class="transport__prompt">Велосипед</p>
                     </li>
                     <li class="transport__item">
                       <svg class="transport__svg transport__svg--run" width="20px" height="21px">
                         <use xlink:href="./img/sprite.svg#icon-run"></use>
                       </svg>
+                      <p class="transport__prompt">Пешком</p>
                     </li>
                   </ul>
                 </div>
@@ -1320,21 +1312,25 @@
                         height="21px">
                         <use xlink:href="./img/sprite.svg#icon-plane"></use>
                       </svg>
+                      <p class="transport__prompt">Авиаперелет</p>
                     </li>
                     <li class="transport__item">
                       <svg class="transport__svg transport__svg--bus transport__svg--active" width="17px" height="21px">
                         <use xlink:href="./img/sprite.svg#icon-bus"></use>
                       </svg>
+                      <p class="transport__prompt">Автотранспорт</p>
                     </li>
                     <li class="transport__item">
                       <svg class="transport__svg transport__svg--bike" width="24px" height="21px">
                         <use xlink:href="./img/sprite.svg#icon-bike"></use>
                       </svg>
+                      <p class="transport__prompt">Велосипед</p>
                     </li>
                     <li class="transport__item">
                       <svg class="transport__svg transport__svg--run transport__svg--active" width="20px" height="21px">
                         <use xlink:href="./img/sprite.svg#icon-run"></use>
                       </svg>
+                      <p class="transport__prompt">Пешком</p>
                     </li>
                   </ul>
                 </div>
@@ -1418,22 +1414,26 @@
                         height="21px">
                         <use xlink:href="./img/sprite.svg#icon-plane"></use>
                       </svg>
+                      <p class="transport__prompt">Авиаперелет</p>
                     </li>
                     <li class="transport__item">
                       <svg class="transport__svg transport__svg--bus" width="17px" height="21px">
                         <use xlink:href="./img/sprite.svg#icon-bus"></use>
                       </svg>
+                      <p class="transport__prompt">Автотранспорт</p>
                     </li>
                     <li class="transport__item">
                       <svg class="transport__svg transport__svg--bike transport__svg--active" width="24px"
                         height="21px">
                         <use xlink:href="./img/sprite.svg#icon-bike"></use>
                       </svg>
+                      <p class="transport__prompt">Велосипед</p>
                     </li>
                     <li class="transport__item">
                       <svg class="transport__svg transport__svg--run" width="20px" height="21px">
                         <use xlink:href="./img/sprite.svg#icon-run"></use>
                       </svg>
+                      <p class="transport__prompt">Пешком</p>
                     </li>
                   </ul>
                 </div>
@@ -1514,21 +1514,25 @@
                         height="21px">
                         <use xlink:href="./img/sprite.svg#icon-plane"></use>
                       </svg>
+                      <p class="transport__prompt">Авиаперелет</p>
                     </li>
                     <li class="transport__item">
                       <svg class="transport__svg transport__svg--bus transport__svg--active" width="17px" height="21px">
                         <use xlink:href="./img/sprite.svg#icon-bus"></use>
                       </svg>
+                      <p class="transport__prompt">Автотранспорт</p>
                     </li>
                     <li class="transport__item">
                       <svg class="transport__svg transport__svg--bike" width="24px" height="21px">
                         <use xlink:href="./img/sprite.svg#icon-bike"></use>
                       </svg>
+                      <p class="transport__prompt">Велосипед</p>
                     </li>
                     <li class="transport__item">
                       <svg class="transport__svg transport__svg--run" width="20px" height="21px">
                         <use xlink:href="./img/sprite.svg#icon-run"></use>
                       </svg>
+                      <p class="transport__prompt">Пешком</p>
                     </li>
                   </ul>
                 </div>

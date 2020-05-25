@@ -1,9 +1,10 @@
 .personal-page {
-  background-color: pale-grey;
+  background-color: @pale-grey;
 }
 
 .personal-page__wrapper-alignment {
-  padding: 21px 25px 0;
+  padding: 21px 25px 60px;
+  position: relative;
 }
 
 .personal-page__wrapper {
@@ -19,12 +20,8 @@
 }
 
 .personal-page__img {
-  border-radius:  50%;
+  border-radius: 50%;
   display: block;
-}
-
-.personal-page__fieldset--transport {
-  display: none;
 }
 
 .personal-page__button-foto {
@@ -39,17 +36,235 @@
   background-color: @pale-grey-two;
   border: none;
   border-radius: 20px;
+
+  &:hover {
+    background-color: @light-blue-grey;
+  }
+
+  &:active {
+    color: @dark-slate-blue-30;
+  }
 }
 
+.personal-page__legend,
 .personal-page__title {
   .font (17px; 30px);
   .font-bold ();
   color: @dark-slate-blue;
   text-transform: uppercase;
+  padding: 0 15px;
   margin: 0;
   display: inline-block;
-  background-color: pale-grey;
+  background-color: @pale-grey;
   position: relative;
   left: 50%;
   transform: translateX(-50%);
+}
+
+.personal-page__legend {
+  text-align: center;
+  background-color: transparent;
+  left: 0;
+  transform: translateX(0);
+}
+
+.personal-page__teg {
+  margin-bottom: 7px;
+}
+
+.personal-page__textarea {
+  .font (16px; 22px);
+  color: @greyish-brown;
+  padding: 21px 25px;
+  width: calc(100% - 50px);
+  border: 1px solid @cloudy-blue;
+  border-radius: 10px;
+  background-color: transparent;
+  margin-top: -15px;
+
+  &:hover {
+    border-color: @cloudy-blue-two;
+  }
+
+  &:active {
+    border-color: @dark-two;
+  }
+}
+
+.personal-page__fieldset {
+  border: 1px solid @cloudy-blue;
+  border-radius: 10px;
+
+  &:hover {
+    border-color: @cloudy-blue-two;
+  }
+
+  &:active {
+    border-color: @dark-two;
+  }
+
+  .personal-page__title {
+    display: none;
+  }
+}
+
+.transport__list {
+  position: relative;
+  bottom: 5px;
+}
+
+@media (min-width: @tablet-width) {
+  .personal-page__wrapper-alignment {
+    padding: 64px 75px 77px;
+  }
+
+  .personal-page__wrapper {
+    padding: 0;
+    margin-bottom: 52px;
+  }
+
+  .personal-page__wrapper-img {
+    .size (94px; 94px);
+    margin-top: 0;
+  }
+
+  .personal-page__img {
+    border-radius: 10%;
+  }
+
+  .personal-page__legend {
+    display: none;
+  }
+
+  .personal-page__title {
+    .font (20px; 18px);
+    letter-spacing: 2px;
+    padding: 0 15px;
+  }
+
+  .personal-page__fieldset {
+    min-width: 282px;
+    max-width: 360px;
+    min-height: 76px;
+    max-height: 120px;
+    position: absolute;
+    top: 64px;
+    left: 50%;
+    transform: translateX(-51%);
+
+    .personal-page__title {
+      display: block;
+      position: absolute;
+      bottom: -9px;
+    }
+  }
+
+  .transport__list {
+    bottom: auto;
+    top: 19px;
+  }
+
+  .personal-page__button-foto {
+    .font (20px; 18px);
+    .font-medium ();
+    letter-spacing: 2px;
+    padding: 21px 20px;
+    margin-bottom: 51px;
+    border-radius: 10px;
+  }
+
+  .personal-page__teg {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    .personal-page__title {
+      position: absolute;
+      bottom: -9px;
+    }
+  }
+
+  .personal-page__textarea {
+    .font (20px; 24px);
+    width: 100%;
+    box-sizing: border-box;
+    padding: 31px 39px 13px;
+    margin-top: 0;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .personal-page__wrapper-alignment {
+    width: @desktop-width;
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 73px 60px 110px 123px;
+  }
+
+  .personal-page__wrapper {
+    position: absolute;
+    top: -190px;
+    right: 155px;
+  }
+
+  .personal-page__wrapper-img {
+    .size (190px; 190px);
+    margin-left: 45px;
+  }
+
+  .personal-page__img {
+    border-top-left-radius: 5%;
+    border-top-right-radius: 5%;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  .personal-page__level-icon {
+    align-self: center;
+    margin-bottom: 8px;
+  }
+
+  .personal-page__wrapper-info {
+    display: flex;
+  }
+
+  .personal-page__button-foto {
+    padding: 14px 20px;
+    margin: 0;
+    position: absolute;
+    top: 0;
+    right: 155px;
+    width: 190px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+
+  .personal-page__span {
+    display: none;
+  }
+
+  .personal-page__teg {
+    width: 58%;
+    margin-bottom: 0;
+
+    .personal-page__title {
+      .font-light ();
+      bottom: -5px;
+      left: 64px;
+    }
+  }
+
+  .personal-page__fieldset {
+    width: 29%;
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: translateX(0);
+    margin-left: auto;
+
+    .personal-page__title {
+      .font-light ();
+      bottom: -5px;
+    }
+  }
 }

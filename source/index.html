@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -20,8 +21,8 @@
   <script src="./js/vendor/picturfill.min.js" async></script>
 </head>
 
-<body>
-  <header class="page-header page-header--opened page-header--nojs">
+<body class="nojs">
+  <header class="page-header page-header--opened">
     <div class="page-header__wrapper-alignment">
       <div class="page-header__wrapper-logo">
         <picture class="page-header__dark-theme">
@@ -92,15 +93,21 @@
           </li>
           <li class="contacts__item">
             <a class="contacts__tel-number" href="tel:88005558628">
-              <span class="contacts__wrapper-svg"><svg class="contacts__svg" width="18px" height="18px">
+              <span class="contacts__wrapper-svg contacts__wrapper-svg--home-phone"><svg class="contacts__svg"
+                  width="18px" height="18px">
                   <use xlink:href="./img/sprite.svg#icon-phone"></use>
+                </svg></span>
+              <span class="contacts__wrapper-svg contacts__wrapper-svg--phone">
+                <svg class="contacts__svg contacts__svg--phone" width="18px" height="18px">
+                  <use xlink:href="./img/sprite.svg#icon-topmenu-phone"></use>
                 </svg></span>
               <span class="contacts__info">8 800 555-86-28</span>
             </a>
           </li>
           <li class="contacts__item">
             <a class="contacts__e-mail" href="mail@htmlacademy.ru">
-              <span class="contacts__wrapper-svg"><svg class="contacts__svg" width="18px" height="14px">
+              <span class="contacts__wrapper-svg">
+                <svg class="contacts__svg" width="18px" height="14px">
                   <use xlink:href="./img/sprite.svg#icon-mail"></use>
                 </svg></span>
               <span class="contacts__info">mail@htmlacademy.ru</span></a>
@@ -138,38 +145,40 @@
   <main class="page-main">
     <section class="page-main__user-nav">
       <div class="page-main__wrapper-alignment">
-        <h1 class="page-main__title">В путешествие с крутыми попутчиками!</h1>
-        <ul class="page-main__list contacts">
-          <li class="contacts__item">
-            <a class="contacts__tel-number" href="tel:88005558628">
-              <span class="contacts__wrapper-svg contacts__wrapper-svg--phone"><svg
-                  class="contacts__svg contacts__svg--phone" width="18px" height="18px">
-                  <use xlink:href="./img/sprite.svg#icon-topmenu-phone"></use>
-                </svg></span>
-              <span class="contacts__info">8 800 555-86-28</span>
-            </a>
-          </li>
-          <li class="contacts__item">
-            <a class="contacts__e-mail" href="mail@htmlacademy.ru">
-              <span class="contacts__wrapper-svg contacts__wrapper-svg--mail"><svg
-                  class="contacts__svg contacts__svg--mail" width="18px" height="14px">
-                  <use xlink:href="./img/sprite.svg#icon-topmenu-mail"></use>
-                </svg></span>
-              <span class="contacts__info">mail@htmlacademy.ru</span></a>
-          </li>
-          <li class="contacts__item">
-            <a class="contacts__link" href="#">Aвторизация</a>
-          </li>
-        </ul>
+        <div class="page-main__container">
+          <h1 class="page-main__title">В путешествие с крутыми попутчиками!</h1>
+          <ul class="page-main__list contacts">
+            <li class="contacts__item">
+              <a class="contacts__tel-number" href="tel:88005558628">
+                <span class="contacts__wrapper-svg contacts__wrapper-svg--phone"><svg
+                    class="contacts__svg contacts__svg--phone" width="18px" height="18px">
+                    <use xlink:href="./img/sprite.svg#icon-topmenu-phone"></use>
+                  </svg></span>
+                <span class="contacts__info">8 800 555-86-28</span>
+              </a>
+            </li>
+            <li class="contacts__item">
+              <a class="contacts__e-mail" href="mail@htmlacademy.ru">
+                <span class="contacts__wrapper-svg contacts__wrapper-svg--mail"><svg
+                    class="contacts__svg contacts__svg--mail" width="18px" height="14px">
+                    <use xlink:href="./img/sprite.svg#icon-topmenu-mail"></use>
+                  </svg></span>
+                <span class="contacts__info">mail@htmlacademy.ru</span></a>
+            </li>
+            <li class="contacts__item">
+              <a class="contacts__link" href="#">Aвторизация</a>
+            </li>
+          </ul>
+        </div>
+        <div class="page-main__review review">
+          <h2 class="visually-hidden">Отзывы наших пользователей</h2>
+          <blockquote class="review__text">
+            «Лучшее приложение, что я видел в жизни!»
+          </blockquote>
+          <p class="review__author-name">Мурат Эльтазин <br />
+            главный редактор газеты «гаджетлайф»</p>
+        </div>
       </div>
-    </section>
-    <section class="page-main__review review">
-      <h2 class="visually-hidden">Отзывы наших пользователей</h2>
-      <blockquote class="review__text">
-        «Лучшее приложение, что я видел в жизни!»
-      </blockquote>
-      <p class="review__author-name">Мурат Эльтазин <br />
-        главный редактор газеты «гаджетлайф»</p>
     </section>
     <section class="page-main__procedure procedure">
       <h2 class="visually-hidden">С чего начать?</h2>
@@ -415,21 +424,25 @@
                       <svg class="transport__svg transport__svg--active" width="19px" height="21px">
                         <use xlink:href="./img/sprite.svg#icon-plane"></use>
                       </svg>
+                      <p class="transport__prompt">Авиаперелет</p>
                     </li>
                     <li class="transport__item">
                       <svg class="transport__svg" width="17px" height="21px">
                         <use xlink:href="./img/sprite.svg#icon-bus"></use>
                       </svg>
+                      <p class="transport__prompt">Автотранспорт</p>
                     </li>
                     <li class="transport__item">
                       <svg class="transport__svg" width="24px" height="21px">
                         <use xlink:href="./img/sprite.svg#icon-bike"></use>
                       </svg>
+                      <p class="transport__prompt">Велосипед</p>
                     </li>
                     <li class="transport__item">
                       <svg class="transport__svg" width="20px" height="21px">
                         <use xlink:href="./img/sprite.svg#icon-run"></use>
                       </svg>
+                      <p class="transport__prompt">Пешком</p>
                     </li>
                   </ul>
                 </div>
@@ -493,21 +506,25 @@
                       <svg class="transport__svg transport__svg--active" width="19px" height="21px">
                         <use xlink:href="./img/sprite.svg#icon-plane"></use>
                       </svg>
+                      <p class="transport__prompt">Авиаперелет</p>
                     </li>
                     <li class="transport__item">
                       <svg class="transport__svg transport__svg--active" width="17px" height="21px">
                         <use xlink:href="./img/sprite.svg#icon-bus"></use>
                       </svg>
+                      <p class="transport__prompt">Автотранспорт</p>
                     </li>
                     <li class="transport__item">
                       <svg class="transport__svg" width="24px" height="21px">
                         <use xlink:href="./img/sprite.svg#icon-bike"></use>
                       </svg>
+                      <p class="transport__prompt">Велосипед</p>
                     </li>
                     <li class="transport__item">
                       <svg class="transport__svg transport__svg--active" width="20px" height="21px">
                         <use xlink:href="./img/sprite.svg#icon-run"></use>
                       </svg>
+                      <p class="transport__prompt">Пешком</p>
                     </li>
                   </ul>
                 </div>
@@ -579,7 +596,7 @@
           <form class="authorization__form" action="https://echo.htmlacademy.ru" method="post">
             <label class="authorization__label">
               <span class="visually-hidden">Введите свой электронный адрес</span>
-              <input class="authorization__input" type="email" name="e-mail" placeholder="E-mail" required />
+              <input class="authorization__input" type="text" name="e-mail" placeholder="E-mail" />
             </label>
             <button class="authorization__button" type="submit">
               Регистрация

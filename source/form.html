@@ -22,60 +22,62 @@
 </head>
 
 <body class="nojs">
-  <header class="page-header page-header--inner-page page-header--opened">
+  <header class="page-header page-header--form-page page-header--opened">
     <div class="page-header__wrapper-content">
       <div class="page-header__wrapper-alignment">
         <div class="page-header__wrapper-nav">
-          <a class="page-header__wrapper-logo" href="index.html">
-            <picture class="page-header__dark-theme">
-              <source type="image/webp" media="(min-width: 1440px)" srcset="
+          <div class="page-header__wrapper-logo">
+            <a href="index.html">
+              <picture class="page-header__dark-theme">
+                <source type="image/webp" media="(min-width: 1440px)" srcset="
               ./img/webp/logo-desktop-white@1x.webp 1x,
               ./img/webp/logo-desktop-white@2x.webp 2x
             " />
-              <source type="image/webp" media="(min-width: 768px)" srcset="
+                <source type="image/webp" media="(min-width: 768px)" srcset="
               ./img/webp/logo-tablet-white@1x.webp 1x,
               ./img/webp/logo-tablet-white@2x.webp 2x
             " />
-              <source type="image/webp" media="(min-width: 320px)" srcset="
+                <source type="image/webp" media="(min-width: 320px)" srcset="
               ./img/webp/logo-mobile-white@1x.webp 1x,
               ./img/webp/logo-mobile-white@2x.webp 2x
             " />
-              <source media="(min-width: 1440px)" srcset="
+                <source media="(min-width: 1440px)" srcset="
               ./img/content/logo-desktop-white@1x.png 1x,
               ./img/content/logo-desktop-white@2x.png 2x
             " />
-              <source media="(min-width: 768px)" srcset="
+                <source media="(min-width: 768px)" srcset="
               ./img/content/logo-tablet-white@1x.png 1x,
               ./img/content/logo-tablet-white@2x.png 2x
             " />
-              <img class="page-header__logo" src="./img/content/logo-mobile-white@1x.png"
-                srcset="./img/content/logo-mobile-white@2x.png 2x" loading="lazy" alt="Фотография корзин" />
-            </picture>
-            <picture class="page-header__light-theme">
-              <source type="image/webp" media="(min-width: 1440px)" srcset="
+                <img class="page-header__logo" src="./img/content/logo-mobile-white@1x.png"
+                  srcset="./img/content/logo-mobile-white@2x.png 2x" loading="lazy" alt="Фотография корзин" />
+              </picture>
+              <picture class="page-header__light-theme">
+                <source type="image/webp" media="(min-width: 1440px)" srcset="
               ./img/webp/logo-desktop-blue@1x.webp 1x,
               ./img/webp/logo-desktop-blue@2x.webp 2x
             " />
-              <source type="image/webp" media="(min-width: 768px)" srcset="
+                <source type="image/webp" media="(min-width: 768px)" srcset="
               ./img/webp/logo-tablet-blue@1x.webp 1x,
               ./img/webp/logo-tablet-blue@2x.webp 2x
             " />
-              <source type="image/webp" media="(min-width: 320px)" srcset="
+                <source type="image/webp" media="(min-width: 320px)" srcset="
               ./img/webp/logo-mobile-blue@1x.webp 1x,
               ./img/webp/logo-mobile-blue@2x.webp 2x
             " />
-              <source media="(min-width: 1440px)" srcset="
+                <source media="(min-width: 1440px)" srcset="
               ./img/content/logo-desktop-blue@1x.png 1x,
               ./img/content/logo-desktop-blue@2x.png 2x
             " />
-              <source media="(min-width: 768px)" srcset="
+                <source media="(min-width: 768px)" srcset="
               ./img/content/logo-tablet-blue@1x.png 1x,
               ./img/content/logo-tablet-blue@2x.png 2x
             " />
-              <img class="page-header__logo" src="./img/content/logo-mobile-blue@1x.png"
-                srcset="./img/content/logo-mobile-blue@2x.png 2x" loading="lazy" alt="Фотография корзин" />
-            </picture>
-          </a>
+                <img class="page-header__logo" src="./img/content/logo-mobile-blue@1x.png"
+                  srcset="./img/content/logo-mobile-blue@2x.png 2x" loading="lazy" alt="Фотография корзин" />
+              </picture>
+            </a>
+          </div>
           <nav class="page-header__nav">
             <button class="page-header__button" type="button"></button>
             <ul class="page-header__list main-menu">
@@ -95,11 +97,12 @@
               </li>
               <li class="contacts__item">
                 <a class="contacts__tel-number" href="tel:88005558628">
-                  <span class="contacts__wrapper-svg"><svg class="contacts__svg" width="18px" height="18px">
+                  <span class="contacts__wrapper-svg contacts__wrapper-svg--home-phone"><svg class="contacts__svg"
+                      width="18px" height="18px">
                       <use xlink:href="./img/sprite.svg#icon-phone"></use>
                     </svg></span>
-                  <span class="contacts__wrapper-svg contacts__wrapper-svg--phone"><svg
-                      class="contacts__svg contacts__svg--phone" width="18px" height="18px">
+                  <span class="contacts__wrapper-svg contacts__wrapper-svg--phone">
+                    <svg class="contacts__svg contacts__svg--phone" width="18px" height="18px">
                       <use xlink:href="./img/sprite.svg#icon-topmenu-phone"></use>
                     </svg></span>
                   <span class="contacts__info">8 800 555-86-28</span>
@@ -107,7 +110,8 @@
               </li>
               <li class="contacts__item">
                 <a class="contacts__e-mail" href="mail@htmlacademy.ru">
-                  <span class="contacts__wrapper-svg"><svg class="contacts__svg" width="18px" height="14px">
+                  <span class="contacts__wrapper-svg">
+                    <svg class="contacts__svg" width="18px" height="14px">
                       <use xlink:href="./img/sprite.svg#icon-mail"></use>
                     </svg></span>
                   <span class="contacts__info">mail@htmlacademy.ru</span></a>
@@ -150,7 +154,7 @@
 
   <main class="page-main">
 
-    <form class="page-main__form form-order" action="https://echo.htmlacademy.ru" method="post">
+    <form class="page-main__form" action="https://echo.htmlacademy.ru" method="post">
       <section class="page-main__personal-page personal-page">
         <div class="personal-page__wrapper-alignment">
           <div class="personal-page__wrapper">
@@ -161,47 +165,6 @@
               <p class="level-icon__number">80</p>
               <p class="level-icon__info">level</p>
             </div>
-            <fieldset class="personal-page__fieldset personal-page__fieldset--transport">
-              <legend class="personal-page__legend">транспорт:</legend>
-              <ul class="personal-page__list transport">
-                <li class="transport__item">
-                  <label class="transport__label">
-                    <input class="visually-hidden" type="checkbox" name="plane">
-                    <span class="transport__checkbox"></span>
-                    <svg class="transport__svg transport__svg--plane" width="19px" height="21px">
-                      <use xlink:href="./img/sprite.svg#icon-plane"></use>
-                    </svg>
-                  </label>
-                </li>
-                <li class="transport__item">
-                  <label class="transport__label">
-                    <input class="visually-hidden" type="checkbox" name="bus" checked>
-                    <span class="transport__checkbox"></span>
-                    <svg class="transport__svg transport__svg--bus" width="17px" height="21px">
-                      <use xlink:href="./img/sprite.svg#icon-bus"></use>
-                    </svg>
-                  </label>
-                </li>
-                <li class="transport__item">
-                  <label class="transport__label">
-                    <input class="visually-hidden" type="checkbox" name="bike">
-                    <span class="transport__checkbox"></span>
-                    <svg class="transport__svg transport__svg--bike" width="24px" height="21px">
-                      <use xlink:href="./img/sprite.svg#icon-bike"></use>
-                    </svg>
-                  </label>
-                </li>
-                <li class="transport__item">
-                  <label class="transport__label">
-                    <input class="visually-hidden" type="checkbox" name="run" checked>
-                    <span class="transport__checkbox"></span>
-                    <svg class="transport__svg transport__svg--run" width="20px" height="21px">
-                      <use xlink:href="./img/sprite.svg#icon-run"></use>
-                    </svg>
-                  </label>
-                </li>
-              </ul>
-            </fieldset>
             <div class="personal-page__wrapper-img">
               <picture>
                 <source type="image/webp" media="(min-width: 1440px)" srcset="
@@ -231,938 +194,1431 @@
           </div>
 
           <button class="personal-page__button-foto" type="button">
-            Сменить фото
+            <span class="personal-page__span">Сменить</span>
+            <span>фото</span>
           </button>
 
-          <div class="personal-page__teg">
-            <label class="personal-page__label">
-              <h3 class="personal-page__title">Тэги</h3>
-              <textarea name="tegs" cols="30" rows="10" value="#бургер #бар #футбол #концерт #крафт"></textarea>
-            </label>
+          <div class="personal-page__wrapper-info">
+            <div class="personal-page__teg">
+              <label class="personal-page__label">
+                <span class="personal-page__title">Тэги</span>
+                <textarea class="personal-page__textarea" name="tegs" cols="30" rows="2"
+                  placeholder="#бургер #бар #футбол #концерт #крафт"></textarea>
+              </label>
+            </div>
+            <fieldset class="personal-page__fieldset transport">
+              <legend class="personal-page__legend">транспорт:</legend>
+              <h3 class="personal-page__title">транспорт</h3>
+              <ul class="personal-page__list transport__list">
+                <li class="transport__item">
+                  <label class="transport__label">
+                    <input class="visually-hidden" type="checkbox" name="plane">
+                    <span class="transport__checkbox"></span>
+                    <svg class="transport__svg transport__svg--plane" width="19px" height="21px">
+                      <use xlink:href="./img/sprite.svg#icon-plane"></use>
+                    </svg>
+                  </label>
+                  <p class="transport__prompt">Авиаперелет</p>
+                </li>
+                <li class="transport__item">
+                  <label class="transport__label">
+                    <input class="visually-hidden" type="checkbox" name="bus" checked>
+                    <span class="transport__checkbox"></span>
+                    <svg class="transport__svg transport__svg--bus" width="17px" height="21px">
+                      <use xlink:href="./img/sprite.svg#icon-bus"></use>
+                    </svg>
+                  </label>
+                  <p class="transport__prompt">Автотранспорт</p>
+                </li>
+                <li class="transport__item">
+                  <label class="transport__label">
+                    <input class="visually-hidden" type="checkbox" name="bike">
+                    <span class="transport__checkbox"></span>
+                    <svg class="transport__svg transport__svg--bike" width="24px" height="21px">
+                      <use xlink:href="./img/sprite.svg#icon-bike"></use>
+                    </svg>
+                  </label>
+                  <p class="transport__prompt">Велосипед</p>
+                </li>
+                <li class="transport__item">
+                  <label class="transport__label">
+                    <input class="visually-hidden" type="checkbox" name="run" checked>
+                    <span class="transport__checkbox"></span>
+                    <svg class="transport__svg transport__svg--run" width="20px" height="21px">
+                      <use xlink:href="./img/sprite.svg#icon-run"></use>
+                    </svg>
+                  </label>
+                  <p class="transport__prompt">Пешком</p>
+                </li>
+              </ul>
+            </fieldset>
           </div>
         </div>
       </section>
 
       <section class="page-main__plans plans">
-        <h2 class="plans__title">Мои планы:</h2>
-        <ul class="plans__list">
-          <li class="plans__item">
-            <h4 class="plans__heading">
-              1. Франция, Италия
-            </h4>
-            <p class="plans__number">3 попутчика</p>
-            <p class="plans__data">26 мар — 29 мар</p>
-            <button class="plans__button">Изменить</button>
-          </li>
-          <li class="plans__item">
-            <h4 class="plans__heading">
-              2. Таиланд, Индонезия
-            </h4>
-            <p class="plans__number">1 попутчик</p>
-            <p class="plans__data">1 июл — 15 июл</p>
-            <button class="plans__button">Изменить</button>
-          </li>
-        </ul>
-
-        <form class="plans__form-add form-add" action="https://echo.htmlacademy.ru" method="post">
-          <h2 class="plans__title">Добавить план:</h2>
-          <ul class="form-add__list">
-            <li class="form-add__item">
-              <h3 class="form-add__title" id="first-step">
-                Шаг 1. <br />
-                Даты пребывания
-              </h3>
-              <p class="form-add__text">
-                Укажите предпочтительное количество попутчиков, которых вы
-                хотели бы позвать в поездку и ее предполагаемую длительность.
-              </p>
-              <label class="form-add__label">
-                <span class="form-add__subheading">ищу попутчиков:</span>
-                <span class="form-add__subheading--opacity">Чел.</span>
-                <input type="text" name="number-companions" pattern="[0-9]" value="2" />
-              </label>
-              <label class="form-add__label">
-                <span class="form-add__subheading">Длительность:</span>
-                <span class="form-add__subheading--opacity">дн.</span>
-                <input type="text" name="duration" pattern="[0-9]" value="2" />
-              </label>
-              <label class="form-add__label">
-                <span class="form-add__subheading--min">Можно с детьми</span>
-                <input type="checkbox" name="children" checked />
-              </label>
-              <div class="form-add__calendar">
-                <h3 class="form-add__title">Март 2019</h3>
-                <table class="form-add__table">
-                  <thead>
-                    <tr>
-                      <th>П</th>
-                      <th>В</th>
-                      <th>С</th>
-                      <th>Ч</th>
-                      <th>П</th>
-                      <th class="form-add__weekend">С</th>
-                      <th class="form-add__weekend">В</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>23</td>
-                      <td>24</td>
-                      <td>25</td>
-                      <td>26</td>
-                      <td>27</td>
-                      <td>28</td>
-                      <td>1</td>
-                    </tr>
-                    <tr>
-                      <td>2</td>
-                      <td>3</td>
-                      <td>4</td>
-                      <td>5</td>
-                      <td>6</td>
-                      <td>7</td>
-                      <td>8</td>
-                    </tr>
-                    <tr>
-                      <td>9</td>
-                      <td>10</td>
-                      <td>11</td>
-                      <td>12</td>
-                      <td>13</td>
-                      <td>14</td>
-                      <td>15</td>
-                    </tr>
-                    <tr>
-                      <td>16</td>
-                      <td>17</td>
-                      <td>18</td>
-                      <td>19</td>
-                      <td>20</td>
-                      <td>21</td>
-                      <td>22</td>
-                    </tr>
-                    <tr>
-                      <td>23</td>
-                      <td>24</td>
-                      <td>25</td>
-                      <td class="form-add__selected--active">26</td>
-                      <td class="form-add__selected">27</td>
-                      <td class="form-add__selected">28</td>
-                      <td>29</td>
-                    </tr>
-                  </tbody>
-                  <tfoot>
-                    <tr>
-                      <td>30</td>
-                      <td>31</td>
-                      <td>1</td>
-                      <td>2</td>
-                      <td>3</td>
-                      <td>4</td>
-                      <td>5</td>
-                    </tr>
-                  </tfoot>
-                </table>
+        <div class="plans__wrapper-alignment">
+          <h2 class="plans__title">Мои планы:</h2>
+          <ul class="plans__list">
+            <li class="plans__item">
+              <div class="plans__wrapper-heading">
+                <span class="plans__serial-number">1.</span>
+                <h4 class="plans__heading">
+                  Франция, Италия
+                </h4>
               </div>
-              <a class="form-add__button-next button" href="#second-step">Следующий шаг</a>
+              <div class="plans__wrapper">
+                <p class="plans__number">3 попутчика</p>
+                <p class="plans__data">26 мар — 29 мар</p>
+                <button class="plans__button">Изменить</button>
+              </div>
             </li>
-            <li class="form-add__item">
-              <h3 class="form-add__title" id="second-step">
-                Шаг 2. <br />
-                Маршрут
-              </h3>
-              <p class="form-add__text">
-                Укажите страны, которые вы хотели посетить. Это может быть одна
-                или сразу несколько.
-              </p>
-              <div class="form-add__wrapper-country">
-                <label class="form-add__label">
-                  <span class="visually-hidden">Выберете страну</span>
-                  <select name="name-country">
-                    <option value="Bosnia-and-Herzegovina" selected>Босния и герцеговина</option>
-                  </select>
-                </label>
-                <button class="form-add__button-close" type="button">
-                  <span class="visually-hidden">Закрыть</span>
-                </button>
-                <span class="form-add__icon-flag form-add__icon-flag--Bosnia-and-Herzegovina"></span>
+            <li class="plans__item">
+              <div class="plans__wrapper-heading">
+                <span class="plans__serial-number">2.</span>
+                <h4 class="plans__heading">
+                  Таиланд, Индонезия
+                </h4>
               </div>
-              <div class="form-add__wrapper-country">
-                <label class="form-add__label">
-                  <span class="visually-hidden">Выберете страну</span>
-                  <select name="name-country">
-                    <option value="Czech-Republic" selected>Чехия</option>
-                  </select>
-                </label>
-                <button class="form-add__button-close" type="button">
-                  <span class="visually-hidden">Закрыть</span>
-                </button>
-                <span class="form-add__icon-flag form-add__icon-flag--Czech-Republic"></span>
+              <div class="plans__wrapper">
+                <p class="plans__number">1 попутчик</p>
+                <p class="plans__data">1 июл — 15 июл</p>
+                <button class="plans__button">Изменить</button>
               </div>
-              <div class="form-add__wrapper-country">
-                <button class="form-add__button-choice">Выберете страну</button>
-                <button class="form-add__button-close" type="button">
-                  <span class="visually-hidden">Закрыть</span>
-                </button>
-                <div class="filter__popup">
-                  <ul class="filter__list">
-                    <li class="filter__item">
-                      <a class="filter__link filter__link--active" href="#">Европа</a>
-                    </li>
-                    <li class="filter__item">
-                      <a class="filter__link" href="#">Азия</a>
-                    </li>
-                    <li class="filter__item">
-                      <a class="filter__link" href="#">Америка</a>
-                    </li>
-                    <li class="filter__item">
-                      <a class="filter__link" href="#">Острова</a>
-                    </li>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="page-main__steps steps">
+        <div class="steps__wrapper-content">
+          <div class="steps__wrapper-alignment">
+            <h2 class="steps__title">Добавить план:</h2>
+            <ul class="steps__list">
+              <li class="steps__item">
+                <div class="steps__container">
+                  <div class="steps__wrapper-title">
+                    <h3 class="steps__heading" id="first-step">
+                      <span>Шаг 1.</span>
+                      <span>Даты пребывания</span>
+                    </h3>
+                    <p class="steps__text steps__text--first">
+                      Укажите предпочтительное количество попутчиков, которых вы
+                      хотели бы позвать в поездку и ее предполагаемую длительность.
+                    </p>
+                  </div>
+                  <ul class="steps__wrapper-indicator">
+                    <li><span class="steps__indicator steps__indicator--active">Даты</span></li>
+                    <li><span class="steps__indicator">Маршрут</span></li>
+                    <li><span class="steps__indicator">Развлечения</span></li>
                   </ul>
-                  <table class="filter__list country">
+                </div>
+                <div class="steps__wrapper">
+                  <div class="steps__amount">
+                    <div class="steps__wrapper-container">
+                      <span class="steps__subheading">ищу попутчиков:</span>
+                      <span class="steps__subheading--opacity">Чел.</span>
+                    </div>
+                    <div class="steps__wrapper-input">
+                      <label for="companions" class="steps__label">
+                        <input id="companions" class="steps__input" type="text" name="number-companions" pattern="[1-9]"
+                          value="2" />
+                      </label>
+                      <button class="steps__amount-button steps__amount-button--minus" type="button"
+                        aria-label="убавить"></button>
+                      <button class="steps__amount-button steps__amount-button--plus" type="button"
+                        aria-label="прибавить"></button>
+                    </div>
+                  </div>
+                  <div class="steps__amount steps__amount--second">
+                    <div class="steps__wrapper-container">
+                      <span class="steps__subheading">Длительность:</span>
+                      <span class="steps__subheading--opacity">дн.</span>
+                    </div>
+                    <div class="steps__wrapper-input">
+                      <label for="duration" class="steps__label">
+                        <input class="steps__input" id="duration" type="text" name="duration" pattern="[1-9]"
+                          value="2" />
+                      </label>
+                      <button class="steps__amount-button steps__amount-button--minus" type="button"
+                        aria-label="убавить"></button>
+                      <button class="steps__amount-button steps__amount-button--plus" type="button"
+                        aria-label="прибавить"></button>
+                    </div>
+                  </div>
+                  <div class="steps__children">
+                    <label class="steps__label steps__label--checkbox">
+                      <input class="visually-hidden" id="children" type="checkbox" name="children" checked />
+                      <span class="steps__checkbox"></span>
+                      <span class="steps__subheading--min">Можно с детьми</span>
+                    </label>
+                  </div>
+                </div>
+                <div class="steps__calendar calendar">
+                  <div class="calendar__wrapper">
+                    <button class="calendar__button calendar__button--back" type="button" aria-label="назад"></button>
+                    <h3 class="calendar__title">Март 2019</h3>
+                    <button class="calendar__button calendar__button--forward" type="button"
+                      aria-label="вперед"></button>
+                  </div>
+
+                  <table class="calendar__table">
+                    <thead>
+                      <tr>
+                        <th>
+                          <span>П</span>
+                          <span class="calendar__second-letter">н</span>
+                        </th>
+                        <th>
+                          <span>В</span>
+                          <span class="calendar__second-letter">т</span>
+                        </th>
+                        <th>
+                          <span>С</span>
+                          <span class="calendar__second-letter">р</span>
+                        </th>
+                        <th>
+                          <span>Ч</span>
+                          <span class="calendar__second-letter">т</span>
+                        </th>
+                        <th>
+                          <span>П</span>
+                          <span class="calendar__second-letter">т</span>
+                        </th>
+                        <th class="calendar__weekend">
+                          <span>С</span>
+                          <span class="calendar__second-letter">б</span>
+                        </th>
+                        <th class="calendar__weekend">
+                          <span>В</span>
+                          <span class="calendar__second-letter">с</span>
+                        </th>
+                      </tr>
+                    </thead>
                     <tbody>
                       <tr>
                         <td>
-                          <label class="country__label">
-                            <input class="visually-hidden" type="radio" name="capital" value="A" checked />
-                            <span>А</span>
+                          <label class="calendar__label">
+                            <input class="visually-hidden calendar__checkbox" type="checkbox" name="23">
+                            <span class="calendar__toggle">23</span>
                           </label>
                         </td>
                         <td>
-                          <label class="country__label">
-                            <input class="visually-hidden" type="radio" name="capital" value="Б" checked />
-                            <span>Б</span>
+                          <label class="calendar__label">
+                            <input class="visually-hidden calendar__checkbox" type="checkbox" name="24">
+                            <span class="calendar__toggle">24</span>
                           </label>
                         </td>
                         <td>
-                          <label class="country__label">
-                            <input class="visually-hidden" type="radio" name="capital" value="В" checked />
-                            <span>В</span>
+                          <label class="calendar__label">
+                            <input class="visually-hidden calendar__checkbox" type="checkbox" name="25">
+                            <span class="calendar__toggle">25</span>
                           </label>
                         </td>
                         <td>
-                          <label class="country__label">
-                            <input class="visually-hidden" type="radio" name="capital" value="Г" checked />
-                            <span>Г</span>
+                          <label class="calendar__label">
+                            <input class="visually-hidden calendar__checkbox" type="checkbox" name="26">
+                            <span class="calendar__toggle">26</span>
                           </label>
                         </td>
                         <td>
-                          <label class="country__label">
-                            <input class="visually-hidden" type="radio" name="capital" value="Д" checked />
-                            <span>Д</span>
-                          </label>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <label class="country__label">
-                            <input class="visually-hidden" type="radio" name="capital" value="Е" checked />
-                            <span>Е</span>
+                          <label class="calendar__label">
+                            <input class="visually-hidden calendar__checkbox" type="checkbox" name="27">
+                            <span class="calendar__toggle">27</span>
                           </label>
                         </td>
                         <td>
-                          <label class="country__label">
-                            <input class="visually-hidden" type="radio" name="capital" value="З" checked />
-                            <span>З</span>
+                          <label class="calendar__label">
+                            <input class="visually-hidden calendar__checkbox" type="checkbox" name="28">
+                            <span class="calendar__toggle">28</span>
                           </label>
                         </td>
                         <td>
-                          <label class="country__label">
-                            <input class="visually-hidden" type="radio" name="capital" value="И" checked />
-                            <span>И</span>
-                          </label>
-                        </td>
-                        <td>
-                          <label class="country__label">
-                            <input class="visually-hidden" type="radio" name="capital" value="К" checked />
-                            <span>К</span>
-                          </label>
-                        </td>
-                        <td>
-                          <label class="country__label">
-                            <input class="visually-hidden" type="radio" name="capital" value="Л" checked />
-                            <span>Л</span>
+                          <label class="calendar__label">
+                            <input class="visually-hidden calendar__checkbox" type="checkbox" name="1">
+                            <span class="calendar__toggle">1</span>
                           </label>
                         </td>
                       </tr>
                       <tr>
                         <td>
-                          <label class="country__label">
-                            <input class="visually-hidden" type="radio" name="capital" value="М" checked />
-                            <span>М</span>
+                          <label class="calendar__label">
+                            <input class="visually-hidden calendar__checkbox" type="checkbox" name="2">
+                            <span class="calendar__toggle">2</span>
                           </label>
                         </td>
                         <td>
-                          <label class="country__label">
-                            <input class="visually-hidden" type="radio" name="capital" value="Н" checked />
-                            <span>Н</span>
+                          <label class="calendar__label">
+                            <input class="visually-hidden calendar__checkbox" type="checkbox" name="3">
+                            <span class="calendar__toggle">3</span>
                           </label>
                         </td>
                         <td>
-                          <label class="country__label">
-                            <input class="visually-hidden" type="radio" name="capital" value="О" checked />
-                            <span>О</span>
+                          <label class="calendar__label">
+                            <input class="visually-hidden calendar__checkbox" type="checkbox" name="4">
+                            <span class="calendar__toggle">4</span>
                           </label>
                         </td>
                         <td>
-                          <label class="country__label">
-                            <input class="visually-hidden" type="radio" name="capital" value="П" checked />
-                            <span>П</span>
+                          <label class="calendar__label">
+                            <input class="visually-hidden calendar__checkbox" type="checkbox" name="5">
+                            <span class="calendar__toggle">5</span>
                           </label>
                         </td>
                         <td>
-                          <label class="country__label">
-                            <input class="visually-hidden" type="radio" name="capital" value="Р" checked />
-                            <span>Р</span>
-                          </label>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <label class="country__label">
-                            <input class="visually-hidden" type="radio" name="capital" value="С" checked />
-                            <span>С</span>
+                          <label class="calendar__label">
+                            <input class="visually-hidden calendar__checkbox" type="checkbox" name="6">
+                            <span class="calendar__toggle">6</span>
                           </label>
                         </td>
                         <td>
-                          <label class="country__label">
-                            <input class="visually-hidden" type="radio" name="capital" value="Т" checked />
-                            <span>Т</span>
+                          <label class="calendar__label">
+                            <input class="visually-hidden calendar__checkbox" type="checkbox" name="7">
+                            <span class="calendar__toggle">7</span>
                           </label>
                         </td>
                         <td>
-                          <label class="country__label">
-                            <input class="visually-hidden" type="radio" name="capital" value="У" checked />
-                            <span>У</span>
-                          </label>
-                        </td>
-                        <td>
-                          <label class="country__label">
-                            <input class="visually-hidden" type="radio" name="capital" value="Ф" checked />
-                            <span>Ф</span>
-                          </label>
-                        </td>
-                        <td>
-                          <label class="country__label">
-                            <input class="visually-hidden" type="radio" name="capital" value="Х" checked />
-                            <span>Х</span>
+                          <label class="calendar__label">
+                            <input class="visually-hidden calendar__checkbox" type="checkbox" name="8">
+                            <span class="calendar__toggle">8</span>
                           </label>
                         </td>
                       </tr>
                       <tr>
                         <td>
-                          <label class="country__label">
-                            <input class="visually-hidden" type="radio" name="capital" value="Ч" checked />
-                            <span>Ч</span>
+                          <label class="calendar__label">
+                            <input class="visually-hidden calendar__checkbox" type="checkbox" name="9">
+                            <span class="calendar__toggle">9</span>
                           </label>
                         </td>
                         <td>
-                          <label class="country__label">
-                            <input class="visually-hidden" type="radio" name="capital" value="Ш" checked />
-                            <span>Ш</span>
+                          <label class="calendar__label">
+                            <input class="visually-hidden calendar__checkbox" type="checkbox" name="10">
+                            <span class="calendar__toggle">10</span>
                           </label>
                         </td>
                         <td>
-                          <label class="country__label">
-                            <input class="visually-hidden" type="radio" name="capital" value="Э" checked />
-                            <span>Э</span>
+                          <label class="calendar__label">
+                            <input class="visually-hidden calendar__checkbox" type="checkbox" name="11">
+                            <span class="calendar__toggle">11</span>
                           </label>
                         </td>
                         <td>
-                          <label class="country__label">
-                            <input class="visually-hidden" type="radio" name="capital" value="Ю" checked />
-                            <span>Ю</span>
+                          <label class="calendar__label">
+                            <input class="visually-hidden calendar__checkbox" type="checkbox" name="12">
+                            <span class="calendar__toggle">12</span>
                           </label>
                         </td>
                         <td>
-                          <label class="country__label">
-                            <input class="visually-hidden" type="radio" name="capital" value="Я" checked />
-                            <span>Я</span>
+                          <label class="calendar__label">
+                            <input class="visually-hidden calendar__checkbox" type="checkbox" name="13">
+                            <span class="calendar__toggle">13</span>
+                          </label>
+                        </td>
+                        <td>
+                          <label class="calendar__label">
+                            <input class="visually-hidden calendar__checkbox" type="checkbox" name="14">
+                            <span class="calendar__toggle">14</span>
+                          </label>
+                        </td>
+                        <td>
+                          <label class="calendar__label">
+                            <input class="visually-hidden calendar__checkbox" type="checkbox" name="15">
+                            <span class="calendar__toggle">15</span>
+                          </label>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <label class="calendar__label">
+                            <input class="visually-hidden calendar__checkbox" type="checkbox" name="16">
+                            <span class="calendar__toggle">16</span>
+                          </label>
+                        </td>
+                        <td>
+                          <label class="calendar__label">
+                            <input class="visually-hidden calendar__checkbox" type="checkbox" name="17">
+                            <span class="calendar__toggle">17</span>
+                          </label>
+                        </td>
+                        <td>
+                          <label class="calendar__label">
+                            <input class="visually-hidden calendar__checkbox" type="checkbox" name="18">
+                            <span class="calendar__toggle">18</span>
+                          </label>
+                        </td>
+                        <td>
+                          <label class="calendar__label">
+                            <input class="visually-hidden calendar__checkbox" type="checkbox" name="19">
+                            <span class="calendar__toggle">19</span>
+                          </label>
+                        </td>
+                        <td>
+                          <label class="calendar__label">
+                            <input class="visually-hidden calendar__checkbox" type="checkbox" name="20">
+                            <span class="calendar__toggle">20</span>
+                          </label>
+                        </td>
+                        <td>
+                          <label class="calendar__label">
+                            <input class="visually-hidden calendar__checkbox" type="checkbox" name="21">
+                            <span class="calendar__toggle">21</span>
+                          </label>
+                        </td>
+                        <td>
+                          <label class="calendar__label">
+                            <input class="visually-hidden calendar__checkbox" type="checkbox" name="22">
+                            <span class="calendar__toggle">22</span>
+                          </label>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <label class="calendar__label">
+                            <input class="visually-hidden calendar__checkbox" type="checkbox" name="23">
+                            <span class="calendar__toggle">23</span>
+                          </label>
+                        </td>
+                        <td>
+                          <label class="calendar__label">
+                            <input class="visually-hidden calendar__checkbox" type="checkbox" name="24">
+                            <span class="calendar__toggle">24</span>
+                          </label>
+                        </td>
+                        <td>
+                          <label class="calendar__label">
+                            <input class="visually-hidden calendar__checkbox" type="checkbox" name="25">
+                            <span class="calendar__toggle">25</span>
+                          </label>
+                        </td>
+                        <td>
+                          <label class="calendar__label">
+                            <input class="visually-hidden calendar__checkbox" type="checkbox" name="26" checked>
+                            <span class="calendar__toggle">26</span>
+                          </label>
+                        </td>
+                        <td>
+                          <label class="calendar__label">
+                            <input class="visually-hidden calendar__checkbox" type="checkbox" name="27" checked>
+                            <span class="calendar__toggle">27</span>
+                          </label>
+                        </td>
+                        <td>
+                          <label class="calendar__label">
+                            <input class="visually-hidden calendar__checkbox" type="checkbox" name="28" checked>
+                            <span class="calendar__toggle">28</span>
+                          </label>
+                        </td>
+                        <td>
+                          <label class="calendar__label">
+                            <input class="visually-hidden calendar__checkbox" type="checkbox" name="29">
+                            <span class="calendar__toggle calendar__grey">29</span>
+                          </label>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <label class="calendar__labelx">
+                            <input class="visually-hidden calendar__checkbox" type="checkbox" name="30">
+                            <span class="calendar__toggle calendar__grey">30</span>
+                          </label>
+                        </td>
+                        <td>
+                          <label class="calendar__label">
+                            <input class="visually-hidden calendar__checkbox" type="checkbox" name="31">
+                            <span class="calendar__toggle calendar__grey">31</span>
+                          </label>
+                        </td>
+                        <td>
+                          <label class="calendar__label">
+                            <input class="visually-hidden calendar__checkbox" type="checkbox" name="1">
+                            <span class="calendar__toggle calendar__grey">1</span>
+                          </label>
+                        </td>
+                        <td>
+                          <label class="calendar__label">
+                            <input class="visually-hidden calendar__checkbox" type="checkbox" name="2">
+                            <span class="calendar__toggle calendar__grey">2</span>
+                          </label>
+                        </td>
+                        <td>
+                          <label class="calendar__label">
+                            <input class="visually-hidden calendar__checkbox" type="checkbox" name="3">
+                            <span class="calendar__toggle calendar__grey">3</span>
+                          </label>
+                        </td>
+                        <td>
+                          <label class="calendar__label">
+                            <input class="visually-hidden calendar__checkbox" type="checkbox" name="4">
+                            <span class="calendar__toggle calendar__grey">4</span>
+                          </label>
+                        </td>
+                        <td>
+                          <label class="calendar__label">
+                            <input class="visually-hidden calendar__checkbox" type="checkbox" name="5">
+                            <span class="calendar__toggle calendar__grey">5</span>
                           </label>
                         </td>
                       </tr>
                     </tbody>
                   </table>
-                  <ul class="country__list capital-1" data-letter="A">
-                    <li class="country__item">
-                      <a href="#">Австралия</a>
-                    </li>
-                    <li class="country__item">
-                      <a href="#">Австрия</a>
-                    </li>
-                    <li class="country__item">
-                      <a href="#">Азербайджан</a>
-                    </li>
-                    <li class="country__item">
-                      <a href="#">Албания</a>
-                    </li>
-                    <li class="country__item">
-                      <a href="#">Алжир</a>
-                    </li>
-                    <li class="country__item">
-                      <a href="#">Ангола</a>
-                    </li>
-                    <li class="country__item">
-                      <a href="#">Андорра</a>
-                    </li>
-                    <li class="country__item">
-                      <a href="#">Антигуа и Барбуда</a>
-                    </li>
-                    <li class="country__item">
-                      <a href="#">Аргентина</a>
-                    </li>
-                    <li class="country__item">
-                      <a href="#">Армения</a>
-                    </li>
-                    <li class="country__item">
-                      <a href="#">Афганистан</a>
-                    </li>
-                  </ul>
-                  <ul class="country__list capital-2" data-letter="B">
-                    <li class="country__item">
-                      <a href="#">Багамские Острова</a>
-                    </li>
-                    <li class="country__item">
-                      <a href="#">Бангладеш</a>
-                    </li>
-                    <li class="country__item">
-                      <a href="#">Барбадос</a>
-                    </li>
-                    <li class="country__item">
-                      <a href="#">Бахрейн</a>
-                    </li>
-                    <li class="country__item">
-                      <a href="#">Белоруссия</a>
-                    </li>
-                    <li class="country__item">
-                      <a href="#">Белиз</a>
-                    </li>
-                    <li class="country__item">
-                      <a href="#">Бельгия</a>
-                    </li>
-                    <li class="country__item">
-                      <a href="#">Бенин</a>
-                    </li>
-                    <li class="country__item">
-                      <a href="#">Болгария</a>
-                    </li>
-                    <li class="country__item">
-                      <a href="#">Боливия</a>
-                    </li>
-                    <li class="country__item">
-                      <a href="#">Босния и Герцеговина</a>
-                    </li>
-                    <li class="country__item">
-                      <a href="#">Ботсвана</a>
-                    </li>
-                    <li class="country__item">
-                      <a href="#">Бразилия</a>
-                    </li>
-                    <li class="country__item">
-                      <a href="#">Бруней</a>
-                    </li>
-                    <li class="country__item">
-                      <a href="#">Буркина-Фасо</a>
-                    </li>
-                    <li class="country__item">
-                      <a href="#">Бурунди</a>
-                    </li>
-                    <li class="country__item">
-                      <a href="#">Бутан</a>
-                    </li>
-                  </ul>
-                  <ul class="country__list capital-3" data-letter="V">
-                    <li class="country__item">
-                      <a href="#">Вануату</a>
-                    </li>
-                    <li class="country__item">
-                      <a href="#">Великобритания</a>
-                    </li>
-                    <li class="country__item">
-                      <a href="#">Венгрия</a>
-                    </li>
-                    <li class="country__item">
-                      <a href="#">Венесуэла</a>
-                    </li>
-                    <li class="country__item">
-                      <a href="#">Восточный Тимор</a>
-                    </li>
-                    <li class="country__item">
-                      <a href="#">Вьетнам</a>
-                    </li>
-                  </ul>
-                  <ul class="country__list capital-4" data-letter="G">
-                    <li class="country__item">
-                      <a href="#">Габон</a>
-                    </li>
-                    <li class="country__item">
-                      <a href="#">Гаити</a>
-                    </li>
-                    <li class="country__item">
-                      <a href="#">Гайана</a>
-                    </li>
-                    <li class="country__item">
-                      <a href="#">Гамбия</a>
-                    </li>
-                    <li class="country__item">
-                      <a href="#">Гана</a>
-                    </li>
-                    <li class="country__item">
-                      <a href="#">Гватемала</a>
-                    </li>
-                    <li class="country__item">
-                      <a href="#">Гвинея</a>
-                    </li>
-                    <li class="country__item">
-                      <a href="#">Гвинея-Бисау</a>
-                    </li>
-                    <li class="country__item">
-                      <a href="#">Германия</a>
-                    </li>
-                    <li class="country__item">
-                      <a href="#">Гондурас</a>
-                    </li>
-                    <li class="country__item">
-                      <a href="#">Гренада</a>
-                    </li>
-                    <li class="country__item">
-                      <a href="#">Греция</a>
-                    </li>
-                    <li class="country__item">
-                      <a href="#">Грузия</a>
-                    </li>
-                  </ul>
-                  <ul class="country__list capital-5" data-letter="D">
-                    <li class="country__item">
-                      <a href="#">Дания</a>
-                    </li>
-                    <li class="country__item">
-                      <a href="#">Джибути</a>
-                    </li>
-                    <li class="country__item">
-                      <a href="#">Доминика</a>
-                    </li>
-                    <li class="country__item">
-                      <a href="#">Доминикана</a>
-                    </li>
-                  </ul>
-                  <ul class="country__list capital-6" data-letter="E">
-                    <li class="country__item">
-                      <a href="#">Египет</a>
-                    </li>
-                  </ul>
-                  <ul class="country__list capital-7" data-letter="Z">
-                    <li class="country__item">
-                      <a href="#">Замбия</a>
-                    </li>
-                    <li class="country__item">
-                      <a href="#">Зимбабве</a>
-                    </li>
-                  </ul>
-                  <ul class="country__list capital-8" data-letter="I">
-                    <li class="country__item">
-                      <a href="#">Израиль</a>
-                    </li>
-                    <li class="country__item">
-                      <a href="#">Индия</a>
-                    </li>
-                    <li class="country__item">
-                      <a href="#">Индонезия</a>
-                    </li>
-                    <li class="country__item">
-                      <a href="#">Иордания</a>
-                    </li>
-                    <li class="country__item">
-                      <a href="#">Ирак</a>
-                    </li>
-                    <li class="country__item">
-                      <a href="#">Иран</a>
-                    </li>
-                    <li class="country__item">
-                      <a href="#">Ирландия</a>
-                    </li>
-                    <li class="country__item">
-                      <a href="#">Исландия</a>
-                    </li>
-                    <li class="country__item">
-                      <a href="#">Испания</a>
-                    </li>
-                    <li class="country__item">
-                      <a href="#">Италия</a>
-                    </li>
-                  </ul>
-                  <ul class="country__list capital-9" data-letter="K">
-                    <li class="country__item">
-                      <a href="#">Кабо-Верде</a>
-                    </li>
-                    <li class="country__item">
-                      <a href="#">Казахстан</a>
-                    </li>
-                    <li class="country__item">
-                      <a href="#">Камбоджа</a>
-                    </li>
-                    <li class="country__item">
-                      <a href="#">Камерун</a>
-                    </li>
-                    <li class="country__item">
-                      <a href="#">Канада</a>
-                    </li>
-                    <li class="country__item">
-                      <a href="#">Катар</a>
-                    </li>
-                    <li class="country__item">
-                      <a href="#">Кения</a>
-                    </li>
-                    <li class="country__item">
-                      <a href="#">Кипр</a>
-                    </li>
-                    <li class="country__item">
-                      <a href="#">Киргизия</a>
-                    </li>
-                    <li class="country__item">
-                      <a href="#">Кирибати</a>
-                    </li>
-                    <li class="country__item">
-                      <a href="#">Китай</a>
-                    </li>
-                    <li class="country__item">
-                      <a href="#">Колумбия</a>
-                    </li>
-                  </ul>
-                  <ul class="country__list capital-10" data-letter="L">
-                    <li class="country__item">
-                      <a href="#">Лаос</a>
-                    </li>
-                    <li class="country__item">
-                      <a href="#">Латвия</a>
-                    </li>
-                    <li class="country__item">
-                      <a href="#">Лесото</a>
-                    </li>
-                    <li class="country__item">
-                      <a href="#">Либерия</a>
-                    </li>
-                    <li class="country__item">
-                      <a href="#">Ливан</a>
-                    </li>
-                    <li class="country__item">
-                      <a href="#">Ливия</a>
-                    </li>
-                    <li class="country__item">
-                      <a href="#">Литва</a>
-                    </li>
-                    <li class="country__item">
-                      <a href="#">Лихтенштейн</a>
-                    </li>
-                    <li class="country__item">
-                      <a href="#">Люксембург</a>
-                    </li>
-                  </ul>
-                  <ul class="country__list capital-11" data-letter="M">
-                    <li class="country__item">
-                      <a href="#">Маврикий</a>
-                    </li>
-                    <li class="country__item">
-                      <a href="#">Мавритания</a>
-                    </li>
-                    <li class="country__item">
-                      <a href="#">Мадагаскар</a>
-                    </li>
-                    <li class="country__item">
-                      <a href="#">Малави</a>
-                    </li>
-                    <li class="country__item">
-                      <a href="#">Малайзия</a>
-                    </li>
-                    <li class="country__item">
-                      <a href="#">Мали</a>
-                    </li>
-                    <li class="country__item">
-                      <a href="#">Мальдивы</a>
-                    </li>
-                    <li class="country__item">
-                      <a href="#">Мальта</a>
-                    </li>
-                    <li class="country__item">
-                      <a href="#">Марокко</a>
-                    </li>
-                    <li class="country__item">
-                      <a href="#">Мексика</a>
-                    </li>
-                  </ul>
-                  <ul class="country__list capital-12" data-letter="N">
-                    <li class="country__item">
-                      <a href="#">Намибия</a>
-                    </li>
-                    <li class="country__item">
-                      <a href="#">Науру</a>
-                    </li>
-                    <li class="country__item">
-                      <a href="#">Непал</a>
-                    </li>
-                    <li class="country__item">
-                      <a href="#">Нигер</a>
-                    </li>
-                    <li class="country__item">
-                      <a href="#">Нигерия</a>
-                    </li>
-                    <li class="country__item">
-                      <a href="#">Нидерланды</a>
-                    </li>
-                    <li class="country__item">
-                      <a href="#">Никарагуа</a>
-                    </li>
-                    <li class="country__item">
-                      <a href="#">Новая Зеландия</a>
-                    </li>
-                    <li class="country__item">
-                      <a href="#">Норвегия</a>
-                    </li>
-                  </ul>
-                  <ul class="country__list capital-13" data-letter="O">
-                    <li class="country__item">
-                      <a href="#">ОАЭ</a>
-                    </li>
-                    <li class="country__item">
-                      <a href="#">Оман</a>
-                    </li>
-                  </ul>
-                  <ul class="country__list capital-14" data-letter="P">
-                    <li class="country__item">
-                      <a href="#">Пакистан</a>
-                    </li>
-                    <li class="country__item">
-                      <a href="#">Палау</a>
-                    </li>
-                    <li class="country__item">
-                      <a href="#">Панама</a>
-                    </li>
-                    <li class="country__item">
-                      <a href="#">Папуа — Новая Гвинея</a>
-                    </li>
-                    <li class="country__item">
-                      <a href="#">Парагвай</a>
-                    </li>
-                    <li class="country__item">
-                      <a href="#">Перу</a>
-                    </li>
-                    <li class="country__item">
-                      <a href="#">Польша</a>
-                    </li>
-                    <li class="country__item">
-                      <a href="#">Португалия</a>
-                    </li>
-                  </ul>
-                  <ul class="country__list capital-15" data-letter="R">
-                    <li class="country__item">
-                      <a href="#">Руанда</a>
-                    </li>
-                    <li class="country__item">
-                      <a href="#">Румыния</a>
-                    </li>
-                    <li class="country__item">
-                      <a href="#">Россия</a>
-                    </li>
-                  </ul>
-                  <ul class="country__list capital-16" data-letter="S">
-                    <li class="country__item">
-                      <a href="#">Сальвадор</a>
-                    </li>
-                    <li class="country__item">
-                      <a href="#">Самоа</a>
-                    </li>
-                    <li class="country__item">
-                      <a href="#">Сан-Марино</a>
-                    </li>
-                    <li class="country__item">
-                      <a href="#">Саудовская Аравия</a>
-                    </li>
-                    <li class="country__item">
-                      <a href="#">Сейшелы</a>
-                    </li>
-                    <li class="country__item">
-                      <a href="#">Сенегал</a>
-                    </li>
-                    <li class="country__item">
-                      <a href="#">Сербия</a>
-                    </li>
-                    <li class="country__item">
-                      <a href="#">Сингапур</a>
-                    </li>
-                    <li class="country__item">
-                      <a href="#">Сирия</a>
-                    </li>
-                    <li class="country__item">
-                      <a href="#">Словакия</a>
-                    </li>
-                    <li class="country__item">
-                      <a href="#">Словения</a>
-                    </li>
-                    <li class="country__item">
-                      <a href="#">США</a>
-                    </li>
-                  </ul>
-                  <ul class="country__list capital-17" data-letter="T">
-                    <li class="country__item">
-                      <a href="#">Таджикистан</a>
-                    </li>
-                    <li class="country__item">
-                      <a href="#">Таиланд</a>
-                    </li>
-                    <li class="country__item">
-                      <a href="#">Танзания</a>
-                    </li>
-                    <li class="country__item">
-                      <a href="#">Того</a>
-                    </li>
-                    <li class="country__item">
-                      <a href="#">Тонга</a>
-                    </li>
-                    <li class="country__item">
-                      <a href="#">Тринидад и Тобаго</a>
-                    </li>
-                    <li class="country__item">
-                      <a href="#">Тувалу</a>
-                    </li>
-                    <li class="country__item">
-                      <a href="#">Тунис</a>
-                    </li>
-                    <li class="country__item">
-                      <a href="#">Туркмения</a>
-                    </li>
-                    <li class="country__item">
-                      <a href="#">Турция</a>
-                    </li>
-                  </ul>
-                  <ul class="country__list capital-18" data-letter="U">
-                    <li class="country__item">
-                      <a href="#">Уганда</a>
-                    </li>
-                    <li class="country__item">
-                      <a href="#">Узбекистан</a>
-                    </li>
-                    <li class="country__item">
-                      <a href="#">Украина</a>
-                    </li>
-                    <li class="country__item">
-                      <a href="#">Уругвай</a>
-                    </li>
-                  </ul>
-                  <ul class="country__list capital-19" data-letter="F">
-                    <li class="country__item">
-                      <a href="#">Фиджи</a>
-                    </li>
-                    <li class="country__item">
-                      <a href="#">Филиппины</a>
-                    </li>
-                    <li class="country__item">
-                      <a href="#">Финляндия</a>
-                    </li>
-                    <li class="country__item">
-                      <a href="#">Франция</a>
-                    </li>
-                  </ul>
-                  <ul class="country__list capital-20" data-letter="H">
-                    <li class="country__item">
-                      <a href="#">Хорватия</a>
-                    </li>
-                  </ul>
-                  <ul class="country__list capital-21" data-letter="CH">
-                    <li class="country__item">
-                      <a href="#">Чад</a>
-                    </li>
-                    <li class="country__item">
-                      <a href="#">Черногория</a>
-                    </li>
-                    <li class="country__item">
-                      <a href="#">Чехия</a>
-                    </li>
-                    <li class="country__item">
-                      <a href="#">Чили</a>
-                    </li>
-                  </ul>
-                  <ul class="country__list capital-22" data-letter="SH">
-                    <li class="country__item">
-                      <a href="#">Швейцария</a>
-                    </li>
-                    <li class="country__item">
-                      <a href="#">Швеция</a>
-                    </li>
-                    <li class="country__item">
-                      <a href="#">Шри-Ланка</a>
-                    </li>
-                  </ul>
-                  <ul class="country__list capital-23" data-letter="EH">
-                    <li class="country__item">
-                      <a href="#">Эквадор</a>
-                    </li>
-                    <li class="country__item">
-                      <a href="#">Эритрея</a>
-                    </li>
-                    <li class="country__item">
-                      <a href="#">Эсватини</a>
-                    </li>
-                    <li class="country__item">
-                      <a href="#">Эстония</a>
-                    </li>
-                    <li class="country__item">
-                      <a href="#">Эфиопия</a>
-                    </li>
-                  </ul>
-                  <ul class="country__list capital-24" data-letter="YOU">
-                    <li class="country__item">
-                      <a href="#">ЮАР</a>
-                    </li>
-                    <li class="country__item">
-                      <a href="#">Южный Судан</a>
-                    </li>
-                  </ul>
-                  <ul class="country__list capital-25" data-letter="YA">
-                    <li class="country__item">
-                      <a href="#">Ямайка</a>
-                    </li>
-                    <li class="country__item">
-                      <a href="#">Япония</a>
-                    </li>
-                  </ul>
-                  <button class="filter__popup-button" type="button">
-                    свернуть
-                  </button>
                 </div>
-              </div>
-              <button class="form-add__button-add" type="button">
-                Добавить страну
-              </button>
-              <a class="form-add__button-next button" href="#third-step">Следующий шаг</a>
-              <a class="form-add__button-down button" href="#first-step">На шаг назад</a>
-            </li>
-            <li class="form-add__item">
-              <h3 class="form-add__title" id="third-step">
-                Шаг 3. <br />
-                Развлечения
-              </h3>
-              <p class="form-add__text">
-                Наконец, расскажите о своих планах времяпровождения. Можно
-                писать в свободной форме и ставить тэги.
-              </p>
-              <label class="form-add__label">
-                <span class="form-add__name-contry">Босния и Герцеговина</span>
-                <textarea name="action-plan" cols="30" rows="10" placeholder="План действий"></textarea>
-              </label>
-              <label class="form-add__label">
-                <span class="form-add__name-contry">Чехия</span>
-                <textarea name="action-plan" cols="30" rows="10"></textarea>
-              </label>
-              <button class="form-add__button" type="submit">Отправить</button>
-              <a class="form-add__button-down button" href="#second-step">На шаг назад</a>
-            </li>
-          </ul>
-        </form>
+                <a class="steps__button-next" href="#second-step">Следующий шаг</a>
+              </li>
+              <li class="steps__item">
+                <div class="steps__container">
+                  <div class="steps__wrapper-title">
+                    <h3 class="steps__heading" id="second-step">
+                      <span>Шаг 2.</span>
+                      <span>Маршрут</span>
+                    </h3>
+                    <p class="steps__text steps__text--second">
+                      Укажите страны, которые вы хотели посетить. Это может быть одна
+                      или сразу несколько.
+                    </p>
+                  </div>
+                  <ul class="steps__wrapper-indicator">
+                    <li><span class="steps__indicator">Даты</span></li>
+                    <li><span class="steps__indicator steps__indicator--active">Маршрут</span></li>
+                    <li><span class="steps__indicator">Развлечения</span></li>
+                  </ul>
+                </div>
+                <div class="steps__country-selection country-selection">
+                  <div class="country-selection__wrapper country-selection__wrapper--selected">
+                    <p class="country-selection__country-selected  country-selection__country-selected--arrow">Босния и
+                      Герцеговина</p>
+                    <span
+                      class="country-selection__icon-flag country-selection__icon-flag--Bosnia-and-Herzegovina"></span>
+                    <button class="country-selection__button-close" type="button" aria-label="Удалить">
+                      <svg class="country-selection__svg" width="9px" height="9px">
+                        <use xlink:href="./img/sprite.svg#icon-close"></use>
+                      </svg>
+                    </button>
+                  </div>
+                  <div class="country-selection__wrapper country-selection__wrapper--selected">
+                    <p class="country-selection__country-selected  country-selection__country-selected--arrow">Чехия</p>
+                    <span class="country-selection__icon-flag country-selection__icon-flag--Czech-Republic"></span>
+                    <button class="country-selection__button-close" type="button" aria-label="Удалить">
+                      <svg class="country-selection__svg" width="9px" height="9px">
+                        <use xlink:href="./img/sprite.svg#icon-close"></use>
+                      </svg>
+                    </button>
+                  </div>
+                  <div class="country-selection__wrapper-popup">
+                    <div class="country-selection__wrapper country-selection__wrapper--choice">
+                      <button type="button" class="country-selection__button-choice">
+                        <span
+                          class="country-selection__country-selected  country-selection__country-selected--arrow">Выберите
+                          страну</span>
+                        <span class="country-selection__icon-flag"></span>
+                      </button>
+                      <button class="country-selection__button-close" type="button" aria-label="Удалить">
+                        <svg class="country-selection__svg" width="9px" height="9px">
+                          <use xlink:href="./img/sprite.svg#icon-close"></use>
+                        </svg>
+                      </button>
+                    </div>
+                    <div class="country-selection__popup">
+                      <div class="country-selection__alignment">
+                        <div class="country-selection__container country">
+                          <button type="button"
+                            class="country-selection__button-choice country-selection__button-choice--close">
+                            Выберите страну
+                            <svg class="country-selection__svg" width="9px" height="9px">
+                              <use xlink:href="./img/sprite.svg#icon-close"></use>
+                            </svg>
+                          </button>
+                          <div class="country__wrapper-content">
+                            <table class="country__table">
+                              <tbody>
+                                <tr>
+                                  <td>
+                                    <label class="country__label country__selected" for="a">
+                                      А
+                                    </label>
+                                  </td>
+                                  <td>
+                                    <label class="country__label" for="b">
+                                      Б
+                                    </label>
+                                  </td>
+                                  <td>
+                                    <label class="country__label" for="v">
+                                      В
+                                    </label>
+                                  </td>
+                                  <td>
+                                    <label class="country__label" for="g">
+                                      Г
+                                    </label>
+                                  </td>
+                                  <td>
+                                    <label class="country__label" for="d">
+                                      Д
+                                    </label>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>
+                                    <label class="country__label" for="e">
+                                      Е
+                                    </label>
+                                  </td>
+                                  <td>
+                                    <label class="country__label" for="z">
+                                      З
+                                    </label>
+                                  </td>
+                                  <td>
+                                    <label class="country__label" for="i">
+                                      И
+                                    </label>
+                                  </td>
+                                  <td>
+                                    <label class="country__label" for="k">
+                                      К
+                                    </label>
+                                  </td>
+                                  <td>
+                                    <label class="country__label" for="l">
+                                      Л
+                                    </label>
+                                  </td>
+                                </tr>
+                                <tr>
+
+                                  <td>
+                                    <label class="country__label" for="m">
+                                      М
+                                    </label>
+                                  </td>
+                                  <td>
+                                    <label class="country__label" for="n">
+                                      Н
+                                    </label>
+                                  </td>
+                                  <td>
+                                    <label class="country__label" for="o">
+                                      О
+                                    </label>
+                                  </td>
+                                  <td>
+                                    <label class="country__label" for="p">
+                                      П
+                                    </label>
+                                  </td>
+                                  <td>
+                                    <label class="country__label" for="r">
+                                      Р
+                                    </label>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>
+                                    <label class="country__label" for="s">
+                                      С
+                                    </label>
+                                  </td>
+                                  <td>
+                                    <label class="country__label" for="t">
+                                      Т
+                                    </label>
+                                  </td>
+                                  <td>
+                                    <label class="country__label" for="u">
+                                      У
+                                    </label>
+                                  </td>
+                                  <td>
+                                    <label class="country__label" for="f">
+                                      Ф
+                                    </label>
+                                  </td>
+                                  <td>
+                                    <label class="country__label" for="h">
+                                      Х
+                                    </label>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>
+                                    <label class="country__label" for="ch">
+                                      Ч
+                                    </label>
+                                  </td>
+                                  <td>
+                                    <label class="country__label" for="sh">
+                                      Ш
+                                    </label>
+                                  </td>
+                                  <td>
+                                    <label class="country__label" for="eh">
+                                      Э
+                                    </label>
+                                  </td>
+                                  <td>
+                                    <label class="country__label" for="you">
+                                      Ю
+                                    </label>
+                                  </td>
+                                  <td>
+                                    <label class="country__label" for="ya">
+                                      Я
+                                    </label>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                            <div class="country__container">
+                              <div class="country__letter">
+                                <h3 class="country__title">A</h3>
+                                <input class="country__input visually-hidden" id="a" type="radio" name="capital"
+                                  value="A" checked>
+                                <ul class="country__list" data-letter="A">
+                                  <li class="country__item">
+                                    <a href="#">Австралия</a>
+                                  </li>
+                                  <li class="country__item">
+                                    <a href="#">Австрия</a>
+                                  </li>
+                                  <li class="country__item">
+                                    <a href="#">Азербайджан</a>
+                                  </li>
+                                  <li class="country__item">
+                                    <a href="#">Албания</a>
+                                  </li>
+                                  <li class="country__item">
+                                    <a href="#">Алжир</a>
+                                  </li>
+                                  <li class="country__item">
+                                    <a href="#">Ангола</a>
+                                  </li>
+                                  <li class="country__item">
+                                    <a href="#">Андорра</a>
+                                  </li>
+                                  <li class="country__item">
+                                    <a href="#">Антигуа и Барбуда</a>
+                                  </li>
+                                  <li class="country__item">
+                                    <a href="#">Аргентина</a>
+                                  </li>
+                                  <li class="country__item">
+                                    <a href="#">Армения</a>
+                                  </li>
+                                  <li class="country__item">
+                                    <a href="#">Афганистан</a>
+                                  </li>
+                                </ul>
+                              </div>
+                              <div class="country__letter">
+                                <h3 class="country__title">Б</h3>
+                                <input class="country__input visually-hidden" id="b" type="radio" name="capital"
+                                  value="B">
+                                <ul class="country__list" data-letter="B">
+                                  <li class="country__item">
+                                    <a href="#">Багамские Острова</a>
+                                  </li>
+                                  <li class="country__item">
+                                    <a href="#">Бангладеш</a>
+                                  </li>
+                                  <li class="country__item">
+                                    <a href="#">Барбадос</a>
+                                  </li>
+                                  <li class="country__item">
+                                    <a href="#">Бахрейн</a>
+                                  </li>
+                                  <li class="country__item">
+                                    <a href="#">Белоруссия</a>
+                                  </li>
+                                  <li class="country__item">
+                                    <a href="#">Белиз</a>
+                                  </li>
+                                  <li class="country__item">
+                                    <a href="#">Бельгия</a>
+                                  </li>
+                                  <li class="country__item">
+                                    <a href="#">Бенин</a>
+                                  </li>
+                                  <li class="country__item">
+                                    <a href="#">Болгария</a>
+                                  </li>
+                                  <li class="country__item">
+                                    <a href="#">Боливия</a>
+                                  </li>
+                                  <li class="country__item">
+                                    <a href="#">Босния и Герцеговина</a>
+                                  </li>
+                                  <li class="country__item">
+                                    <a href="#">Ботсвана</a>
+                                  </li>
+                                  <li class="country__item">
+                                    <a href="#">Бразилия</a>
+                                  </li>
+                                  <li class="country__item">
+                                    <a href="#">Бруней</a>
+                                  </li>
+                                  <li class="country__item">
+                                    <a href="#">Буркина-Фасо</a>
+                                  </li>
+                                  <li class="country__item">
+                                    <a href="#">Бурунди</a>
+                                  </li>
+                                  <li class="country__item">
+                                    <a href="#">Бутан</a>
+                                  </li>
+                                </ul>
+                              </div>
+                              <div class="country__letter">
+                                <h3 class="country__title">В</h3>
+                                <input id="v" class="country__input visually-hidden" type="radio" name="capital"
+                                  value="V">
+                                <ul class="country__list" data-letter="V">
+                                  <li class="country__item">
+                                    <a href="#">Вануату</a>
+                                  </li>
+                                  <li class="country__item">
+                                    <a href="#">Великобритания</a>
+                                  </li>
+                                  <li class="country__item">
+                                    <a href="#">Венгрия</a>
+                                  </li>
+                                  <li class="country__item">
+                                    <a href="#">Венесуэла</a>
+                                  </li>
+                                  <li class="country__item">
+                                    <a href="#">Восточный Тимор</a>
+                                  </li>
+                                  <li class="country__item">
+                                    <a href="#">Вьетнам</a>
+                                  </li>
+                                </ul>
+                              </div>
+                              <div class="country__letter">
+                                <h3 class="country__title">Г</h3>
+                                <input id="g" class="country__input visually-hidden" type="radio" name="capital"
+                                  value="G">
+                                <ul class="country__list" data-letter="G">
+                                  <li class="country__item">
+                                    <a href="#">Габон</a>
+                                  </li>
+                                  <li class="country__item">
+                                    <a href="#">Гаити</a>
+                                  </li>
+                                  <li class="country__item">
+                                    <a href="#">Гайана</a>
+                                  </li>
+                                  <li class="country__item">
+                                    <a href="#">Гамбия</a>
+                                  </li>
+                                  <li class="country__item">
+                                    <a href="#">Гана</a>
+                                  </li>
+                                  <li class="country__item">
+                                    <a href="#">Гватемала</a>
+                                  </li>
+                                  <li class="country__item">
+                                    <a href="#">Гвинея</a>
+                                  </li>
+                                  <li class="country__item">
+                                    <a href="#">Гвинея-Бисау</a>
+                                  </li>
+                                  <li class="country__item">
+                                    <a href="#">Германия</a>
+                                  </li>
+                                  <li class="country__item">
+                                    <a href="#">Гондурас</a>
+                                  </li>
+                                  <li class="country__item">
+                                    <a href="#">Гренада</a>
+                                  </li>
+                                  <li class="country__item">
+                                    <a href="#">Греция</a>
+                                  </li>
+                                  <li class="country__item">
+                                    <a href="#">Грузия</a>
+                                  </li>
+                                </ul>
+                              </div>
+                              <div class="country__letter">
+                                <h3 class="country__title">Д</h3>
+                                <input id="d" class="country__input visually-hidden" type="radio" name="capital"
+                                  value="D">
+                                <ul class="country__list" data-letter="D">
+                                  <li class="country__item">
+                                    <a href="#">Дания</a>
+                                  </li>
+                                  <li class="country__item">
+                                    <a href="#">Джибути</a>
+                                  </li>
+                                  <li class="country__item">
+                                    <a href="#">Доминика</a>
+                                  </li>
+                                  <li class="country__item">
+                                    <a href="#">Доминикана</a>
+                                  </li>
+                                </ul>
+                              </div>
+                              <div class="country__letter">
+                                <h3 class="country__title">E</h3>
+                                <input id="e" class="country__input visually-hidden" type="radio" name="capital"
+                                  value="E">
+                                <ul class="country__list" data-letter="E">
+                                  <li class="country__item">
+                                    <a href="#">Египет</a>
+                                  </li>
+                                </ul>
+                              </div>
+                              <div class="country__letter">
+                                <h3 class="country__title">З</h3>
+                                <input id="z" class="country__input visually-hidden" type="radio" name="capital"
+                                  value="Z">
+                                <ul class="country__list" data-letter="Z">
+                                  <li class="country__item">
+                                    <a href="#">Замбия</a>
+                                  </li>
+                                  <li class="country__item">
+                                    <a href="#">Зимбабве</a>
+                                  </li>
+                                </ul>
+                              </div>
+                              <div class="country__letter">
+                                <h3 class="country__title">И</h3>
+                                <input id="i" class="country__input visually-hidden" type="radio" name="capital"
+                                  value="I">
+                                <ul class="country__list" data-letter="I">
+                                  <li class="country__item">
+                                    <a href="#">Израиль</a>
+                                  </li>
+                                  <li class="country__item">
+                                    <a href="#">Индия</a>
+                                  </li>
+                                  <li class="country__item">
+                                    <a href="#">Индонезия</a>
+                                  </li>
+                                  <li class="country__item">
+                                    <a href="#">Иордания</a>
+                                  </li>
+                                  <li class="country__item">
+                                    <a href="#">Ирак</a>
+                                  </li>
+                                  <li class="country__item">
+                                    <a href="#">Иран</a>
+                                  </li>
+                                  <li class="country__item">
+                                    <a href="#">Ирландия</a>
+                                  </li>
+                                  <li class="country__item">
+                                    <a href="#">Исландия</a>
+                                  </li>
+                                  <li class="country__item">
+                                    <a href="#">Испания</a>
+                                  </li>
+                                  <li class="country__item">
+                                    <a href="#">Италия</a>
+                                  </li>
+                                </ul>
+                              </div>
+                              <div class="country__letter">
+                                <h3 class="country__title">K</h3>
+                                <input id="k" class="country__input visually-hidden" type="radio" name="capital"
+                                  value="K">
+                                <ul class="country__list" data-letter="K">
+                                  <li class="country__item">
+                                    <a href="#">Кабо-Верде</a>
+                                  </li>
+                                  <li class="country__item">
+                                    <a href="#">Казахстан</a>
+                                  </li>
+                                  <li class="country__item">
+                                    <a href="#">Камбоджа</a>
+                                  </li>
+                                  <li class="country__item">
+                                    <a href="#">Камерун</a>
+                                  </li>
+                                  <li class="country__item">
+                                    <a href="#">Канада</a>
+                                  </li>
+                                  <li class="country__item">
+                                    <a href="#">Катар</a>
+                                  </li>
+                                  <li class="country__item">
+                                    <a href="#">Кения</a>
+                                  </li>
+                                  <li class="country__item">
+                                    <a href="#">Кипр</a>
+                                  </li>
+                                  <li class="country__item">
+                                    <a href="#">Киргизия</a>
+                                  </li>
+                                  <li class="country__item">
+                                    <a href="#">Кирибати</a>
+                                  </li>
+                                  <li class="country__item">
+                                    <a href="#">Китай</a>
+                                  </li>
+                                  <li class="country__item">
+                                    <a href="#">Колумбия</a>
+                                  </li>
+                                </ul>
+                              </div>
+                              <div class="country__letter">
+                                <h3 class="country__title">Л</h3>
+                                <input id="l" class="country__input visually-hidden" type="radio" name="capital"
+                                  value="L">
+                                <ul class="country__list" data-letter="L">
+                                  <li class="country__item">
+                                    <a href="#">Лаос</a>
+                                  </li>
+                                  <li class="country__item">
+                                    <a href="#">Латвия</a>
+                                  </li>
+                                  <li class="country__item">
+                                    <a href="#">Лесото</a>
+                                  </li>
+                                  <li class="country__item">
+                                    <a href="#">Либерия</a>
+                                  </li>
+                                  <li class="country__item">
+                                    <a href="#">Ливан</a>
+                                  </li>
+                                  <li class="country__item">
+                                    <a href="#">Ливия</a>
+                                  </li>
+                                  <li class="country__item">
+                                    <a href="#">Литва</a>
+                                  </li>
+                                  <li class="country__item">
+                                    <a href="#">Лихтенштейн</a>
+                                  </li>
+                                  <li class="country__item">
+                                    <a href="#">Люксембург</a>
+                                  </li>
+                                </ul>
+                              </div>
+                              <div class="country__letter">
+                                <h3 class="country__title">M</h3>
+                                <input id="m" class="country__input visually-hidden" type="radio" name="capital"
+                                  value="M">
+                                <ul class="country__list" data-letter="M">
+                                  <li class="country__item">
+                                    <a href="#">Маврикий</a>
+                                  </li>
+                                  <li class="country__item">
+                                    <a href="#">Мавритания</a>
+                                  </li>
+                                  <li class="country__item">
+                                    <a href="#">Мадагаскар</a>
+                                  </li>
+                                  <li class="country__item">
+                                    <a href="#">Малави</a>
+                                  </li>
+                                  <li class="country__item">
+                                    <a href="#">Малайзия</a>
+                                  </li>
+                                  <li class="country__item">
+                                    <a href="#">Мали</a>
+                                  </li>
+                                  <li class="country__item">
+                                    <a href="#">Мальдивы</a>
+                                  </li>
+                                  <li class="country__item">
+                                    <a href="#">Мальта</a>
+                                  </li>
+                                  <li class="country__item">
+                                    <a href="#">Марокко</a>
+                                  </li>
+                                  <li class="country__item">
+                                    <a href="#">Мексика</a>
+                                  </li>
+                                </ul>
+                              </div>
+                              <div class="country__letter">
+                                <h3 class="country__title">Н</h3>
+                                <input id="n" class="country__input visually-hidden" type="radio" name="capital"
+                                  value="N">
+                                <ul class="country__list" data-letter="N">
+                                  <li class="country__item">
+                                    <a href="#">Намибия</a>
+                                  </li>
+                                  <li class="country__item">
+                                    <a href="#">Науру</a>
+                                  </li>
+                                  <li class="country__item">
+                                    <a href="#">Непал</a>
+                                  </li>
+                                  <li class="country__item">
+                                    <a href="#">Нигер</a>
+                                  </li>
+                                  <li class="country__item">
+                                    <a href="#">Нигерия</a>
+                                  </li>
+                                  <li class="country__item">
+                                    <a href="#">Нидерланды</a>
+                                  </li>
+                                  <li class="country__item">
+                                    <a href="#">Никарагуа</a>
+                                  </li>
+                                  <li class="country__item">
+                                    <a href="#">Новая Зеландия</a>
+                                  </li>
+                                  <li class="country__item">
+                                    <a href="#">Норвегия</a>
+                                  </li>
+                                </ul>
+                              </div>
+                              <div class="country__letter">
+                                <h3 class="country__title">O</h3>
+                                <input id="o" class="country__input visually-hidden" type="radio" name="capital"
+                                  value="O">
+                                <ul class="country__list" data-letter="O">
+                                  <li class="country__item">
+                                    <a href="#">ОАЭ</a>
+                                  </li>
+                                  <li class="country__item">
+                                    <a href="#">Оман</a>
+                                  </li>
+                                </ul>
+                              </div>
+                              <div class="country__letter">
+                                <h3 class="country__title">П</h3>
+                                <input id="p" class="country__input visually-hidden" type="radio" name="capital"
+                                  value="P">
+                                <ul class="country__list" data-letter="P">
+                                  <li class="country__item">
+                                    <a href="#">Пакистан</a>
+                                  </li>
+                                  <li class="country__item">
+                                    <a href="#">Палау</a>
+                                  </li>
+                                  <li class="country__item">
+                                    <a href="#">Панама</a>
+                                  </li>
+                                  <li class="country__item">
+                                    <a href="#">Папуа — Новая Гвинея</a>
+                                  </li>
+                                  <li class="country__item">
+                                    <a href="#">Парагвай</a>
+                                  </li>
+                                  <li class="country__item">
+                                    <a href="#">Перу</a>
+                                  </li>
+                                  <li class="country__item">
+                                    <a href="#">Польша</a>
+                                  </li>
+                                  <li class="country__item">
+                                    <a href="#">Португалия</a>
+                                  </li>
+                                </ul>
+                              </div>
+                              <div class="country__letter">
+                                <h3 class="country__title">P</h3>
+                                <input id="r" class="country__input visually-hidden" type="radio" name="capital"
+                                  value="R">
+                                <ul class="country__list" data-letter="R">
+                                  <li class="country__item">
+                                    <a href="#">Руанда</a>
+                                  </li>
+                                  <li class="country__item">
+                                    <a href="#">Румыния</a>
+                                  </li>
+                                  <li class="country__item">
+                                    <a href="#">Россия</a>
+                                  </li>
+                                </ul>
+                              </div>
+                              <div class="country__letter">
+                                <h3 class="country__title">C</h3>
+                                <input id="s" class="country__input visually-hidden" type="radio" name="capital"
+                                  value="S">
+                                <ul class="country__list" data-letter="S">
+                                  <li class="country__item">
+                                    <a href="#">Сальвадор</a>
+                                  </li>
+                                  <li class="country__item">
+                                    <a href="#">Самоа</a>
+                                  </li>
+                                  <li class="country__item">
+                                    <a href="#">Сан-Марино</a>
+                                  </li>
+                                  <li class="country__item">
+                                    <a href="#">Саудовская Аравия</a>
+                                  </li>
+                                  <li class="country__item">
+                                    <a href="#">Сейшелы</a>
+                                  </li>
+                                  <li class="country__item">
+                                    <a href="#">Сенегал</a>
+                                  </li>
+                                  <li class="country__item">
+                                    <a href="#">Сербия</a>
+                                  </li>
+                                  <li class="country__item">
+                                    <a href="#">Сингапур</a>
+                                  </li>
+                                  <li class="country__item">
+                                    <a href="#">Сирия</a>
+                                  </li>
+                                  <li class="country__item">
+                                    <a href="#">Словакия</a>
+                                  </li>
+                                  <li class="country__item">
+                                    <a href="#">Словения</a>
+                                  </li>
+                                  <li class="country__item">
+                                    <a href="#">США</a>
+                                  </li>
+                                </ul>
+                              </div>
+                              <div class="country__letter">
+                                <h3 class="country__title">T</h3>
+                                <input id="t" class="country__input visually-hidden" type="radio" name="capital"
+                                  value="T">
+                                <ul class="country__list" data-letter="T">
+                                  <li class="country__item">
+                                    <a href="#">Таджикистан</a>
+                                  </li>
+                                  <li class="country__item">
+                                    <a href="#">Таиланд</a>
+                                  </li>
+                                  <li class="country__item">
+                                    <a href="#">Танзания</a>
+                                  </li>
+                                  <li class="country__item">
+                                    <a href="#">Того</a>
+                                  </li>
+                                  <li class="country__item">
+                                    <a href="#">Тонга</a>
+                                  </li>
+                                  <li class="country__item">
+                                    <a href="#">Тринидад и Тобаго</a>
+                                  </li>
+                                  <li class="country__item">
+                                    <a href="#">Тувалу</a>
+                                  </li>
+                                  <li class="country__item">
+                                    <a href="#">Тунис</a>
+                                  </li>
+                                  <li class="country__item">
+                                    <a href="#">Туркмения</a>
+                                  </li>
+                                  <li class="country__item">
+                                    <a href="#">Турция</a>
+                                  </li>
+                                </ul>
+                              </div>
+                              <div class="country__letter">
+                                <h3 class="country__title">У</h3>
+                                <input id="u" class="country__input visually-hidden" type="radio" name="capital"
+                                  value="U">
+                                <ul class="country__list" data-letter="U">
+                                  <li class="country__item">
+                                    <a href="#">Уганда</a>
+                                  </li>
+                                  <li class="country__item">
+                                    <a href="#">Узбекистан</a>
+                                  </li>
+                                  <li class="country__item">
+                                    <a href="#">Украина</a>
+                                  </li>
+                                  <li class="country__item">
+                                    <a href="#">Уругвай</a>
+                                  </li>
+                                </ul>
+                              </div>
+                              <div class="country__letter">
+                                <h3 class="country__title">Ф</h3>
+                                <input id="f" class="country__input visually-hidden" type="radio" name="capital"
+                                  value="F">
+                                <ul class="country__list" data-letter="F">
+                                  <li class="country__item">
+                                    <a href="#">Фиджи</a>
+                                  </li>
+                                  <li class="country__item">
+                                    <a href="#">Филиппины</a>
+                                  </li>
+                                  <li class="country__item">
+                                    <a href="#">Финляндия</a>
+                                  </li>
+                                  <li class="country__item">
+                                    <a href="#">Франция</a>
+                                  </li>
+                                </ul>
+                              </div>
+                              <div class="country__letter">
+                                <h3 class="country__title">Х</h3>
+                                <input id="h" class="country__input visually-hidden" type="radio" name="capital"
+                                  value="H">
+                                <ul class="country__list" data-letter="H">
+                                  <li class="country__item">
+                                    <a href="#">Хорватия</a>
+                                  </li>
+                                </ul>
+                              </div>
+                              <div class="country__letter">
+                                <h3 class="country__title">Ч</h3>
+                                <input id="ch" class="country__input visually-hidden" type="radio" name="capital"
+                                  value="CH">
+                                <ul class="country__list" data-letter="CH">
+                                  <li class="country__item">
+                                    <a href="#">Чад</a>
+                                  </li>
+                                  <li class="country__item">
+                                    <a href="#">Черногория</a>
+                                  </li>
+                                  <li class="country__item">
+                                    <a href="#">Чехия</a>
+                                  </li>
+                                  <li class="country__item">
+                                    <a href="#">Чили</a>
+                                  </li>
+                                </ul>
+                              </div>
+                              <div class="country__letter">
+                                <h3 class="country__title">Ш</h3>
+                                <input id="sh" class="country__input visually-hidden" type="radio" name="capital"
+                                  value="SH">
+                                <ul class="country__list" data-letter="SH">
+                                  <li class="country__item">
+                                    <a href="#">Швейцария</a>
+                                  </li>
+                                  <li class="country__item">
+                                    <a href="#">Швеция</a>
+                                  </li>
+                                  <li class="country__item">
+                                    <a href="#">Шри-Ланка</a>
+                                  </li>
+                                </ul>
+                              </div>
+                              <div class="country__letter">
+                                <h3 class="country__title">Э</h3>
+                                <input id="eh" class="country__input visually-hidden" type="radio" name="capital"
+                                  value="EH">
+                                <ul class="country__list" data-letter="EH">
+                                  <li class="country__item">
+                                    <a href="#">Эквадор</a>
+                                  </li>
+                                  <li class="country__item">
+                                    <a href="#">Эритрея</a>
+                                  </li>
+                                  <li class="country__item">
+                                    <a href="#">Эсватини</a>
+                                  </li>
+                                  <li class="country__item">
+                                    <a href="#">Эстония</a>
+                                  </li>
+                                  <li class="country__item">
+                                    <a href="#">Эфиопия</a>
+                                  </li>
+                                </ul>
+                              </div>
+                              <div class="country__letter">
+                                <h3 class="country__title">Ю</h3>
+                                <input id="you" class="country__input visually-hidden" type="radio" name="capital"
+                                  value="YOU">
+                                <ul class="country__list" data-letter="YOU">
+                                  <li class="country__item">
+                                    <a href="#">ЮАР</a>
+                                  </li>
+                                  <li class="country__item">
+                                    <a href="#">Южный Судан</a>
+                                  </li>
+                                </ul>
+                              </div>
+                              <div class="country__letter">
+                                <h3 class="country__title">Я</h3>
+                                <input id="ya" class="country__input visually-hidden" type="radio" name="capital"
+                                  value="YA">
+                                <ul class="country__list" data-letter="YA">
+                                  <li class="country__item">
+                                    <a href="#">Ямайка</a>
+                                  </li>
+                                  <li class="country__item">
+                                    <a href="#">Япония</a>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="country-selection__wrapper-button-add">
+                    <button class="country-selection__button-add" type="button">
+                      <span
+                        class="country-selection__country-selected country-selection__country-selected--plus">Добавить
+                        страну</span>
+                      <span class="country-selection__icon-flag country-selection__icon-flag-add"></span>
+                    </button>
+                  </div>
+                </div>
+                <div class="steps__wrapper-button">
+                  <a class="steps__button-next button" href="#third-step">Следующий
+                    шаг</a>
+                  <a class="steps__button-down button" href="#first-step">На шаг назад</a>
+                </div>
+              </li>
+              <li class="steps__item">
+                <div class="steps__container">
+                  <div class="steps__wrapper-title">
+                    <h3 class="steps__heading" id="third-step">
+                      <span>Шаг 3.</span>
+                      <span>Развлечения</span>
+                    </h3>
+                    <p class="steps__text steps__text--third">
+                      Наконец, расскажите о своих планах времяпровождения. Можно
+                      писать в свободной форме и ставить тэги.
+                    </p>
+                  </div>
+                  <ul class="steps__wrapper-indicator">
+                    <li><span class="steps__indicator">Даты</span></li>
+                    <li><span class="steps__indicator">Маршрут</span></li>
+                    <li><span class="steps__indicator steps__indicator--active">Развлечения</span></li>
+                  </ul>
+                </div>
+                <div class="steps__entertainment entertainment">
+                  <div class="entertainment__wrapper-content">
+                    <div class="entertainment__wrapper">
+                      <div class="entertainment__wrapper-title">
+                        <h4 class="entertainment__name-country">Босния и Герцегoвина</h4>
+                        <span class="entertainment__wrapper-bosnia"></span>
+                      </div>
+                      <label class="entertainment__label">
+                        <textarea id="plan-first" class="entertainment__textarea entertainment__textarea--bosnia"
+                          name="action-plan" cols="30" rows="8" placeholder="План действий"></textarea>
+                        <span class="entertainment__error">Это поле должно быть заполнено</span>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="entertainment__wrapper-content">
+                    <div class="entertainment__wrapper">
+                      <div class="entertainment__wrapper-title">
+                        <h4 class="entertainment__name-country">Чехия</h4>
+                        <span class="entertainment__wrapper-czech"></span>
+                      </div>
+                      <label class="entertainment__label">
+                        <textarea id="plan-second" class="entertainment__textarea entertainment__textarea--czech"
+                          name="action-plan" cols="30"
+                          rows="8">Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.</textarea>
+                        <span class="entertainment__error">Это поле должно быть заполнено</span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="steps__wrapper-button">
+                  <button class="steps__button-form" type="submit">Отправить</button>
+                  <a class="steps__button-down button" href="#first-step">На шаг назад</a>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
       </section>
+
     </form>
   </main>
 
-  <footer class="page-footer page-footer--inner-page">
+  <footer class="page-footer page-footer--form-page">
     <div class="page-footer__wrapper">
       <div class="page-footer__wrapper-alignment">
         <ul class="page-footer__list">
@@ -1233,7 +1689,7 @@
   <script>
     svg4everybody();
   </script>
-  <script src="./js/catalog.min.js"></script>
+  <script src="./js/form.min.js"></script>
 </body>
 
 </html>

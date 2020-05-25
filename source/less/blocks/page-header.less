@@ -1,7 +1,3 @@
-.page-header {
-  background-color: @pale-grey-four;
-}
-
 .page-header__wrapper-alignment {
   background-color: @dark-two;
 }
@@ -72,6 +68,12 @@
   }
 }
 
+.page-header__list.contacts {
+  .contacts__wrapper-svg--phone {
+    display: none;
+  }
+}
+
 .page-header--closed {
   .page-header__wrapper-logo {
     background-color: @dark-two;
@@ -97,6 +99,10 @@
   .contacts {
     display: none;
   }
+
+  .contacts__item:not(:first-child) {
+    display: none;
+  }
 }
 
 .nojs {
@@ -110,8 +116,9 @@
 }
 
 // Внутренняя страница
-
 .page-header--inner-page {
+  background-color: @pale-grey-four;
+
   .page-header__wrapper-alignment {
     border-radius: 20px;
   }
@@ -131,6 +138,42 @@
       content: "";
       display: block;
       .size (173px; 5px);
+      border-radius: 2.4px;
+      background-color: @mango;
+      position: absolute;
+      bottom: -2px;
+    }
+  }
+
+  .page-header__link {
+    display: none;
+  }
+}
+
+// Страница формы
+
+.page-header--form-page {
+  background-color: @pale-grey;
+
+  .page-header__wrapper-alignment {
+    border-radius: 20px;
+  }
+
+  .page-header__wrapper-logo {
+    padding: 19px 25px 26px;
+  }
+
+  .page-header__title {
+    .font (36px; 40px);
+    .font-bold ();
+    padding: 3px 25px 12px;
+    margin-bottom: 0;
+    position: relative;
+
+    &::after {
+      content: "";
+      display: block;
+      .size (214px; 5px);
       border-radius: 2.4px;
       background-color: @mango;
       position: absolute;
@@ -166,6 +209,16 @@
     top: -80px;
     left: 50%;
     transform: translate(-50%);
+  }
+
+  .page-header--closed {
+    .contacts {
+      display: block;
+    }
+
+    .contacts__item:not(:first-child) {
+      display: none;
+    }
   }
 
   // Внутренняя страница
@@ -246,13 +299,108 @@
         content: "";
         display: block;
         .size (32px; 16px);
-        background-image: url(../../img/return.svg);
+        background-image: url("../../img/return.svg");
         background-repeat: no-repeat;
         background-size: 32px 16px;
         position: absolute;
         top: 3px;
         right: 36px;
       }
+    }
+
+    .contacts__link {
+      top: -70px;
+    }
+  }
+
+  // Страница формы
+  .page-header--form-page {
+    background-color: @pale-grey;
+
+    &.page-header--closed .page-header__wrapper-logo {
+      background-color: @dark-two;
+    }
+
+    .page-header__wrapper-alignment {
+      border-radius: 60px;
+      background-color: @dark-two;
+    }
+
+    .page-header__wrapper-logo {
+      padding: 39px 40px 23px;
+    }
+
+    .page-header__logo {
+      padding-top: 7px;
+    }
+
+    .page-header__button {
+      top: -60px;
+    }
+
+    .page-header__wrapper-header {
+      display: flex;
+      align-items: baseline;
+    }
+
+    .page-header__title {
+      .font (60px; 70px);
+      padding: 62px 74px 68px 74px;
+
+      &::after {
+        .size (357px; 8px);
+        border-radius: 4px;
+        bottom: -4px;
+      }
+    }
+
+    .page-header__link {
+      .font (20px; 24px);
+      .font-bold ();
+      .link-reset (#ffffff);
+      text-transform: uppercase;
+      display: block;
+      padding-right: 97px;
+      margin-right: 39px;
+      margin-left: auto;
+      position: relative;
+      bottom: 8px;
+
+      &:hover {
+        opacity: 0.6;
+      }
+
+      &:hover::before {
+        opacity: 0.6;
+      }
+
+      &:active {
+        opacity: 0.3;
+      }
+
+      &:active::before {
+        opacity: 0.3;
+      }
+
+      &:focus {
+        outline: 2px solid #81b3d2;
+      }
+
+      &::before {
+        content: "";
+        display: block;
+        .size (32px; 16px);
+        background-image: url("../../img/return.svg");
+        background-repeat: no-repeat;
+        background-size: 32px 16px;
+        position: absolute;
+        top: 3px;
+        right: 36px;
+      }
+    }
+
+    .contacts__link {
+      top: -70px;
     }
   }
 }
@@ -265,7 +413,7 @@
 
   .page-header__wrapper-alignment {
     width: 1440px;
-    padding: 40px 500px 0 60px;
+    padding: 40px 60px 0 60px;
     box-sizing: border-box;
     margin: 0 auto;
     display: flex;
@@ -275,7 +423,7 @@
   .page-header--opened .page-header__wrapper-logo {
     background-color: @dark-two;
     padding: 0;
-    margin-right: 39px;
+    margin-right: 40px;
   }
 
   .page-header__logo {
@@ -295,19 +443,49 @@
 
     .page-header__nav {
       background-color: @dark-two;
-      padding-top: 20px;
       display: flex;
       flex-wrap: wrap;
       position: relative;
     }
 
     .main-menu {
+      padding-top: 20px;
       display: flex;
       flex-wrap: wrap;
     }
 
     .contacts {
+      padding: 9px 0 0;
+      display: flex;
+      margin-left: auto;
+      position: relative;
+      right: -2px;
+    }
+
+    .contacts__item:not(:first-child) {
+      display: block;
+    }
+
+    .contacts__item:last-child {
       display: none;
+    }
+
+    .contacts__item:first-child {
+      order: 3;
+    }
+  }
+
+  .page-header__list.contacts {
+    .contacts__wrapper-svg--home-phone {
+      display: none;
+    }
+
+    .contacts__wrapper-svg--phone {
+      display: block;
+    }
+
+    .contacts__link {
+      margin: 0;
     }
   }
 
@@ -336,7 +514,6 @@
 
     .page-header__wrapper-nav {
       display: flex;
-      padding-right: 500px;
     }
 
     .page-header__list.main-menu {
@@ -353,6 +530,53 @@
 
     .page-header__link {
       margin-right: 27px;
+    }
+
+    .contacts__link {
+      top: 0;
+    }
+  }
+
+  // Страница формы
+  .page-header--form-page {
+    background-color: @pale-grey;
+
+    .page-header__wrapper-content {
+      border-bottom-left-radius: 60px;
+      border-bottom-right-radius: 60px;
+      background-color: @dark-two;
+    }
+
+    .page-header__wrapper-alignment {
+      width: 1440px;
+      box-sizing: border-box;
+      margin: 0 auto;
+      flex-direction: column;
+      padding-right: 60px;
+    }
+
+    .page-header__wrapper-nav {
+      display: flex;
+    }
+
+    .page-header__list.main-menu {
+      flex-direction: row;
+    }
+
+    .page-header__title {
+      padding: 76px 66px 66px;
+
+      &::after {
+        z-index: 1;
+      }
+    }
+
+    .page-header__link {
+      display: none;
+    }
+
+    .contacts__link {
+      top: 0;
     }
   }
 }

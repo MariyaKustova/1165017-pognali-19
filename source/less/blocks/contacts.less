@@ -34,7 +34,7 @@
   align-items: center;
 
   &:hover {
-    color: @light-gold;
+    color: @mango-two;
   }
 
   &:active {
@@ -65,7 +65,6 @@
   top: 14px;
   left: 14px;
 }
-
 
 @media (min-width: @tablet-width) {
   .contacts {
@@ -99,4 +98,73 @@
 }
 
 @media (min-width: @desktop-width) {
+  .contacts__wrapper-svg {
+    .size (50px; 50px);
+    margin: 0;
+  }
+
+  .contacts__svg {
+    fill: @dark-two;
+  }
+
+  .contacts__tel-number .contacts__svg {
+    .size (18px; 18px);
+    top: 15px;
+    left: 18px;
+  }
+
+  .contacts__e-mail .contacts__svg {
+    .size (18px; 14px);
+    top: 17px;
+    left: 16px;
+  }
+
+  .contacts__tel-number .contacts__wrapper-svg {
+    background-color: @mango;
+  }
+
+  .contacts__e-mail .contacts__wrapper-svg {
+    background-color: @mango-two;
+  }
+
+  .contacts__tel-number,
+  .contacts__e-mail {
+    font-size: 0;
+  }
+
+  .contacts__link {
+    position: relative;
+    top: 0;
+    right: 0;
+  }
+
+  .contacts__tel-number {
+    &:hover .contacts__wrapper-svg--phone {
+      background-color: @dusty-orange;
+    }
+
+    &:hover .contacts__svg {
+      fill: @dark-two;
+    }
+
+    &:active .contacts__svg {
+      opacity: 1;
+      fill: @dark-two-30;
+    }
+  }
+
+  .contacts__e-mail {
+    &:hover .contacts__wrapper-svg {
+      background-color: @mango;
+    }
+
+    &:hover .contacts__svg {
+      fill: @dark-two;
+    }
+
+    &:active .contacts__svg {
+      opacity: 1;
+      fill: @dark-two-30;
+    }
+  }
 }

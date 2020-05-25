@@ -8,7 +8,12 @@
     background-image: url("../../img/globe-back-mobile@2x.jpg");
   }
 }
+
 .page-main__wrapper-alignment {
+  position: relative;
+}
+
+.page-main__container {
   min-height: 405px;
   display: flex;
   flex-direction: column;
@@ -52,6 +57,7 @@
 
   .contacts__link {
     margin: 0;
+    padding: 5px 39px;
   }
 
   .contacts__tel-number {
@@ -93,6 +99,7 @@
   .contacts__wrapper-svg--mail {
     background-color: @mango-two;
   }
+
   .contacts__svg {
     fill: @dark-two;
     position: relative;
@@ -103,10 +110,6 @@
   .contacts__svg--phone {
     top: 12px;
   }
-
-  .contacts__link {
-    padding: 5px 39px;
-  }
 }
 
 // Внутренняя страница
@@ -114,10 +117,6 @@
 .page-main--inner-page {
   background-color: @pale-grey;
   padding-bottom: 88px;
-
-  .page-main__list.contacts {
-    display: none;
-  }
 
   .companions__list {
     .list-reset ();
@@ -165,8 +164,8 @@
       height: 6px;
       border-radius: 50%;
       position: absolute;
-      top: 10px;
-      right: 17px;
+      top: 12px;
+      right: 22px;
     }
   }
 
@@ -263,6 +262,7 @@
 
   .companions__dream-countries {
     position: relative;
+
     &::before {
       content: "";
       display: block;
@@ -346,47 +346,16 @@
     }
   }
 
-  .transport__list {
-    padding-left: 25px;
-  }
+  .companions__transport.transport {
+    .transport__list {
+      padding-left: 25px;
+      position: relative;
+      top: 2px;
+    }
 
-  .transport__item {
-    .size (33px; 33px);
-    background-color: @pale-grey;
-    border-radius: 50%;
-    position: relative;
-  }
-
-  .transport__item:not(:last-child) {
-    margin-right: 0;
-  }
-
-  .transport__svg--plane {
-    .size (14px; 18px);
-    position: absolute;
-    top: 7px;
-    left: 8px;
-  }
-
-  .transport__svg--bus {
-    .size (13px; 16px);
-    position: absolute;
-    top: 8px;
-    left: 10px;
-  }
-
-  .transport__svg--bike {
-    .size (19px; 17px);
-    position: absolute;
-    top: 6px;
-    left: 6px;
-  }
-
-  .transport__svg--run {
-    .size (15px; 17px);
-    position: absolute;
-    top: 8px;
-    left: 8px;
+    .transport__item {
+      background-color: @pale-grey;
+    }
   }
 
   .companions__level {
@@ -454,6 +423,18 @@
     margin-bottom: 15px;
     left: 50%;
     transform: translateX(-50%);
+
+    &:hover,
+    &:hover::before,
+    &:hover::after {
+      opacity: 0.6;
+    }
+
+    &:active,
+    &:active::before,
+    &:active::after {
+      opacity: 0.3;
+    }
   }
 
   .companions__button--more::before,
@@ -470,35 +451,21 @@
   .companions__button--more::before {
     transform: rotate(90deg);
   }
-
-  .companions__button--more {
-    &:hover,
-    &:hover::before,
-    &:hover::after {
-      opacity: 0.6;
-    }
-
-    &:active,
-    &:active::before,
-    &:active::after {
-      opacity: 0.3;
-    }
-  }
 }
 
 @media (min-width: @tablet-width) {
   .page-main__user-nav {
     position: relative;
     background-color: #182044;
-    background-image: url(../../img/globe-back-tablet@1x.jpg);
+    background-image: url("../../img/globe-back-tablet@1x.jpg");
     background-position: center 250px;
 
     @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
-      background-image: url(../../img/globe-back-tablet@2x.jpg);
+      background-image: url("../../img/globe-back-tablet@2x.jpg");
     }
   }
 
-  .page-main__wrapper-alignment {
+  .page-main__container {
     min-height: 862px;
     box-sizing: border-box;
     padding-bottom: 540px;
@@ -526,35 +493,13 @@
   }
 
   .page-main__list.contacts {
-    width: auto;
-    justify-content: flex-end;
-    padding-right: 39px;
-    position: absolute;
-    top: -91px;
-    right: 0;
-
-    .contacts__item:not(:last-child) {
-      display: none;
-    }
-
-    .contacts__link {
-      .font (20px; 30px);
-      padding: 10px 30px;
-      position: relative;
-      top: 0px;
-      right: 0;
-    }
+    display: none;
   }
 
   // Внутренняя страница
 
   .page-main--inner-page {
     padding-bottom: 102px;
-
-    .page-main__list.contacts {
-      display: block;
-      top: 40px;
-    }
 
     .companions__list {
       padding: 0 40px;
@@ -653,37 +598,17 @@
       }
     }
 
-    .transport__list {
-      padding-left: 20px;
-      flex-direction: column;
-    }
+    .companions__transport.transport {
+      .transport__list {
+        padding-left: 7px;
+        flex-direction: column;
+        position: relative;
+        top: -5px;
+      }
 
-    .transport__item {
-      background-color: transparent;
-    }
-
-    .transport__svg--plane {
-      .size (19px; 21px);
-      top: 7px;
-      left: -2px;
-    }
-
-    .transport__svg--bus {
-      .size (17px; 21px);
-      top: 6px;
-      left: 1px;
-    }
-
-    .transport__svg--bike {
-      .size (24px; 21px);
-      top: 3px;
-      left: -3px;
-    }
-
-    .transport__svg--run {
-      .size (20px; 21px);
-      top: 5px;
-      left: 0px;
+      .transport__item {
+        background-color: #ffffff;
+      }
     }
 
     .companions__level {
@@ -799,37 +724,13 @@
 }
 
 @media (min-width: @desktop-width) {
-  .page-main__list.contacts {
-    max-width: 500px;
-    padding-right: 60px;
-    top: -50px;
-
-    .contacts__item:not(:last-child) {
-      display: block;
-    }
-
-    .contacts__link {
-      margin: 0;
-    }
-
-    .contacts__wrapper-svg {
-      .size (50px; 50px);
-    }
-
-    .contacts__svg {
-      .size (18px; 18px);
-      top: 15px;
-      left: 17px;
-    }
-  }
-
   .page-main__user-nav {
-    background-image: url(../../img/globe-back-desktop@1x.jpg);
+    background-image: url("../../img/globe-back-desktop@1x.jpg");
     background-position: center 0;
     min-height: 650px;
 
     @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
-      background-image: url(../../img/globe-back-desktop@2x.jpg);
+      background-image: url("../../img/globe-back-desktop@2x.jpg");
     }
   }
 
@@ -837,9 +738,11 @@
     width: @desktop-width;
     box-sizing: border-box;
     margin: 0 auto;
+  }
+
+  .page-main__container {
     min-height: 650px;
     padding-bottom: 250px;
-    position: relative;
 
     &::before {
       content: "";
@@ -868,12 +771,6 @@
   .page-main--inner-page {
     padding-bottom: 116px;
 
-    .page-main__list.contacts {
-      display: flex;
-      top: 49px;
-      right: 83px;
-    }
-
     .page-main__wrapper-section {
       width: @desktop-width;
       box-sizing: border-box;
@@ -884,6 +781,7 @@
 
     .page-main__choice {
       order: 2;
+      min-width: 285px;
     }
 
     .companions {
@@ -936,7 +834,6 @@
     }
 
     .companions__preferences {
-      padding-right: 0;
       width: auto;
       margin: 17px 0 0 4px;
       padding-right: 30px;
@@ -960,9 +857,11 @@
       padding: 0;
     }
 
-    .transport__list {
-      flex-direction: row;
-      padding-left: 20px;
+    .companions__transport.transport {
+      .transport__list {
+        flex-direction: row;
+        margin-left: -18px;
+      }
     }
 
     .companions__like {

@@ -1,0 +1,192 @@
+.plans {
+  background-color: @pale-grey-two;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  margin-top: -28px;
+  position: relative;
+}
+
+.plans__wrapper-alignment {
+  padding: 27px 25px 20px;
+}
+
+.plans__title {
+  .title-form ();
+  margin-bottom: 31px;
+}
+
+.plans__list {
+  .list-reset ();
+}
+
+.plans__item {
+  border-radius: 10px;
+  background-color: #ffffff;
+  color: @dark-slate-blue;
+  padding: 23px 23px 21px;
+  margin-bottom: 10px;
+}
+
+.plans__serial-number {
+  .font (16px; 16px);
+  .font-medium ();
+  margin-right: 6px;
+}
+
+.plans__wrapper-heading {
+  display: flex;
+}
+
+.plans__heading {
+  .font (16px; 16px);
+  .font-bold ();
+  margin: 0 0 20px 0;
+}
+
+.plans__number,
+.plans__data {
+  .font (14px; 14px);
+  .font-medium ();
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+  margin: 0 0 5px 2px;
+}
+
+.plans__data {
+  margin-bottom: 21px;
+}
+
+.plans__button {
+  .font (14px; 18px);
+  .font-medium ();
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+  padding: 1px 3px;
+  border: none;
+  background-color: transparent;
+  color: rgba(0, 0, 0, 0.3);
+
+  &:hover {
+    color: rgba(0, 0, 0, 0.6);
+  }
+
+  &:active {
+    color: rgba(0, 0, 0, 0.1);
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .plans__wrapper-alignment {
+    padding: 47px 74px 67px;
+  }
+
+  .plans__title {
+    .font(36px, 50px);
+    margin-bottom: 44px;
+  }
+
+  .plans__item {
+    padding: 0;
+  }
+
+  .plans__serial-number {
+    .font (20px; 18px);
+    order: 2;
+    margin: 42px 32px 0 auto;
+  }
+
+  .plans__heading {
+    .font (24px; 50px);
+    padding: 25px 32px 2px 37px;
+  }
+
+  .plans__wrapper {
+    display: flex;
+    padding: 0 29px 0 32px;
+    border-top: 1px solid @pale-grey-two;
+  }
+
+  .plans__number,
+  .plans__data {
+    .font (20px; 18px);
+    letter-spacing: 2px;
+    padding-top: 18px;
+    padding-bottom: 18px;
+    margin: 0;
+    flex-grow: 1;
+  }
+
+  .plans__data {
+    margin-bottom: 0;
+  }
+
+  .plans__button {
+    .font (20px; 18px);
+    letter-spacing: 2px;
+    text-align: right;
+    flex-grow: 1;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .plans {
+    border-top-left-radius: 60px;
+    border-top-right-radius: 60px;
+    margin-top: -49px;
+  }
+
+  .plans__wrapper-alignment {
+    width: @desktop-width;
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 47px 60px 47px 123px;
+  }
+
+  .plans__title {
+    margin-bottom: 42px;
+    margin-left: 7px;
+  }
+
+  .plans__item {
+    display: flex;
+    padding: 23px 39px 25px 43px;
+    margin-bottom: 15px;
+  }
+
+  .plans__serial-number {
+    order: 1;
+    margin: 17px 37px 0 0;
+  }
+
+  .plans__wrapper-heading {
+    width: 49.7%;
+  }
+
+  .plans__heading {
+    padding: 0;
+    margin: 0;
+    order: 2;
+  }
+
+  .plans__wrapper {
+    padding: 0;
+    border: none;
+    flex-grow: 1;
+  }
+
+  .plans__number,
+  .plans__data {
+    padding: 17px 0 0 0;
+    flex-grow: 0;
+  }
+
+  .plans__number {
+    min-width: 176px;
+  }
+
+  .plans__button {
+    padding: 0;
+    flex-grow: 0;
+    margin-left: auto;
+  }
+}
