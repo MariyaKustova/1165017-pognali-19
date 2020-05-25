@@ -60,7 +60,7 @@
 }
 
 .steps__item {
-  background-color: #fff;
+  background-color: #ffffff;
   border-radius: 10px;
   padding: 22px 25px 21px;
   margin-bottom: 10px;
@@ -131,7 +131,7 @@
 
   &:hover ~ .steps__amount-button--plus::before,
   &:hover ~ .steps__amount-button--plus::after,
-  &:hover ~ .steps__amount-button--minus:before {
+  &:hover ~ .steps__amount-button--minus::before {
     background-color: @bluey-grey;
   }
 
@@ -142,7 +142,7 @@
 
   &:active ~ .steps__amount-button--plus::before,
   &:active ~ .steps__amount-button--plus::after,
-  &:active ~ .steps__amount-button--minus:before {
+  &:active ~ .steps__amount-button--minus::before {
     background-color: @dark-two;
   }
 }
@@ -166,7 +166,7 @@
     background-color: @cloudy-blue;
     position: relative;
     left: 14px;
-    top: 0px;
+    top: 0;
   }
 
   &:hover::before {
@@ -196,7 +196,7 @@
 
   &::after {
     transform: rotate(90deg);
-    top: 0px;
+    top: 0;
     left: 15px;
   }
 
@@ -245,7 +245,7 @@
   background-color: @pale-grey-three;
 }
 
-.steps__label input[type="checkbox"]:active + .steps__checkbox {
+.steps__label input[type="checkbox"]:focus + .steps__checkbox {
   outline: 2px solid #81b3d2;
 }
 
@@ -311,7 +311,6 @@
     color: @dark-slate-blue-30;
   }
 }
-
 
 @media (min-width: @tablet-width) {
   .steps__wrapper-alignment {
@@ -444,7 +443,7 @@
       content: "";
       display: block;
       .size (10px; 14px);
-      background-image: url(../../img/triangle-arrow-right.svg);
+      background-image: url("../../img/triangle-arrow-right.svg");
       background-repeat: no-repeat;
       background-size: 10px 14px;
       position: absolute;
@@ -482,11 +481,11 @@
       content: "";
       display: block;
       .size (10px; 14px);
-      background-image: url(../../img/triangle-arrow-left.svg);
+      background-image: url("../../img/triangle-arrow-left.svg");
       background-repeat: no-repeat;
       background-size: 10px 14px;
       position: absolute;
-      top: 34px;
+      top: 31px;
       left: 68px;
     }
 
@@ -529,12 +528,10 @@
     padding-bottom: 104px;
     padding-right: 159px;
     margin-bottom: 45px;
-}
+  }
 
-  .steps__heading {
-    span {
-      display: inline-block;
-    }
+  .steps__heading span {
+    display: inline-block;
   }
 
   .steps__container {

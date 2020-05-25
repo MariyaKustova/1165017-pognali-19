@@ -8,6 +8,7 @@
     background-image: url("../../img/globe-back-mobile@2x.jpg");
   }
 }
+
 .page-main__wrapper-alignment {
   position: relative;
 }
@@ -56,6 +57,7 @@
 
   .contacts__link {
     margin: 0;
+    padding: 5px 39px;
   }
 
   .contacts__tel-number {
@@ -107,10 +109,6 @@
 
   .contacts__svg--phone {
     top: 12px;
-  }
-
-  .contacts__link {
-    padding: 5px 39px;
   }
 }
 
@@ -264,6 +262,7 @@
 
   .companions__dream-countries {
     position: relative;
+
     &::before {
       content: "";
       display: block;
@@ -424,6 +423,18 @@
     margin-bottom: 15px;
     left: 50%;
     transform: translateX(-50%);
+
+    &:hover,
+    &:hover::before,
+    &:hover::after {
+      opacity: 0.6;
+    }
+
+    &:active,
+    &:active::before,
+    &:active::after {
+      opacity: 0.3;
+    }
   }
 
   .companions__button--more::before,
@@ -440,31 +451,17 @@
   .companions__button--more::before {
     transform: rotate(90deg);
   }
-
-  .companions__button--more {
-    &:hover,
-    &:hover::before,
-    &:hover::after {
-      opacity: 0.6;
-    }
-
-    &:active,
-    &:active::before,
-    &:active::after {
-      opacity: 0.3;
-    }
-  }
 }
 
 @media (min-width: @tablet-width) {
   .page-main__user-nav {
     position: relative;
     background-color: #182044;
-    background-image: url(../../img/globe-back-tablet@1x.jpg);
+    background-image: url("../../img/globe-back-tablet@1x.jpg");
     background-position: center 250px;
 
     @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
-      background-image: url(../../img/globe-back-tablet@2x.jpg);
+      background-image: url("../../img/globe-back-tablet@2x.jpg");
     }
   }
 
@@ -728,12 +725,12 @@
 
 @media (min-width: @desktop-width) {
   .page-main__user-nav {
-    background-image: url(../../img/globe-back-desktop@1x.jpg);
+    background-image: url("../../img/globe-back-desktop@1x.jpg");
     background-position: center 0;
     min-height: 650px;
 
     @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
-      background-image: url(../../img/globe-back-desktop@2x.jpg);
+      background-image: url("../../img/globe-back-desktop@2x.jpg");
     }
   }
 
@@ -837,7 +834,6 @@
     }
 
     .companions__preferences {
-      padding-right: 0;
       width: auto;
       margin: 17px 0 0 4px;
       padding-right: 30px;

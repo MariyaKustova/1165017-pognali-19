@@ -29,6 +29,14 @@
   width: 100%;
   min-height: 50px;
   background-color: #ffffff;
+
+  &:hover::before {
+    opacity: 0.6;
+  }
+
+  &:active::before {
+    opacity: 0.3;
+  }
 }
 
 .pagination__link--down {
@@ -45,36 +53,26 @@
   content: "";
   display: block;
   .size (10px; 30px);
-  background-image: url(../../img/triangle-arrow-left.svg);
+  background-image: url("../../img/triangle-arrow-left.svg");
   background-repeat: no-repeat;
   background-size: 10px 20px;
   position: relative;
   left: 50%;
   top: 50%;
-  transform: translate(-50%; 50%);
+  transform: translate(-50%, 50%);
 }
 
 .pagination__link--next::before {
   content: "";
   display: block;
   .size (10px; 30px);
-  background-image: url(../../img/triangle-arrow-right.svg);
+  background-image: url("../../img/triangle-arrow-right.svg");
   background-repeat: no-repeat;
   background-size: 10px 20px;
   position: relative;
   left: 50%;
   top: 50%;
-  transform: translate(-50%; 50%);
-}
-
-.pagination__link {
-  &:hover::before {
-    opacity: 0.6;
-  }
-
-  &:active::before {
-    opacity: 0.3;
-  }
+  transform: translate(-50%, 50%);
 }
 
 @media (min-width: @tablet-width) {
@@ -82,7 +80,7 @@
     padding: 25px 28px;
     margin: 0 40px;
     width: calc(100% - 80px);
-    background-color: #fff;
+    background-color: #ffffff;
     border-radius: 20px;
   }
 
@@ -136,11 +134,11 @@
 
 @media (min-width: @desktop-width) {
   .pagination {
-  width: 950px;
-  margin: 0 60px;
-}
+    width: 950px;
+    margin: 0 60px;
+  }
 
-.pagination__list {
-  margin-right: 8px;
-}
+  .pagination__list {
+    margin-right: 8px;
+  }
 }
