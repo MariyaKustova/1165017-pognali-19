@@ -267,7 +267,8 @@
   .country-selection__popup {
     position: relative;
     display: block;
-    margin-top: 64px;
+    margin-top: -65px;
+    margin-bottom: 21px;
 
     .country-selection__svg {
       display: none;
@@ -474,10 +475,10 @@
     }
 
     .country-selection__icon-flag {
-      width: 24.5%;
+      width: 31%;
 
       &::before {
-        left: -48px;
+        left: -12px;
       }
     }
   }
@@ -507,7 +508,7 @@
       width: 64%;
       box-sizing: border-box;
       border: 1px solid #cbced9;
-      margin: 36px 79px 42px 26px;
+      margin: 36px 79px 37px 26px;
 
       td:not(:last-child) {
         border-right: 1px solid @cloudy-blue;
@@ -532,7 +533,7 @@
       .font (20px; 18px);
       .font-medium ();
       letter-spacing: 2px;
-      padding: 45% 0;
+      padding: 46% 0;
     }
 
     .country__list a {
@@ -612,12 +613,19 @@
     }
 
     .country-selection__icon-flag {
-      width: 24.5%;
+      width: 31%;
       background-color: transparent;
 
       &::before {
-        left: -48px;
+        left: -12px;
       }
+    }
+  }
+
+  .nojs {
+    .country-selection__popup {
+      margin-top: -85px;
+      margin-bottom: 14px;
     }
   }
 }
@@ -692,12 +700,9 @@
   }
 
   .country-selection__popup {
-    display: block;
-    height: auto;
-
     .country__table {
       display: block;
-      margin: 23px 92px 26px 16px;
+      margin: 23px 92px 22px 16px;
       border-collapse: separate;
       border-spacing: 12px;
       border: none;
@@ -714,19 +719,28 @@
     }
 
     .country__container {
-      width: 240px;
+      width: 260px;
       position: relative;
+      margin-bottom: 0;
+      padding-left: 127px;
+      overflow: hidden;
     }
 
     .country__label {
       .font (20px; 18px);
       .font-medium ();
       letter-spacing: 2px;
+      border-radius: 5px;
+      padding: 35% 0;
     }
 
     .country__list {
       display: none;
+    }
+
+    .country__letter {
       margin: 0;
+      padding-bottom: 21px;
     }
 
     .country__input:checked ~ .country__list {

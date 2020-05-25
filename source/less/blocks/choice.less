@@ -72,7 +72,7 @@
 }
 
 .nojs {
-  .choice__list {
+  .choice__container .choice__list {
     display: block;
   }
 
@@ -146,7 +146,7 @@
 
 .choice__container--transport {
   .choice__wrapper-container {
-    margin-bottom: 5px;
+    margin-bottom: 10px;
   }
 
   .transport__list {
@@ -154,7 +154,7 @@
     display: flex;
     justify-content: start;
     padding-left: 0;
-    margin-bottom: 19px;
+    margin-bottom: 13px;
   }
 }
 
@@ -179,7 +179,6 @@
     color: @dark-two-30;
   }
 }
-
 
 @media (min-width: @tablet-width) {
   .choice {
@@ -236,8 +235,15 @@
     }
   }
 
-  .choice__container--closed .choice__list,
-  .choice__container--closed .choice__list.transport {
+  .nojs {
+    .choice__container .choice__list,
+    .choice__container .choice__list.transport {
+      display: flex;
+    }
+  }
+
+  .choice__container--opened .choice__list,
+  .choice__container--opened .choice__list.transport {
     display: flex;
   }
 
@@ -287,6 +293,7 @@
       margin-left: 0;
       margin-bottom: 0;
       flex-direction: row;
+      top: 5px;
     }
   }
 
@@ -325,9 +332,14 @@
     flex-direction: column;
   }
 
-  .choice__container--closed .choice__list,
-  .choice__container--closed .choice__list.transport {
+  .choice__container .choice__list,
+  .choice__container .choice__list.transport {
     display: none;
+  }
+
+  .choice__container--opened .choice__list,
+  .choice__container--opened .choice__list.transport {
+    display: flex;
   }
 
   .choice__wrapper-container {
@@ -342,8 +354,14 @@
     }
   }
 
-  .choice__container--closed .choice__button::before {
+  .choice__container .choice__button::before {
     top: 11px;
+    left: 3px;
+  }
+
+  .choice__container--opened .choice__button::before {
+    top: -6px;
+    left: 3px;
   }
 
   .choice__list {
@@ -352,11 +370,13 @@
     padding-top: 21px;
   }
 
-  .choice__list.transport {
-    flex-direction: row;
-    flex-wrap: wrap;
-    padding-top: 6px;
-    margin-bottom: 21px;
+  .choice__container--transport {
+    .transport__list {
+      flex-direction: row;
+      flex-wrap: wrap;
+      margin-top: -13px;
+      margin-bottom: 27px;
+    }
   }
 
   .choice__list.level {

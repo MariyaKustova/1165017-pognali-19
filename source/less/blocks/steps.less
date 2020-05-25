@@ -312,6 +312,7 @@
   }
 }
 
+
 @media (min-width: @tablet-width) {
   .steps__wrapper-alignment {
     padding: 43px 74px 90px;
@@ -472,6 +473,7 @@
     padding: 28px 39px 28px 90px;
     margin-top: 0;
     margin-left: auto;
+    margin-bottom: 0;
     width: auto;
     min-width: 285px;
     position: relative;
@@ -486,6 +488,14 @@
       position: absolute;
       top: 34px;
       left: 68px;
+    }
+
+    &:hover::before {
+      opacity: 0.7;
+    }
+
+    &:active::before {
+      opacity: 0.3;
     }
   }
 }
